@@ -1,0 +1,202 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Your local community hub for Grafton, Oberlin, LaGrange, Carlisle Township, and Eaton Township. Find news, events, sports, schools, and services." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={description}>
+  <title>{title} | GraftonHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container">
+      <div class="nav-content">
+        <a href="/" class="logo">
+          <span class="logo-icon">🏠</span>
+          <span class="logo-text">GraftonHub</span>
+        </a>
+        <div class="nav-links">
+          <a href="/news">News</a>
+          <a href="/events">Events</a>
+          <a href="/sports">Sports</a>
+          <a href="/services">Services</a>
+          <a href="/about">About</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>GraftonHub</h4>
+          <p>Your community hub for Grafton and surrounding areas.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Communities</h4>
+          <ul>
+            <li>Grafton</li>
+            <li>Oberlin</li>
+            <li>LaGrange</li>
+            <li>Carlisle Township</li>
+            <li>Eaton Township</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/new-residents">New to the Area?</a></li>
+            <li><a href="/utilities">Utility Setup</a></li>
+            <li><a href="/schools">Schools</a></li>
+            <li><a href="/sports">Youth Sports</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>About</h4>
+          <p>A community resource updated twice daily. No ads, no tracking—just helpful local information.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GraftonHub • Made with ❤️ for our community</p>
+        <p class="update-time">Last updated: {new Date().toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'medium', timeStyle: 'short' })}</p>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .site-header {
+      background: var(--color-bg-elevated);
+      border-bottom: 1px solid var(--color-border-light);
+      padding: var(--space-md) 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .logo:hover {
+      color: var(--color-primary-dark);
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: var(--space-lg);
+    }
+
+    .nav-links a {
+      color: var(--color-text-secondary);
+      font-weight: var(--font-weight-medium);
+      transition: color var(--transition-base);
+    }
+
+    .nav-links a:hover {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .site-footer {
+      background: var(--color-text-primary);
+      color: var(--color-bg-base);
+      padding: var(--space-2xl) 0 var(--space-lg);
+      margin-top: var(--space-3xl);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-xl);
+      margin-bottom: var(--space-xl);
+    }
+
+    .footer-section h4 {
+      color: var(--color-primary-light);
+      font-size: var(--font-size-lg);
+      margin-bottom: var(--space-md);
+    }
+
+    .footer-section p {
+      color: var(--color-bg-surface);
+      font-size: var(--font-size-sm);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      color: var(--color-bg-surface);
+      font-size: var(--font-size-sm);
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer-section a {
+      color: var(--color-bg-surface);
+    }
+
+    .footer-section a:hover {
+      color: var(--color-primary-light);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: var(--space-lg);
+      border-top: 1px solid rgba(245, 239, 230, 0.2);
+      color: var(--color-bg-surface);
+      font-size: var(--font-size-sm);
+    }
+
+    .update-time {
+      margin-top: var(--space-sm);
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</body>
+</html>
