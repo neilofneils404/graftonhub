@@ -1,14 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
-import localities from '../data/localities.json';
 ---
 
 <BaseLayout title="Local Government | GraftonHub" description="Government contacts, meeting schedules, and official websites for Grafton, Oberlin, LaGrange, Carlisle Township, and Eaton Township.">
   <div class="page-header">
     <div class="container">
       <h1>🏛️ Local Government</h1>
-      <p class="lead">Official websites, meeting schedules, and contact information for your local government</p>
+      <p class="lead">Officials, meeting schedules, and contact information for your local government</p>
     </div>
   </div>
 
@@ -33,16 +32,35 @@ import localities from '../data/localities.json';
         <h2>🏘️ Village of Grafton</h2>
         <div class="card-content">
           <div class="info-block">
-            <h3>Contact Information</h3>
-            <p><strong>Address:</strong> 960 Main Street, Grafton, OH 44044</p>
-            <p><strong>Website:</strong> <a href="https://villageofgrafton.org" target="_blank" rel="noopener">villageofgrafton.org</a></p>
-            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/p/The-Village-of-Grafton-61568902899359/" target="_blank" rel="noopener">Village of Grafton</a></p>
+            <h3>Elected Officials</h3>
+            <p><strong>Mayor:</strong> Charles Duke (term ends 12/31/2027)</p>
+            <p><strong>Clerk-Treasurer:</strong> Stephanie Barnhart — <a href="mailto:arbarnhart@villageofgrafton.org">arbarnhart@villageofgrafton.org</a></p>
+            <p><strong>Administrator:</strong> Andrew Lipian</p>
+            <p><strong>Village Hall:</strong> <a href="tel:440-926-2401">440-926-2401</a></p>
           </div>
           <div class="info-block">
-            <h3>Council Meetings</h3>
-            <p><strong>When:</strong> Mondays at 7:30 PM (check website for schedule)</p>
-            <p><strong>Where:</strong> Village Hall</p>
-            <p><a href="https://villageofgrafton.org" target="_blank" rel="noopener">View agendas and minutes →</a></p>
+            <h3>Village Council</h3>
+            <ul class="officials-list">
+              <li><strong>Patrick McCort</strong> (President, Ward 3) — <a href="mailto:patrickmccort@yahoo.com">patrickmccort@yahoo.com</a></li>
+              <li><strong>Lynette Kitts</strong> (Ward 4) — <a href="mailto:lmkitts@villageofgrafton.org">lmkitts@villageofgrafton.org</a></li>
+              <li><strong>Brian Romes</strong> (Ward 1) — <a href="mailto:BRomes@villageofgrafton.org">BRomes@villageofgrafton.org</a></li>
+              <li><strong>Rodney Campbell</strong> (Ward 2) — <a href="mailto:RCampbell@villageofgrafton.org">RCampbell@villageofgrafton.org</a></li>
+              <li><strong>Scott Kilgore</strong> (At-Large) — <a href="mailto:SKilgore@villageofgrafton.org">SKilgore@villageofgrafton.org</a></li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h3>Meetings</h3>
+            <p><strong>Council:</strong> 1st & 3rd Tuesdays at 7:30 PM</p>
+            <p><strong>Location:</strong> Town Hall, 960 Main St</p>
+            <p><strong>Live Stream:</strong> <a href="https://www.glwb.net/" target="_blank" rel="noopener">glwb.net</a></p>
+            <p><a href="https://villageofgrafton.org" target="_blank" rel="noopener">villageofgrafton.org →</a></p>
+          </div>
+          <div class="info-block">
+            <h3>Zoning & Permits</h3>
+            <p><strong>Provider:</strong> SafeBuilt Ohio</p>
+            <p><strong>Chief Building Official:</strong> William DiFucci</p>
+            <p><strong>Inspections:</strong> <a href="tel:440-926-2401">440-926-2401</a> opt. 2</p>
+            <p><strong>Planning/Zoning Commission:</strong> 3rd Tuesday as needed</p>
           </div>
         </div>
       </div>
@@ -52,21 +70,34 @@ import localities from '../data/localities.json';
         <h2>🏡 Carlisle Township</h2>
         <div class="card-content">
           <div class="info-block">
-            <h3>Contact Information</h3>
-            <p><strong>Address:</strong> 11969 State Route 301, Grafton, OH 44044</p>
-            <p><strong>Phone:</strong> <a href="tel:440-458-5667">440-458-5667</a></p>
+            <h3>Elected Officials</h3>
+            <p><strong>Trustee:</strong> Jared Smith (LCTA President)</p>
+            <p><em>Other trustees - contact office</em></p>
+            <p><strong>Fiscal Officer:</strong> Kelsey Sizemore (since Apr 2024)</p>
+            <p><strong>Main Office:</strong> <a href="tel:440-458-5667">440-458-5667</a></p>
             <p><strong>Email:</strong> <a href="mailto:CarlisleTwp@windstream.net">CarlisleTwp@windstream.net</a></p>
-            <p><strong>Website:</strong> <a href="https://www.carlisletownship.com" target="_blank" rel="noopener">carlisletownship.com</a></p>
           </div>
           <div class="info-block">
-            <h3>Trustee Meetings</h3>
-            <p><strong>When:</strong> 1st and 3rd Monday of each month at 7:00 PM</p>
-            <p><strong>Where:</strong> Carlisle Township Town Hall</p>
+            <h3>Meetings</h3>
+            <p><strong>Trustees:</strong> 1st & 3rd Monday at 7:00 PM</p>
+            <p><strong>Location:</strong> Township Hall, 11969 Lagrange Road</p>
+            <p><strong>Zoning Commission:</strong> 2nd Tuesday at 6:30 PM (Fire Station)</p>
+            <p><strong>BZA:</strong> As needed at 7:00 PM</p>
+            <p><a href="https://www.carlisletownship.com" target="_blank" rel="noopener">carlisletownship.com →</a></p>
           </div>
           <div class="info-block">
-            <h3>Key Contacts</h3>
-            <p><strong>Zoning Inspector:</strong> Tim Ehrke — <a href="tel:440-458-4491">440-458-4491</a></p>
-            <p><strong>Road Department:</strong> Paul Sniezek — <a href="tel:440-458-6688">440-458-6688</a></p>
+            <h3>Departments</h3>
+            <p><strong>Zoning Inspector:</strong> Tim Ehrke<br>
+              <a href="tel:440-458-4491">440-458-4491</a> — <a href="mailto:carlisletwpzoning@windstream.net">carlisletwpzoning@windstream.net</a><br>
+              <em>Hours: Tue/Thu 8am-4pm, Wed 8am-12pm</em></p>
+            <p><strong>Fire Chief:</strong> Stephen Higgins<br>
+              <a href="tel:440-458-5178">440-458-5178</a> — <a href="mailto:carlislechief@windstream.net">carlislechief@windstream.net</a></p>
+            <p><strong>Road Dept:</strong> <a href="tel:440-458-5667">440-458-5667</a></p>
+          </div>
+          <div class="info-block">
+            <h3>Addresses</h3>
+            <p><strong>Visit:</strong> 11950 Lagrange Rd, Elyria 44035 (by appt)</p>
+            <p><strong>Mail:</strong> 11969 State Rt 301, LaGrange 44050</p>
           </div>
         </div>
       </div>
@@ -76,21 +107,39 @@ import localities from '../data/localities.json';
         <h2>🌾 Village of LaGrange</h2>
         <div class="card-content">
           <div class="info-block">
-            <h3>Contact Information</h3>
-            <p><strong>Address:</strong> 301 Liberty Street, LaGrange, OH 44050</p>
-            <p><strong>Website:</strong> <a href="https://www.villageoflagrangeohio.gov" target="_blank" rel="noopener">villageoflagrangeohio.gov</a></p>
+            <h3>Elected Officials</h3>
+            <p><strong>Mayor:</strong> Gary Kincannon (term ends 12/31/2027)<br>
+              <a href="tel:440-759-2048">440-759-2048</a> — <a href="mailto:gary.kincannon@villageoflagrangeohio.gov">gary.kincannon@villageoflagrangeohio.gov</a></p>
+            <p><strong>Administrator:</strong> Mary Kay Gates<br>
+              <a href="tel:440-355-5555">440-355-5555</a> ext. 1</p>
+            <p><strong>Fiscal Officer:</strong> Christie Homer-Miller<br>
+              <a href="tel:440-355-5555">440-355-5555</a> ext. 2</p>
           </div>
           <div class="info-block">
-            <h3>Council Meetings</h3>
+            <h3>Village Council</h3>
+            <ul class="officials-list">
+              <li><strong>Curtis Karpinski</strong> (President) — <a href="tel:440-759-2047">440-759-2047</a></li>
+              <li><strong>Dale Gregory</strong> — <a href="tel:440-429-0481">440-429-0481</a></li>
+              <li><strong>Barry Price</strong> — <a href="tel:440-289-8925">440-289-8925</a></li>
+              <li><strong>Rhonda Smith</strong> — <a href="tel:440-204-9235">440-204-9235</a></li>
+              <li><strong>Ben Davey</strong> — <a href="tel:440-371-7684">440-371-7684</a></li>
+              <li><strong>Don Griswold</strong> — <a href="tel:440-213-7089">440-213-7089</a></li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h3>Meetings</h3>
+            <p><strong>Council:</strong> 2nd & 4th Thursday at 7:30 PM</p>
             <p><strong>Committee of the Whole:</strong> 2nd Thursday at 6:45 PM</p>
-            <p><strong>Council Meeting:</strong> 2nd Thursday at 7:00 PM</p>
-            <p><strong>Where:</strong> Village of LaGrange Municipal Building</p>
+            <p><strong>Planning Commission:</strong> 1st Thursday at 7:00 PM</p>
+            <p><strong>Location:</strong> 301 Liberty Street</p>
+            <p><a href="https://www.villageoflagrangeohio.gov" target="_blank" rel="noopener">villageoflagrangeohio.gov →</a></p>
           </div>
           <div class="info-block">
             <h3>Park Board</h3>
-            <p><strong>Website:</strong> <a href="https://www.LagrangeCommunityPark.org" target="_blank" rel="noopener">LagrangeCommunityPark.org</a></p>
-            <p><strong>Meetings:</strong> 2nd Tuesday at 7:00 PM (plus 4th Tuesday Mar-Oct)</p>
-            <p><strong>Where:</strong> 101 West Street (former library)</p>
+            <p><strong>Meetings:</strong> 2nd & 4th Tuesday at 7:00 PM</p>
+            <p><strong>Location:</strong> 101 West St (Veterans Park Building)</p>
+            <p><strong>Chair:</strong> Steve Pycraft — <a href="tel:440-371-9725">440-371-9725</a></p>
+            <p><a href="https://www.lagrangecommunitypark.org" target="_blank" rel="noopener">lagrangecommunitypark.org →</a></p>
           </div>
         </div>
       </div>
@@ -98,31 +147,45 @@ import localities from '../data/localities.json';
       <!-- OBERLIN -->
       <div class="locality-card" id="oberlin">
         <h2>🎓 City of Oberlin</h2>
+        <p class="govt-type">Council-Manager Government (no elected mayor)</p>
         <div class="card-content">
           <div class="info-block">
-            <h3>Contact Information</h3>
-            <p><strong>Address:</strong> 85 S Main St, Oberlin, OH 44074</p>
-            <p><strong>Phone:</strong> <a href="tel:440-775-1531">440-775-1531</a></p>
-            <p><strong>Email:</strong> <a href="mailto:info@cityofoberlin.com">info@cityofoberlin.com</a></p>
-            <p><strong>Website:</strong> <a href="https://cityofoberlin.com" target="_blank" rel="noopener">cityofoberlin.com</a></p>
+            <h3>Leadership</h3>
+            <p><strong>City Manager:</strong> Greg Holcomb<br>
+              <a href="tel:440-775-7206">440-775-7206</a> — <a href="mailto:GHolcomb@CityofOberlin.com">GHolcomb@CityofOberlin.com</a></p>
+            <p><strong>Council President:</strong> Eboni A. Johnson<br>
+              <a href="tel:614-398-1913">614-398-1913</a> — <a href="mailto:ejohnson@cityofoberlin.com">ejohnson@cityofoberlin.com</a></p>
+            <p><strong>Vice President:</strong> Michael McFarlin<br>
+              <a href="tel:440-707-6553">440-707-6553</a></p>
           </div>
           <div class="info-block">
-            <h3>City Council</h3>
-            <p><strong>President:</strong> Eboni A. Johnson — <a href="tel:614-398-1913">614-398-1913</a></p>
-            <p><strong>Vice President:</strong> Michael McFarlin — <a href="tel:440-707-6553">440-707-6553</a></p>
-            <p><a href="https://cityofoberlin.com/city-government/city-council/" target="_blank" rel="noopener">All council members →</a></p>
-          </div>
-          <div class="info-block">
-            <h3>City Departments</h3>
-            <ul class="compact-list">
-              <li><strong>City Manager:</strong> <a href="tel:440-775-7217">440-775-7217</a></li>
-              <li><strong>Finance/Utilities:</strong> <a href="tel:440-775-7211">440-775-7211</a></li>
-              <li><strong>Public Works:</strong> <a href="tel:440-775-7218">440-775-7218</a></li>
-              <li><strong>Recreation:</strong> <a href="tel:440-775-7254">440-775-7254</a></li>
-              <li><strong>Building:</strong> <a href="tel:440-775-7182">440-775-7182</a></li>
-              <li><strong>Planning:</strong> <a href="tel:440-776-4827">440-776-4827</a></li>
+            <h3>City Council (7 at-large)</h3>
+            <ul class="officials-list">
+              <li><strong>Sondra Miller</strong> — <a href="mailto:smiller@cityofoberlin.com">smiller@cityofoberlin.com</a></li>
+              <li><strong>Libni Lopez</strong> — <a href="tel:440-462-8626">440-462-8626</a></li>
+              <li><strong>Kristin Peterson</strong> — <a href="tel:440-223-7814">440-223-7814</a></li>
+              <li><strong>Jessa D. New</strong> — <a href="tel:440-707-6285">440-707-6285</a></li>
+              <li><strong>Joe Waltzer</strong> — <a href="tel:440-506-3032">440-506-3032</a></li>
             </ul>
           </div>
+          <div class="info-block">
+            <h3>Meetings</h3>
+            <p><strong>Council:</strong> 1st & 3rd Mondays at 7:00 PM</p>
+            <p><strong>Location:</strong> City Council Chambers, 85 S. Main St</p>
+            <p><a href="https://cityofoberlin.com" target="_blank" rel="noopener">cityofoberlin.com →</a></p>
+          </div>
+          <div class="info-block">
+            <h3>Key Departments</h3>
+            <p><strong>General:</strong> <a href="tel:440-775-1531">440-775-1531</a></p>
+            <p><strong>Finance/Utilities:</strong> <a href="tel:440-775-7211">440-775-7211</a></p>
+            <p><strong>Public Works:</strong> <a href="tel:440-775-7218">440-775-7218</a></p>
+            <p><strong>Building:</strong> <a href="tel:440-775-7182">440-775-7182</a></p>
+            <p><strong>Planning:</strong> <a href="tel:440-776-4827">440-776-4827</a></p>
+            <p><strong>Sustainability:</strong> Linda Arbogast — <a href="tel:440-775-7257">440-775-7257</a></p>
+          </div>
+        </div>
+        <div class="highlight-box">
+          <strong>🌱 Sustainability Leader:</strong> Oberlin targets 75% greenhouse gas reduction by 2030 and net-zero by 2050. 80% renewable power via OMLPS.
         </div>
       </div>
 
@@ -131,26 +194,37 @@ import localities from '../data/localities.json';
         <h2>🌲 Eaton Township</h2>
         <div class="card-content">
           <div class="info-block">
-            <h3>Contact Information</h3>
-            <p><strong>Address:</strong> 12043 S. Avon Belden Rd, Grafton, OH 44044</p>
-            <p><strong>Phone:</strong> <a href="tel:440-748-2236">440-748-2236</a></p>
-            <p><strong>Fax:</strong> 440-748-1928</p>
-            <p><strong>Email:</strong> <a href="mailto:secretary@eatontownship.org">secretary@eatontownship.org</a></p>
-            <p><strong>Website:</strong> <a href="https://www.eatontownship.org" target="_blank" rel="noopener">eatontownship.org</a></p>
+            <h3>Elected Officials</h3>
+            <p><strong>Trustees:</strong></p>
+            <ul class="officials-list">
+              <li><strong>Steve Franks</strong> — <a href="tel:330-635-1391">330-635-1391</a></li>
+              <li><strong>Matt Hignett</strong> — <a href="tel:330-635-5992">330-635-5992</a></li>
+              <li><strong>Jason Monschein</strong> — <a href="tel:330-635-7715">330-635-7715</a></li>
+            </ul>
+            <p><strong>Fiscal Officer:</strong> Jenifer Hignett — <a href="tel:440-506-7774">440-506-7774</a></p>
           </div>
           <div class="info-block">
-            <h3>Office Hours</h3>
-            <p>Monday – Friday: 8:00 AM – 3:00 PM</p>
-            <p>Saturday & Sunday: Closed</p>
+            <h3>Meetings</h3>
+            <p><strong>Trustees:</strong> 4th Thursday at 7:00 PM</p>
+            <p><strong>Zoning Commission:</strong> 1st & 3rd Wednesday at 7:00 PM</p>
+            <p><strong>BZA:</strong> 2nd Tuesday at 7:00 PM</p>
+            <p><strong>Location:</strong> Township Hall, 12043 S. Avon Belden Rd</p>
+            <p><a href="https://www.eatontownship.org" target="_blank" rel="noopener">eatontownship.org →</a></p>
           </div>
           <div class="info-block">
-            <h3>Trustees</h3>
-            <p><strong>Steve Franks:</strong> <a href="tel:330-635-1391">330-635-1391</a></p>
-            <p><em>Additional trustees — check website</em></p>
+            <h3>Departments</h3>
+            <p><strong>Main Office:</strong> <a href="tel:440-748-2236">440-748-2236</a><br>
+              <em>Mon-Fri 8am-3pm</em></p>
+            <p><strong>Zoning:</strong> <a href="tel:440-748-6706">440-748-6706</a><br>
+              <em>Mon-Thu 9am-2pm</em></p>
+            <p><strong>Road Dept:</strong> <a href="mailto:awilson@eatontownship.org">awilson@eatontownship.org</a></p>
           </div>
           <div class="info-block">
-            <h3>Community Land Use Program</h3>
-            <p><strong>Email:</strong> <a href="mailto:CLUP@eatontownship.org">CLUP@eatontownship.org</a></p>
+            <h3>Fire & Rescue</h3>
+            <p><strong>Eaton Township Fire & Rescue</strong></p>
+            <p><strong>Non-Emergency:</strong> <a href="tel:440-748-2496">440-748-2496</a></p>
+            <p><strong>Chief:</strong> Robert Resar — <a href="tel:440-281-1003">440-281-1003</a></p>
+            <p><strong>Station:</strong> 35955 Royalton Rd, Grafton</p>
           </div>
         </div>
       </div>
@@ -167,9 +241,14 @@ import localities from '../data/localities.json';
           <div class="info-block">
             <h3>Sheriff's Office</h3>
             <p><strong>Non-Emergency:</strong> <a href="tel:440-329-3709">440-329-3709</a></p>
-            <p><strong>Address:</strong> 9896 Murray Ridge Rd, Elyria, OH 44035</p>
-            <p><strong>Website:</strong> <a href="https://loraincountysheriff.com" target="_blank" rel="noopener">loraincountysheriff.com</a></p>
-            <p><em>The Sheriff provides law enforcement for Carlisle Township and Eaton Township.</em></p>
+            <p><strong>Address:</strong> 9896 Murray Ridge Rd, Elyria 44035</p>
+            <p><a href="https://loraincountysheriff.com" target="_blank" rel="noopener">loraincountysheriff.com</a></p>
+            <p><em>Provides law enforcement for Carlisle & Eaton Townships</em></p>
+          </div>
+          <div class="info-block">
+            <h3>County Engineers</h3>
+            <p><strong>Phone:</strong> <a href="tel:440-329-5584">440-329-5584</a></p>
+            <p><em>For county road issues</em></p>
           </div>
         </div>
       </div>
@@ -192,10 +271,6 @@ import localities from '../data/localities.json';
       background: var(--color-bg-surface);
       padding: var(--space-3xl) 0 var(--space-2xl);
       border-bottom: 1px solid var(--color-border-light);
-    }
-
-    .page-header h1 {
-      margin-bottom: var(--space-md);
     }
 
     .lead {
@@ -254,20 +329,32 @@ import localities from '../data/localities.json';
     }
 
     .locality-card h2 {
+      margin-bottom: var(--space-sm);
+    }
+
+    .govt-type {
+      color: var(--color-text-tertiary);
+      font-size: var(--font-size-sm);
       margin-bottom: var(--space-lg);
       padding-bottom: var(--space-md);
       border-bottom: 1px solid var(--color-border-light);
     }
 
+    .locality-card h2 + .card-content {
+      margin-top: var(--space-lg);
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--color-border-light);
+    }
+
     .card-content {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: var(--space-xl);
     }
 
     .info-block h3 {
-      font-size: var(--font-size-md);
-      color: var(--color-text-secondary);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-tertiary);
       margin-bottom: var(--space-sm);
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -275,16 +362,27 @@ import localities from '../data/localities.json';
 
     .info-block p {
       margin-bottom: var(--space-xs);
+      font-size: var(--font-size-sm);
     }
 
-    .compact-list {
+    .officials-list {
       list-style: none;
       padding: 0;
       margin: 0;
     }
 
-    .compact-list li {
-      margin-bottom: var(--space-xs);
+    .officials-list li {
+      margin-bottom: var(--space-sm);
+      font-size: var(--font-size-sm);
+    }
+
+    .highlight-box {
+      margin-top: var(--space-lg);
+      padding: var(--space-md);
+      background: #ecfdf5;
+      border: 1px solid #6ee7b7;
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-sm);
     }
 
     .cta {
@@ -295,15 +393,6 @@ import localities from '../data/localities.json';
       text-align: center;
       max-width: 500px;
       margin: 0 auto;
-    }
-
-    .cta h2 {
-      margin-bottom: var(--space-md);
-    }
-
-    .cta p {
-      color: var(--color-text-secondary);
-      margin-bottom: var(--space-lg);
     }
 
     @media (max-width: 600px) {

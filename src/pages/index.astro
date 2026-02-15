@@ -4,18 +4,6 @@ import '../styles/global.css';
 ---
 
 <BaseLayout title="GraftonHub - Community Information for Grafton & Surrounding Areas">
-  <!-- Live Weather Bar -->
-  <div class="weather-bar">
-    <div class="container">
-      <div class="weather-compact">
-        <span class="weather-temp" id="weather-temp">--°F</span>
-        <span class="weather-condition" id="weather-condition">Loading...</span>
-        <span class="weather-location">Lorain County</span>
-      </div>
-      <div class="current-date" id="current-date"></div>
-    </div>
-  </div>
-
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
@@ -183,75 +171,7 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <script>
-    // Live weather from NWS API
-    async function fetchWeather() {
-      try {
-        const response = await fetch('https://api.weather.gov/gridpoints/CLE/61,51/forecast/hourly', {
-          headers: { 'User-Agent': 'GraftonHub Community Site' }
-        });
-        if (!response.ok) throw new Error('Weather fetch failed');
-        const data = await response.json();
-        const current = data.properties.periods[0];
-        document.getElementById('weather-temp').textContent = `${current.temperature}°${current.temperatureUnit}`;
-        document.getElementById('weather-condition').textContent = current.shortForecast;
-      } catch (error) {
-        document.getElementById('weather-condition').textContent = 'Weather unavailable';
-      }
-    }
-
-    function updateDate() {
-      const now = new Date();
-      document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', { 
-        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'America/New_York'
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      updateDate();
-      fetchWeather();
-    });
-    setInterval(fetchWeather, 15 * 60 * 1000);
-  </script>
-
   <style>
-    .weather-bar {
-      background: #1a1a1a;
-      color: white;
-      padding: 0.5rem 0;
-      font-size: 0.875rem;
-    }
-
-    .weather-bar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .weather-compact {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .weather-temp {
-      font-weight: 600;
-    }
-
-    .weather-condition {
-      color: #ccc;
-    }
-
-    .weather-location {
-      color: #888;
-      font-size: 0.75rem;
-    }
-
-    .current-date {
-      color: #888;
-      font-size: 0.75rem;
-    }
-
     .hero {
       padding: 3rem 0 2rem;
       text-align: center;
