@@ -1,20 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import LocalityNav from '../components/LocalityNav.astro';
-import localities from '../data/localities.json';
+import '../styles/global.css';
 
 const pageTitle = "Youth Sports & Recreation";
 const pageDescription = "Youth sports leagues, recreation programs, and activities serving Grafton, Oberlin, LaGrange, Carlisle Township, and Eaton Township.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-3xl font-bold text-gray-900 mb-2">{pageTitle}</h1>
-    <p class="text-gray-600 mb-6">
-      Youth sports leagues and recreation programs serving southern Lorain County.
-    </p>
+  <div class="page-header">
+    <div class="container">
+      <h1>⚽ {pageTitle}</h1>
+      <p class="lead">Youth sports leagues and recreation programs serving southern Lorain County</p>
+    </div>
+  </div>
 
-    <LocalityNav />
+  <div class="container"
 
     <!-- Baseball & Softball -->
     <section class="mb-12">
@@ -270,16 +270,130 @@ const pageDescription = "Youth sports leagues, recreation programs, and activiti
     </section>
 
     <!-- Registration Tips -->
-    <section class="bg-blue-50 border border-blue-200 rounded-lg p-6">
-      <h2 class="text-xl font-semibold text-gray-900 mb-3">Registration Tips</h2>
-      <ul class="space-y-2 text-gray-700 list-disc list-inside">
-        <li><strong>Spring sports</strong> (baseball, soccer) typically register January-March</li>
-        <li><strong>Fall sports</strong> (football, soccer) typically register May-July</li>
-        <li><strong>Winter sports</strong> (basketball, wrestling) typically register September-November</li>
-        <li>Check organization websites or Facebook pages for current registration dates</li>
-        <li>Many programs offer multi-child discounts</li>
-        <li>Scholarships may be available - contact the organization directly</li>
-      </ul>
+    <section class="registration-tips">
+      <div class="card">
+        <h2>Registration Tips</h2>
+        <ul>
+          <li><strong>Spring sports</strong> (baseball, soccer) typically register January-March</li>
+          <li><strong>Fall sports</strong> (football, soccer) typically register May-July</li>
+          <li><strong>Winter sports</strong> (basketball, wrestling) typically register September-November</li>
+          <li>Check organization websites or Facebook pages for current registration dates</li>
+          <li>Many programs offer multi-child discounts</li>
+          <li>Scholarships may be available - contact the organization directly</li>
+        </ul>
+      </div>
     </section>
+
   </div>
+
+  <style>
+    .page-header {
+      background: var(--color-bg-surface);
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .lead {
+      font-size: var(--font-size-xl);
+      color: var(--color-text-secondary);
+      max-width: 700px;
+    }
+
+    .container > section {
+      padding: var(--space-2xl) 0;
+    }
+
+    .container > section:first-of-type {
+      padding-top: var(--space-xl);
+    }
+
+    h2 {
+      margin-bottom: var(--space-lg);
+      border-bottom: 2px solid var(--color-primary);
+      padding-bottom: var(--space-sm);
+    }
+
+    .bg-blue-50 {
+      background: #eff6ff;
+      border: 1px solid #60a5fa;
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+    }
+
+    .registration-tips {
+      padding: var(--space-xl) 0 var(--space-2xl);
+      background: var(--color-bg-surface);
+    }
+
+    .registration-tips .card {
+      background: white;
+      padding: var(--space-lg);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+    }
+
+    .registration-tips ul {
+      margin-left: var(--space-lg);
+      list-style: disc;
+    }
+
+    .registration-tips li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .space-y-6 > *:not(:last-child) {
+      margin-bottom: var(--space-xl);
+    }
+
+    .bg-white {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+    }
+
+    .text-xl {
+      font-size: var(--font-size-xl);
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    ul.space-y-2 {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.space-y-2 li {
+      margin-bottom: var(--space-sm);
+    }
+
+    ul.space-y-3 li {
+      margin-bottom: var(--space-md);
+    }
+
+    .text-sm {
+      font-size: var(--font-size-sm);
+    }
+
+    .text-gray-600 {
+      color: var(--color-text-secondary);
+    }
+
+    .text-gray-700 {
+      color: var(--color-text);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 var(--space-md);
+      }
+    }
+  </style>
 </BaseLayout>
