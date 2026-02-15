@@ -19,8 +19,9 @@
 - Parks and trails directory
 - Community events calendar
 - New residents guide
-- Full dark mode support
+- Full dark mode support (CSS variables in global.css)
 - Nancy's Diner easter eggs (☕ in footer, custom 404, `/nancys`)
+- **Community validated**: Positive feedback from Grafton Facebook group
 
 ### Infrastructure
 

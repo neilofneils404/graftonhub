@@ -78,6 +78,7 @@ All information verified from official sources:
 
 - **v1.0.0** (2026-02-15): Initial public launch
   - Complete site with 13 pages
-  - Full dark mode support
+  - Full dark mode support (global.css dark mode CSS variables)
   - Nancy's Diner easter eggs
   - Monthly maintenance process established
+  - Community validation: Positive feedback from Grafton Facebook group
