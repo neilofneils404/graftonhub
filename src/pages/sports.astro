@@ -320,13 +320,20 @@ const pageDescription = "Youth sports leagues, recreation programs, and activiti
       border-radius: var(--radius-md);
     }
 
+    @media (prefers-color-scheme: dark) {
+      .bg-blue-50 {
+        background: rgba(59, 130, 246, 0.15);
+        border-color: rgba(96, 165, 250, 0.5);
+      }
+    }
+
     .registration-tips {
       padding: var(--space-xl) 0 var(--space-2xl);
       background: var(--color-bg-surface);
     }
 
     .registration-tips .card {
-      background: white;
+      background: var(--color-bg);
       padding: var(--space-lg);
       border: 1px solid var(--color-border-light);
       border-radius: var(--radius-md);

@@ -169,6 +169,13 @@ import '../styles/global.css';
       margin-top: var(--space-xl);
     }
 
+    @media (prefers-color-scheme: dark) {
+      .nancys-pitch {
+        background: linear-gradient(135deg, rgba(139, 69, 19, 0.3) 0%, rgba(139, 69, 19, 0.15) 100%);
+        border-color: rgba(210, 105, 30, 0.6);
+      }
+    }
+
     @media (max-width: 768px) {
       .error-code {
         font-size: 5rem;

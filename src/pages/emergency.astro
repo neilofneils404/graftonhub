@@ -331,6 +331,18 @@ import '../styles/global.css';
       margin-top: var(--space-sm);
     }
 
+    @media (prefers-color-scheme: dark) {
+      .locality-card.county {
+        background: rgba(59, 130, 246, 0.15);
+        border-color: rgba(186, 230, 253, 0.3);
+      }
+
+      .warning {
+        background: rgba(251, 191, 36, 0.2);
+        color: #fbbf24;
+      }
+    }
+
     @media (max-width: 600px) {
       .services-grid {
         grid-template-columns: 1fr;

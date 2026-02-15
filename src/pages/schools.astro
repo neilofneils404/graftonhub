@@ -578,6 +578,42 @@ import '../styles/global.css';
       margin: 0 auto;
     }
 
+    @media (prefers-color-scheme: dark) {
+      .which-district {
+        background: rgba(251, 191, 36, 0.1);
+      }
+
+      .which-district .card.highlight {
+        background: var(--color-bg);
+        border-color: rgba(251, 191, 36, 0.5);
+      }
+
+      .district-item {
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .highlight-box {
+        background: rgba(16, 185, 129, 0.15);
+        border-color: rgba(16, 185, 129, 0.5);
+      }
+
+      .stats span {
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .library-card {
+        background: var(--color-bg);
+      }
+
+      .library-note {
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .preschool-card {
+        background: var(--color-bg);
+      }
+    }
+
     @media (max-width: 600px) {
       .district-header {
         flex-direction: column;

@@ -347,6 +347,13 @@ import '../styles/global.css';
       font-size: var(--font-size-sm);
     }
 
+    @media (prefers-color-scheme: dark) {
+      .market-card {
+        background: rgba(16, 185, 129, 0.15);
+        border-color: rgba(110, 231, 183, 0.5);
+      }
+    }
+
     @media (max-width: 768px) {
       .seasonal-grid {
         grid-template-columns: 1fr;

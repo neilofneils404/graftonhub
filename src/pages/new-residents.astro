@@ -337,6 +337,39 @@ import '../styles/global.css';
       font-weight: var(--font-weight-medium);
     }
 
+    @media (prefers-color-scheme: dark) {
+      .checklist-card {
+        background: var(--color-bg);
+      }
+
+      .checklist-item {
+        background: rgba(255, 255, 255, 0.03);
+        border-color: var(--color-border);
+      }
+
+      .checklist-item:has(input:checked) {
+        background: rgba(34, 197, 94, 0.1);
+        border-color: rgba(34, 197, 94, 0.5);
+      }
+
+      .utility-item {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: var(--color-border);
+      }
+
+      .contact-item {
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .info-card {
+        background: var(--color-bg);
+      }
+
+      .card {
+        background: var(--color-bg);
+      }
+    }
+
     @media (max-width: 768px) {
       .checklist-item label {
         flex-direction: column;

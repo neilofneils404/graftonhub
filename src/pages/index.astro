@@ -217,7 +217,7 @@ import '../styles/global.css';
 
     .quick-links {
       padding: 1.5rem 0;
-      background: white;
+      background: var(--color-bg-surface);
       border-bottom: 1px solid var(--color-border-light);
     }
 
@@ -248,6 +248,25 @@ import '../styles/global.css';
 
     .quick-card.emergency:hover {
       background: #fee2e2;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .quick-card {
+        color: var(--color-text);
+      }
+
+      .quick-card.emergency {
+        background: rgba(239, 68, 68, 0.15);
+        color: #fca5a5;
+      }
+
+      .quick-card.emergency:hover {
+        background: rgba(239, 68, 68, 0.25);
+      }
+
+      .quick-card:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
     }
 
     .quick-card .icon {
@@ -291,6 +310,13 @@ import '../styles/global.css';
     .info-card.highlight {
       background: #fffbeb;
       border-color: #fcd34d;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .info-card.highlight {
+        background: rgba(251, 191, 36, 0.15);
+        border-color: rgba(251, 191, 36, 0.5);
+      }
     }
 
     .info-card h3 {
@@ -348,6 +374,12 @@ import '../styles/global.css';
       border-radius: var(--radius-md);
       text-align: center;
       border: 1px solid var(--color-border-light);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .utility-item {
+        background: var(--color-bg);
+      }
     }
 
     .utility-item h4 {

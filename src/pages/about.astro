@@ -23,12 +23,12 @@ import '../styles/global.css';
           <li>When the next school board meeting is</li>
           <li>How to contact local government offices</li>
         </ul>
-        <p>No ads. No tracking. No subscription fees. Just helpful information, updated twice daily.</p>
+        <p>No ads. No tracking. No subscription fees. Just helpful information, verified monthly.</p>
       </div>
 
       <div class="card">
         <h2>How It Works</h2>
-        <p>GraftonHub automatically gathers public information from official sources:</p>
+        <p>GraftonHub compiles public information from official sources:</p>
         <ul>
           <li><strong>Weather:</strong> National Weather Service (official government data)</li>
           <li><strong>News:</strong> Chronicle-Telegram, Cleveland.com, and local news outlets</li>
@@ -36,7 +36,7 @@ import '../styles/global.css';
           <li><strong>Government:</strong> Village, township, and city official websites</li>
           <li><strong>Events:</strong> Public calendars and community announcements</li>
         </ul>
-        <p>We update the site twice a day (morning and evening) to keep information current.</p>
+        <p>We verify and update information monthly to keep it current and accurate.</p>
       </div>
 
       <div class="card privacy-card">
@@ -70,7 +70,7 @@ import '../styles/global.css';
         <h2>💡 Why We Built This</h2>
         <p>Local information is scattered across dozens of websites, Facebook groups, and physical bulletin boards. Finding what you need often requires knowing where to look.</p>
         <p>We wanted to create one place where you can find answers to common questions without hunting through multiple sites or asking in Facebook groups.</p>
-        <p>Think of it as a digital community bulletin board—except it updates itself.</p>
+        <p>Think of it as a digital community bulletin board, maintained by neighbors for neighbors.</p>
       </div>
 
       <div class="card technical-card">
@@ -79,11 +79,11 @@ import '../styles/global.css';
         <ul>
           <li><strong>Built with:</strong> Astro (static site generator)</li>
           <li><strong>Hosted on:</strong> Cloudflare Pages (free tier)</li>
-          <li><strong>Updated:</strong> Twice daily via automated scripts</li>
+          <li><strong>Updated:</strong> Monthly verification cycle</li>
           <li><strong>Search:</strong> Client-side (no server required)</li>
-          <li><strong>Cost to run:</strong> ~$12/year for the domain</li>
+          <li><strong>Cost to run:</strong> ~$14/year (domain + verification)</li>
         </ul>
-        <p>Open-source technology, built by a local resident who wanted to help.</p>
+        <p>Built by a local resident who wanted to help.</p>
       </div>
 
       <div class="card credits-card">
@@ -204,6 +204,26 @@ import '../styles/global.css';
 
     .final-note h2 {
       color: var(--color-primary);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .disclaimer-card {
+        background: rgba(251, 191, 36, 0.1);
+        border-left-color: rgba(251, 191, 36, 0.6);
+      }
+
+      .credits-card {
+        background: rgba(249, 115, 22, 0.1);
+      }
+
+      .final-note {
+        background: linear-gradient(
+          135deg,
+          rgba(249, 115, 22, 0.1) 0%,
+          rgba(34, 197, 94, 0.1) 100%
+        );
+        border-color: rgba(59, 130, 246, 0.5);
+      }
     }
 
     @media (max-width: 768px) {
