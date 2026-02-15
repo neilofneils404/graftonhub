@@ -1,225 +1,169 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
-import { readFile } from 'fs/promises';
-import { join } from 'path';
-
-// Load events data
-let eventsData;
-try {
-  const eventsPath = join(process.cwd(), 'data/events/upcoming.json');
-  const eventsJson = await readFile(eventsPath, 'utf-8');
-  eventsData = JSON.parse(eventsJson);
-} catch (error) {
-  eventsData = { events: [] };
-}
-
-// Format date helpers
-function formatDate(dateStr: string) {
-  const date = new Date(dateStr);
-  return date.toLocaleDateString('en-US', { 
-    weekday: 'long',
-    month: 'long', 
-    day: 'numeric',
-    year: 'numeric'
-  });
-}
-
-function formatTime(timeStr: string | null) {
-  if (!timeStr) return '';
-  const [hours, minutes] = timeStr.split(':');
-  const hour = parseInt(hours);
-  const ampm = hour >= 12 ? 'PM' : 'AM';
-  const displayHour = hour > 12 ? hour - 12 : hour === 0 ? 12 : hour;
-  return `${displayHour}:${minutes} ${ampm}`;
-}
-
-// Sort events by date
-const sortedEvents = eventsData.events
-  .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 ---
 
-<BaseLayout title="Community Events | GraftonHub" description="Upcoming events, meetings, and activities in Grafton, Oberlin, LaGrange and surrounding areas.">
+<BaseLayout title="Community Events | GraftonHub" description="Find community events in Grafton, Oberlin, LaGrange and surrounding areas.">
   <div class="page-header">
     <div class="container">
       <h1>📅 Community Events</h1>
-      <p class="lead">Meetings, activities, and events happening in our communities</p>
+      <p class="lead">Find events happening in our communities</p>
     </div>
   </div>
 
-  <section class="events-section">
+  <section class="content-section">
     <div class="container">
-      {sortedEvents.length === 0 ? (
-        <div class="card empty-state">
-          <p>No upcoming events scheduled. Check back soon!</p>
-        </div>
-      ) : (
-        <div class="events-list">
-          {sortedEvents.map(event => (
-            <div class="event-card card">
-              <div class="event-date-badge">
-                <span class="event-day">{new Date(event.date).getDate()}</span>
-                <span class="event-month">{new Date(event.date).toLocaleDateString('en-US', { month: 'short' })}</span>
-              </div>
-              <div class="event-content">
-                <h2 class="event-title">{event.title}</h2>
-                <div class="event-meta">
-                  <span class="event-datetime">
-                    {formatDate(event.date)}
-                    {event.time && ` at ${formatTime(event.time)}`}
-                  </span>
-                  {event.location && (
-                    <span class="event-location">📍 {event.location}</span>
-                  )}
-                  {event.community && (
-                    <span class="event-community">{event.community}</span>
-                  )}
-                </div>
-                {event.description && (
-                  <p class="event-description">{event.description}</p>
-                )}
-                {event.link && (
-                  <a href={event.link} target="_blank" rel="noopener" class="event-link">More info →</a>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
+      <div class="card info-card">
+        <h2>Where to Find Local Events</h2>
+        <p>We're working on building a community events calendar. In the meantime, here are the best places to find local events:</p>
+        
+        <div class="source-list">
+          <div class="source-item">
+            <h3>🏛️ Government Meetings</h3>
+            <ul>
+              <li><a href="https://www.cityofoberlin.com/meetings/" target="_blank" rel="noopener">City of Oberlin Meetings</a></li>
+              <li><a href="https://www.loraincounty.us/commissioners" target="_blank" rel="noopener">Lorain County Commissioners</a></li>
+            </ul>
+          </div>
 
-      <div class="card submit-event">
-        <h3>📝 Submit an Event</h3>
-        <p>Have an event you'd like listed? Community events, fundraisers, meetings, and activities are welcome.</p>
-        <a href="mailto:neil@neilofneils.com?subject=Event Submission for GraftonHub" class="btn">Submit Event</a>
+          <div class="source-item">
+            <h3>📚 Library Events</h3>
+            <ul>
+              <li><a href="https://www.grafton.lib.oh.us/events" target="_blank" rel="noopener">Grafton-Midview Public Library</a></li>
+              <li><a href="https://www.oberlinpubliclibrary.org/events" target="_blank" rel="noopener">Oberlin Public Library</a></li>
+            </ul>
+          </div>
+
+          <div class="source-item">
+            <h3>🌲 Parks & Recreation</h3>
+            <ul>
+              <li><a href="https://www.loraincountymetroparks.com/events" target="_blank" rel="noopener">Lorain County Metro Parks Events</a></li>
+              <li><a href="https://www.cityofoberlin.com/recreation-department/" target="_blank" rel="noopener">Oberlin Recreation Department</a></li>
+            </ul>
+          </div>
+
+          <div class="source-item">
+            <h3>🏫 School Events</h3>
+            <ul>
+              <li><a href="https://www.midviewk12.org/events" target="_blank" rel="noopener">Midview Schools Calendar</a></li>
+              <li><a href="https://www.oberlinschools.net" target="_blank" rel="noopener">Oberlin Schools</a></li>
+              <li><a href="https://www.keystonelocalschools.org" target="_blank" rel="noopener">Keystone Schools</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="submit-section">
+          <h3>📝 Know of an Event?</h3>
+          <p>If you'd like to see a community event listed here, let us know!</p>
+          <a href="mailto:neil@neilofneils.com?subject=Event Submission for GraftonHub" class="btn">Submit an Event</a>
+        </div>
       </div>
     </div>
   </section>
 
   <style>
     .page-header {
-      background: var(--color-bg-surface);
-      padding: var(--space-3xl) 0 var(--space-2xl);
-      border-bottom: 1px solid var(--color-border-light);
+      background: #f9f9f9;
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid #e0e0e0;
     }
 
     .page-header h1 {
-      margin-bottom: var(--space-md);
+      margin-bottom: 0.5rem;
     }
 
     .lead {
-      font-size: var(--font-size-xl);
-      color: var(--color-text-secondary);
-      max-width: 700px;
+      font-size: 1.125rem;
+      color: #666;
     }
 
-    .events-section {
-      padding: var(--space-3xl) 0;
+    .content-section {
+      padding: 2rem 0 4rem;
     }
 
-    .events-list {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-lg);
-      margin-bottom: var(--space-3xl);
+    .info-card {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      background: white;
     }
 
-    .event-card {
-      display: flex;
-      gap: var(--space-xl);
-      align-items: flex-start;
+    .info-card h2 {
+      margin-bottom: 1rem;
     }
 
-    .event-date-badge {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-width: 70px;
-      padding: var(--space-md);
-      background: var(--color-bg-surface);
-      border-radius: var(--border-radius-md);
+    .info-card > p {
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .source-item {
+      padding: 1rem;
+      background: #f9f9f9;
+      border-radius: 6px;
+    }
+
+    .source-item h3 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .source-item ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .source-item li {
+      margin: 0.5rem 0;
+    }
+
+    .source-item a {
+      color: #0066cc;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .source-item a:hover {
+      text-decoration: underline;
+    }
+
+    .submit-section {
       text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid #e0e0e0;
     }
 
-    .event-day {
-      font-size: var(--font-size-2xl);
-      font-weight: var(--font-weight-bold);
-      line-height: 1;
+    .submit-section h3 {
+      margin-bottom: 0.5rem;
     }
 
-    .event-month {
-      font-size: var(--font-size-sm);
-      text-transform: uppercase;
-      color: var(--color-text-secondary);
+    .submit-section p {
+      color: #666;
+      margin-bottom: 1rem;
     }
 
-    .event-content {
-      flex: 1;
-    }
-
-    .event-title {
-      font-size: var(--font-size-xl);
-      margin-bottom: var(--space-sm);
-    }
-
-    .event-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-md);
-      font-size: var(--font-size-sm);
-      color: var(--color-text-secondary);
-      margin-bottom: var(--space-md);
-    }
-
-    .event-community {
-      background: var(--color-bg-surface);
-      padding: var(--space-xs) var(--space-sm);
-      border-radius: var(--border-radius-sm);
-      font-size: var(--font-size-xs);
-    }
-
-    .event-description {
-      color: var(--color-text-secondary);
-      line-height: var(--line-height-relaxed);
-    }
-
-    .event-link {
+    .btn {
       display: inline-block;
-      margin-top: var(--space-md);
-      font-weight: var(--font-weight-medium);
+      padding: 0.75rem 1.5rem;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
     }
 
-    .empty-state {
-      text-align: center;
-      padding: var(--space-3xl);
-      color: var(--color-text-secondary);
-    }
-
-    .submit-event {
-      text-align: center;
-      background: var(--color-bg-surface);
-    }
-
-    .submit-event h3 {
-      margin-bottom: var(--space-md);
-    }
-
-    .submit-event p {
-      margin-bottom: var(--space-lg);
-      color: var(--color-text-secondary);
-    }
-
-    @media (max-width: 600px) {
-      .event-card {
-        flex-direction: column;
-        gap: var(--space-md);
-      }
-
-      .event-date-badge {
-        flex-direction: row;
-        gap: var(--space-sm);
-        min-width: auto;
-      }
+    .btn:hover {
+      background: #555;
     }
   </style>
 </BaseLayout>
