@@ -69,13 +69,14 @@
           "phone": "440-926-2401"
         },
         "gas": {
-          "provider": "Dominion Energy Ohio",
-          "phone": "800-362-7557",
-          "website": "https://www.dominionenergy.com"
+          "provider": "Columbia Gas of Ohio",
+          "phone": "1-800-344-4077",
+          "website": "https://www.columbiagasohio.com"
         },
         "trash": {
-          "provider": "TBD - verify",
-          "note": "Check with village office"
+          "provider": "Republic Services",
+          "phone": "440-458-5191",
+          "schedule": "Weekly curbside trash/recycling, bulk 1st Friday/month"
         }
       },
       "schools": {
@@ -118,10 +119,10 @@
         },
         "fire": {
           "name": "Carlisle Township Fire Department",
-          "chief": "Steve Higgins",
-          "phone": "440-458-5177",
-          "email": "CarlisleChief@windstream.net",
-          "address": "11950 LaGrange Rd, LaGrange, OH 44050"
+          "chief": "Stephen Higgins",
+          "phone": "440-458-5178",
+          "email": "carlislechief@windstream.net",
+          "address": "11950 Lagrange Road, Elyria, OH 44035"
         }
       },
       "utilities": {
@@ -139,11 +140,13 @@
           "note": "Contact township for your area"
         },
         "gas": {
-          "provider": "Dominion Energy Ohio",
-          "phone": "800-362-7557"
+          "provider": "Columbia Gas of Ohio",
+          "phone": "1-800-344-4077",
+          "website": "https://www.columbiagasohio.com"
         },
         "trash": {
-          "note": "Private haulers - contact township for options"
+          "provider": "Rumpke Waste & Recycling",
+          "note": "Municipal contract since Apr 2024, curbside with carts"
         }
       },
       "schools": {
@@ -195,8 +198,13 @@
           "note": "Contact village office"
         },
         "gas": {
-          "provider": "Dominion Energy Ohio",
-          "phone": "800-362-7557"
+          "provider": "Columbia Gas of Ohio",
+          "phone": "1-800-344-4077",
+          "website": "https://www.columbiagasohio.com"
+        },
+        "trash": {
+          "provider": "Republic Services",
+          "note": "Municipal contract, curbside"
         }
       },
       "schools": {
@@ -250,12 +258,14 @@
           "phone": "440-775-7218"
         },
         "gas": {
-          "provider": "Dominion Energy Ohio",
-          "phone": "800-362-7557"
+          "provider": "Columbia Gas of Ohio",
+          "phone": "1-800-344-4077",
+          "website": "https://www.columbiagasohio.com"
         },
         "trash": {
           "provider": "City of Oberlin Public Works",
-          "phone": "440-775-7218"
+          "phone": "440-775-7218",
+          "note": "Recycling bi-weekly opt-in subscription"
         },
         "financeUtilityOffice": {
           "phone": ["440-775-7211", "440-775-7214"]
@@ -313,7 +323,11 @@
           "nonEmergency": "440-329-3709"
         },
         "fire": {
-          "note": "TBD - verify fire coverage"
+          "name": "Eaton Township Fire & Rescue",
+          "nonEmergency": "440-748-2496",
+          "chief": "Robert Resar",
+          "chiefPhone": "440-281-1003",
+          "address": "35955 Royalton Rd, Grafton, OH 44044"
         }
       },
       "utilities": {
@@ -323,15 +337,22 @@
         },
         "water": {
           "provider": "Varies - wells or RLCWA",
-          "note": "Contact township"
+          "rlcwaPhone": "440-355-5121",
+          "note": "Contact township or RLCWA for your area"
         },
         "sewer": {
-          "provider": "Varies - septic systems",
-          "note": "Contact township"
+          "provider": "LORCO (Lorain County Rural Wastewater District)",
+          "note": "Some areas septic",
+          "lorcoAddress": "22898 West Rd, Wellington, OH 44090"
         },
         "gas": {
-          "provider": "Dominion Energy Ohio",
-          "phone": "800-362-7557"
+          "provider": "Columbia Gas of Ohio",
+          "phone": "1-800-344-4077",
+          "website": "https://www.columbiagasohio.com"
+        },
+        "trash": {
+          "provider": "Rumpke Waste & Recycling",
+          "note": "Municipal contract, curbside"
         }
       },
       "schools": {
@@ -409,10 +430,10 @@
         }
       },
       "gas": {
-        "dominion": {
-          "name": "Dominion Energy Ohio",
-          "phone": "800-362-7557",
-          "website": "https://www.dominionenergy.com",
+        "columbiaGas": {
+          "name": "Columbia Gas of Ohio",
+          "phone": "1-800-344-4077",
+          "website": "https://www.columbiagasohio.com",
           "coverage": "Entire region"
         }
       },
