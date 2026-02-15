@@ -1,439 +1,285 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import '../styles/global.css';
+import LocalityNav from '../components/LocalityNav.astro';
+import localities from '../data/localities.json';
+
+const pageTitle = "Youth Sports & Recreation";
+const pageDescription = "Youth sports leagues, recreation programs, and activities serving Grafton, Oberlin, LaGrange, Carlisle Township, and Eaton Township.";
 ---
 
-<BaseLayout title="Youth Sports | GraftonHub" description="Youth sports programs, registration info, and contacts for baseball, soccer, football, basketball, and more in Grafton, LaGrange, and Oberlin areas.">
-  <div class="page-header">
-    <div class="container">
-      <h1>⚽ Youth Sports</h1>
-      <p class="lead">Find programs, registration info, and contacts for youth sports in our area</p>
-    </div>
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">{pageTitle}</h1>
+    <p class="text-gray-600 mb-6">
+      Youth sports leagues and recreation programs serving southern Lorain County.
+    </p>
+
+    <LocalityNav />
+
+    <!-- Baseball & Softball -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-blue-600 pb-2">
+        Baseball & Softball
+      </h2>
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Grafton Midview Hot Stove</h3>
+          <p class="text-sm text-gray-600 mb-3">Serving: Grafton, Eaton Township</p>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Ages:</strong> 5-18 (boys baseball, girls softball)</li>
+            <li><strong>Website:</strong> <a href="https://www.graftonhotstove.org/" class="text-blue-600 hover:underline">graftonhotstove.org</a></li>
+            <li><strong>Contact:</strong> Graftonmidviewhotstove@gmail.com</li>
+            <li><strong>Location:</strong> Local fields (calendar on site for closures/practices)</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Oberlin Baseball Softball Federation (OBSF)</h3>
+          <p class="text-sm text-gray-600 mb-3">Serving: Oberlin</p>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Ages:</strong> 5-18 (baseball & softball)</li>
+            <li><strong>Website:</strong> <a href="https://sites.google.com/view/obsf/home" class="text-blue-600 hover:underline">sites.google.com/view/obsf</a></li>
+            <li><strong>Baseball Contact:</strong> Jodi Cool, 440-864-1817</li>
+            <li><strong>Softball Contact:</strong> Anthony Gallam, 440-452-5011</li>
+            <li><strong>Email:</strong> oberlinbaseballsoftball@gmail.com</li>
+            <li><strong>Location:</strong> Oberlin Recreation Complex (5 lighted fields)</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Lorain County Hot Stove League</h3>
+          <p class="text-sm text-gray-600 mb-3">Serving: County-wide (travel/competitive)</p>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Type:</strong> Travel and competitive play</li>
+            <li><strong>Website:</strong> <a href="https://www.loraincountyhotstove.com/" class="text-blue-600 hover:underline">loraincountyhotstove.com</a></li>
+            <li><strong>Note:</strong> Teams from Keystone, Midview, and other area schools participate</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soccer -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-blue-600 pb-2">
+        Soccer
+      </h2>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+        <p class="text-gray-700">
+          <strong>All local soccer programs participate in the Lorain County Soccer League (LCSL)</strong> - 
+          a recreational league for ages U7-U15. Teams play against each other within the county.
+        </p>
+        <p class="text-sm text-gray-600 mt-2">
+          LCSL Website: <a href="https://www.quickscores.com/loraincountysoccer" class="text-blue-600 hover:underline">quickscores.com/loraincountysoccer</a>
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Midview Soccer League</h3>
+          <p class="text-sm text-gray-600 mb-3">Serving: Grafton, Carlisle Township, Eaton Township</p>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Ages:</strong> U7-U15 (recreational), Bumblebee U3-U6 (introductory)</li>
+            <li><strong>Website:</strong> <a href="https://www.midviewsoccer.com/" class="text-blue-600 hover:underline">midviewsoccer.com</a></li>
+            <li><strong>President:</strong> Scott Ulrich, 440-714-1407, mslpresident@yahoo.com</li>
+            <li><strong>Registrar:</strong> midviewsoccerregistrar@gmail.com</li>
+            <li><strong>Fields:</strong> Midview Complex (16218 Chamberlain Rd), West Grass (13080 Durkee Rd), Ross Stadium (38199 Capel Rd)</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">LaGrange Youth Soccer Association (LYSA)</h3>
+          <p class="text-sm text-gray-600 mb-3">Serving: LaGrange, Carlisle Township</p>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Ages:</strong> U7-U15 (LCSL recreational), U4-U6 (in-house PeeWee/WildTots)</li>
+            <li><strong>Cost:</strong> $80 U7-U15, $50 in-house (uniforms separate, 2-year cycle)</li>
+            <li><strong>Website:</strong> <a href="https://www.lagrangeyouthsoccer.com/" class="text-blue-600 hover:underline">lagrangeyouthsoccer.com</a></li>
+            <li><strong>Contact:</strong> lysaboard@gmail.com, President Christine Schwartz</li>
+            <li><strong>Location:</strong> Lagrange Community Park (Fields 1-5)</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Oberlin Youth Soccer Association (OYSA)</h3>
+          <p class="text-sm text-gray-600 mb-3">Serving: Oberlin</p>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Ages:</strong> U7-U15 (6-14 years), recreational & competitive</li>
+            <li><strong>Seasons:</strong> Spring (April-June), Fall (August-October)</li>
+            <li><strong>Cost:</strong> U7-U8 $90 annual/$55 seasonal; U9-U15 $110 annual/$65 seasonal (+ $45 uniform)</li>
+            <li><strong>Website:</strong> <a href="https://www.oberlinsoccer.org/" class="text-blue-600 hover:underline">oberlinsoccer.org</a></li>
+            <li><strong>Contact:</strong> oberlinyouthsoccer@gmail.com, President Nevin Irvin</li>
+            <li><strong>Location:</strong> Oberlin Pavilion fields (OB1-8)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Football & Cheer -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-blue-600 pb-2">
+        Football & Cheer
+      </h2>
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">JR LC8 Football League</h3>
+          <p class="text-sm text-gray-600 mb-3">Serving: Lorain County (all areas)</p>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Divisions:</strong> Flag, Padded Flag, Rookie Tackle, Full Contact Varsity</li>
+            <li><strong>Facebook:</strong> <a href="https://www.facebook.com/JrLC8/" class="text-blue-600 hover:underline">facebook.com/JrLC8</a></li>
+            <li><strong>Note:</strong> Teams affiliated with local schools (Midview, Keystone, Oberlin)</li>
+            <li><strong>Registration:</strong> Typically opens in spring; check Facebook for updates</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Flag Football Fanatics</h3>
+          <p class="text-sm text-gray-600 mb-3">Serving: West Cleveland/Lorain area</p>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Ages:</strong> 4-14 (PreK/K, 1st-2nd, 3rd-4th divisions)</li>
+            <li><strong>Website:</strong> <a href="https://playfanatics.com/" class="text-blue-600 hover:underline">playfanatics.com</a></li>
+            <li><strong>Type:</strong> Flag football for younger ages</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Basketball -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-blue-600 pb-2">
+        Basketball
+      </h2>
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Keystone Youth Sports Basketball</h3>
+          <p class="text-sm text-gray-600 mb-3">Serving: LaGrange, Carlisle Township</p>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Ages:</strong> K-6th grade</li>
+            <li><strong>Cost:</strong> K/1st $15, 2nd/3rd $30</li>
+            <li><strong>Website:</strong> <a href="https://keystoneyouthsports.com/basketball/" class="text-blue-600 hover:underline">keystoneyouthsports.com/basketball</a></li>
+            <li><strong>Contact:</strong> keystoneyouthbasketball@gmail.com, Jeff Holzhauer (jeffrey.holzhauer@keystoneschools.org)</li>
+            <li><strong>Location:</strong> Keystone Middle School (501 Opportunity Way), games Saturdays</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Midview Youth Basketball</h3>
+          <p class="text-sm text-gray-600 mb-3">Serving: Grafton, Eaton Township</p>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Ages:</strong> Youth (likely K-8 feeder program)</li>
+            <li><strong>Interest Form:</strong> <a href="https://forms.gle/8qRgNnG8Nc2Esqp89" class="text-blue-600 hover:underline">Sign up here</a></li>
+            <li><strong>Website:</strong> <a href="https://www.midviewathletics.com/youth-sports/youth-sports-programs" class="text-blue-600 hover:underline">midviewathletics.com/youth-sports</a></li>
+            <li><strong>Contact:</strong> dmay@midviewk12.org, Shawn Bristow (sbristow@midviewk12.org)</li>
+            <li><strong>Location:</strong> Midview schools (38199 Capel Rd, Grafton)</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Oberlin Parks & Recreation Youth Basketball</h3>
+          <p class="text-sm text-gray-600 mb-3">Serving: Oberlin</p>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Ages:</strong> K-2nd grade (beginner/recreational)</li>
+            <li><strong>Cost:</strong> $30 resident, $40 non-resident</li>
+            <li><strong>Website:</strong> <a href="https://cityofoberlin.com/city-government/departments/recreation/youth-recreation/youth-basketball/" class="text-blue-600 hover:underline">City of Oberlin Recreation</a></li>
+            <li><strong>Location:</strong> Oberlin Enrichment & Activity Center (OEAC), Rec Complex</li>
+            <li><strong>Registration:</strong> Check website for seasonal registration dates</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Activities -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-blue-600 pb-2">
+        Other Sports & Activities
+      </h2>
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Swimming</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li>
+              <strong>Splash Zone (Lorain County Metro Parks)</strong><br>
+              <span class="text-sm">8-lane indoor competition pool, swim teams, lessons, open swim</span><br>
+              <span class="text-sm text-gray-600">Location: Oberlin | Phone: 440-774-5059</span>
+            </li>
+            <li>
+              <strong>French Creek Family YMCA</strong><br>
+              <span class="text-sm">Indoor pool, youth aquatics, childcare</span><br>
+              <span class="text-sm text-gray-600">Location: Avon | Phone: 440-934-9622</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Wrestling</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>
+              <strong>Keystone Youth Wrestling</strong><br>
+              <span class="text-sm text-gray-600">580 Opportunity Way, LaGrange | Youth programs and tournaments</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Martial Arts</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li>
+              <strong>Neutral Ground Grafton Martial Arts</strong><br>
+              <span class="text-sm">Juniors program for kids</span><br>
+              <span class="text-sm text-gray-600">
+                <a href="https://graftonmartialarts.com/program/juniors-martial-arts/" class="text-blue-600 hover:underline">graftonmartialarts.com</a>
+              </span>
+            </li>
+            <li>
+              <strong>Vanyo Martial Arts</strong><br>
+              <span class="text-sm text-gray-600">Kids classes available</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Dance</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>
+              <strong>MovementWorks Dance & Fitness</strong><br>
+              <span class="text-sm">Hip-hop, jazz, ballet, acro, tap, tumbling, cheer, yoga, preschool classes</span><br>
+              <span class="text-sm text-gray-600">Ages 6 months+ | Oberlin</span><br>
+              <span class="text-sm text-gray-600">
+                <a href="https://www.movementworksdance.com/" class="text-blue-600 hover:underline">movementworksdance.com</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Tennis & Golf</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li>
+              <strong>Tennis:</strong> Grafton Parks & Recreation offers seasonal youth tennis camps
+            </li>
+            <li>
+              <strong>Golf Courses:</strong> Forest Hills GC, Kopf Family GC (Cherry Ridge), Pheasant Run GC, Oberlin GC
+              <br><span class="text-sm text-gray-600">Check individual courses for junior programs</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Tips -->
+    <section class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">Registration Tips</h2>
+      <ul class="space-y-2 text-gray-700 list-disc list-inside">
+        <li><strong>Spring sports</strong> (baseball, soccer) typically register January-March</li>
+        <li><strong>Fall sports</strong> (football, soccer) typically register May-July</li>
+        <li><strong>Winter sports</strong> (basketball, wrestling) typically register September-November</li>
+        <li>Check organization websites or Facebook pages for current registration dates</li>
+        <li>Many programs offer multi-child discounts</li>
+        <li>Scholarships may be available - contact the organization directly</li>
+      </ul>
+    </section>
   </div>
-
-  <section class="quick-nav">
-    <div class="container">
-      <div class="nav-links">
-        <a href="#soccer">Soccer</a>
-        <a href="#baseball">Baseball & Softball</a>
-        <a href="#football">Football</a>
-        <a href="#basketball">Basketball</a>
-        <a href="#other">Other Sports</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="sports-section" id="soccer">
-    <div class="container">
-      <h2>⚽ Soccer</h2>
-      <p class="section-intro">All three organizations play in the <strong>Lorain County Soccer League (LCSL)</strong> together. Registration typically opens in fall (for spring) and spring (for fall).</p>
-
-      <div class="programs-grid">
-        <div class="program-card">
-          <h3>Midview Soccer League</h3>
-          <p class="serves">Serves: Grafton, Eaton Twp, Carlisle Twp (Midview area)</p>
-          <div class="program-details">
-            <p><strong>Ages:</strong> U3-U6 (Bumblebee), U7-U15 (Rec)</p>
-            <p><strong>Website:</strong> <a href="https://www.midviewsoccer.com" target="_blank" rel="noopener">midviewsoccer.com</a></p>
-            <p><strong>President:</strong> Scott Ulrich — <a href="tel:440-714-1407">440-714-1407</a></p>
-            <p><strong>Email:</strong> <a href="mailto:mslpresident@yahoo.com">mslpresident@yahoo.com</a></p>
-            <p><strong>Registrar:</strong> <a href="mailto:midviewsoccerregistrar@gmail.com">midviewsoccerregistrar@gmail.com</a></p>
-          </div>
-          <div class="fields">
-            <strong>Fields:</strong> Midview Complex (16218 Chamberlain Rd), West Grass (13080 Durkee Rd), Ross/Adelsberg Stadium
-          </div>
-        </div>
-
-        <div class="program-card">
-          <h3>LaGrange Youth Soccer (LYSA)</h3>
-          <p class="serves">Serves: LaGrange, LaGrange Twp</p>
-          <div class="program-details">
-            <p><strong>Ages:</strong> U4-U6 (In-house), U7-U15 (LCSL)</p>
-            <p><strong>Cost:</strong> $80 (U7-U15), $50 (in-house)</p>
-            <p><strong>Website:</strong> <a href="https://www.lagrangeyouthsoccer.com" target="_blank" rel="noopener">lagrangeyouthsoccer.com</a></p>
-            <p><strong>President:</strong> Christine Schwartz</p>
-            <p><strong>Email:</strong> <a href="mailto:lysaboard@gmail.com">lysaboard@gmail.com</a></p>
-          </div>
-          <div class="fields">
-            <strong>Fields:</strong> LaGrange Community Park
-          </div>
-        </div>
-
-        <div class="program-card">
-          <h3>Oberlin Youth Soccer (OYSA)</h3>
-          <p class="serves">Serves: Oberlin area</p>
-          <div class="program-details">
-            <p><strong>Ages:</strong> U7-U15 (ages 6-14)</p>
-            <p><strong>Cost:</strong> U7-U8: $90/yr ($55 seasonal), U9-U15: $110/yr ($65 seasonal) + $45 uniform</p>
-            <p><strong>Website:</strong> <a href="https://www.oberlinsoccer.org" target="_blank" rel="noopener">oberlinsoccer.org</a></p>
-            <p><strong>Email:</strong> <a href="mailto:oberlinyouthsoccer@gmail.com">oberlinyouthsoccer@gmail.com</a></p>
-          </div>
-          <div class="fields">
-            <strong>Fields:</strong> Oberlin Pavilion fields
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sports-section alt" id="baseball">
-    <div class="container">
-      <h2>⚾ Baseball & Softball</h2>
-      <p class="section-intro">Local leagues use the "Hot Stove" format common in Ohio. Registration typically Jan-Mar for spring season.</p>
-
-      <div class="programs-grid">
-        <div class="program-card">
-          <h3>Grafton Midview Hot Stove</h3>
-          <p class="serves">Serves: Grafton, Eaton Twp, Carlisle Twp</p>
-          <div class="program-details">
-            <p><strong>Sports:</strong> Boys baseball, girls softball</p>
-            <p><strong>Ages:</strong> 5-18</p>
-            <p><strong>Website:</strong> <a href="https://www.graftonhotstove.org" target="_blank" rel="noopener">graftonhotstove.org</a></p>
-            <p><strong>Email:</strong> <a href="mailto:Graftonmidviewhotstove@gmail.com">Graftonmidviewhotstove@gmail.com</a></p>
-          </div>
-        </div>
-
-        <div class="program-card">
-          <h3>Oberlin Baseball Softball Federation</h3>
-          <p class="serves">Serves: Oberlin area</p>
-          <div class="program-details">
-            <p><strong>Sports:</strong> Baseball and softball</p>
-            <p><strong>Ages:</strong> 5-18</p>
-            <p><strong>Website:</strong> <a href="https://sites.google.com/view/obsf" target="_blank" rel="noopener">OBSF Website</a></p>
-            <p><strong>Email:</strong> <a href="mailto:oberlinbaseballsoftball@gmail.com">oberlinbaseballsoftball@gmail.com</a></p>
-            <p><strong>Baseball Contact:</strong> Jodi Cool — <a href="tel:440-864-1817">440-864-1817</a></p>
-            <p><strong>Softball Contact:</strong> Anthony Gallam — <a href="tel:440-452-5011">440-452-5011</a></p>
-          </div>
-          <div class="fields">
-            <strong>Fields:</strong> Oberlin Recreation Complex (5 lighted fields)
-          </div>
-        </div>
-
-        <div class="program-card">
-          <h3>Lorain County Hot Stove League</h3>
-          <p class="serves">Competitive/travel league serving all areas</p>
-          <div class="program-details">
-            <p><strong>Type:</strong> Competitive play</p>
-            <p><strong>Ages:</strong> Multiple divisions (e.g., 13-14U Class F)</p>
-            <p><strong>Website:</strong> <a href="https://www.loraincountyhotstove.com" target="_blank" rel="noopener">loraincountyhotstove.com</a></p>
-            <p><strong>Note:</strong> Teams from Keystone, Midview, and other areas participate</p>
-          </div>
-        </div>
-
-        <div class="program-card">
-          <h3>Gremlins Baseball & Softball</h3>
-          <p class="serves">Grafton area</p>
-          <div class="program-details">
-            <p><strong>Focus:</strong> Skills development, games, fun</p>
-            <p><strong>Website:</strong> <a href="https://www.gremlinsball.com" target="_blank" rel="noopener">gremlinsball.com</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sports-section" id="football">
-    <div class="container">
-      <h2>🏈 Football & Cheerleading</h2>
-      <p class="section-intro">Registration typically May-July for fall season.</p>
-
-      <div class="programs-grid">
-        <div class="program-card">
-          <h3>JR LC8 Football League</h3>
-          <p class="serves">Lorain County youth football - serves Midview, Keystone, Oberlin areas</p>
-          <div class="program-details">
-            <p><strong>Divisions:</strong> Flag, Padded Flag, Rookie Tackle, Full Contact Varsity</p>
-            <p><strong>Ages:</strong> Youth (age/weight based divisions)</p>
-            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/JrLC8/" target="_blank" rel="noopener">JR LC8 Football</a></p>
-            <p><strong>Note:</strong> Contact via Facebook for registration info and costs (~$100-300 typical)</p>
-          </div>
-          <div class="fields">
-            <strong>Fields:</strong> School-based (Midview, Keystone, etc.)
-          </div>
-        </div>
-
-        <div class="program-card">
-          <h3>Flag Football Fanatics</h3>
-          <p class="serves">Lorain area (flag football option)</p>
-          <div class="program-details">
-            <p><strong>Ages:</strong> 4-14 (PreK/K, 1st-2nd, 3rd-4th divisions)</p>
-            <p><strong>Website:</strong> <a href="https://playfanatics.com/programs/west-cleveland-lorain-spring/" target="_blank" rel="noopener">playfanatics.com</a></p>
-          </div>
-        </div>
-      </div>
-      <p class="note">Cheerleading typically paired with football programs. Check JR LC8 Facebook for cheer squad info.</p>
-    </div>
-  </section>
-
-  <section class="sports-section alt" id="basketball">
-    <div class="container">
-      <h2>🏀 Basketball</h2>
-      <p class="section-intro">Registration typically in fall (Oct-Nov) for winter season.</p>
-
-      <div class="programs-grid">
-        <div class="program-card">
-          <h3>Keystone Youth Sports Basketball</h3>
-          <p class="serves">Serves: LaGrange, Carlisle Twp (Keystone area)</p>
-          <div class="program-details">
-            <p><strong>Ages:</strong> K-6th grade</p>
-            <p><strong>Cost:</strong> K/1st: $15, 2nd/3rd: $30</p>
-            <p><strong>Website:</strong> <a href="https://keystoneyouthsports.com/basketball/" target="_blank" rel="noopener">keystoneyouthsports.com</a></p>
-            <p><strong>Email:</strong> <a href="mailto:keystoneyouthbasketball@gmail.com">keystoneyouthbasketball@gmail.com</a></p>
-            <p><strong>Contact:</strong> Jeff Holzhauer — <a href="mailto:jeffrey.holzhauer@keystoneschools.org">jeffrey.holzhauer@keystoneschools.org</a></p>
-          </div>
-          <div class="fields">
-            <strong>Gyms:</strong> Keystone Middle School, Saturdays
-          </div>
-        </div>
-
-        <div class="program-card">
-          <h3>Midview Youth Basketball</h3>
-          <p class="serves">Serves: Grafton, Eaton Twp (Midview area)</p>
-          <div class="program-details">
-            <p><strong>Ages:</strong> Youth (K-8 feeder programs)</p>
-            <p><strong>Registration:</strong> <a href="https://forms.gle/8qRgNnG8Nc2Esqp89" target="_blank" rel="noopener">Interest Form</a></p>
-            <p><strong>Website:</strong> <a href="https://www.midviewathletics.com/youth-sports/youth-sports-programs" target="_blank" rel="noopener">Midview Athletics</a></p>
-            <p><strong>Contact:</strong> <a href="mailto:dmay@midviewk12.org">dmay@midviewk12.org</a></p>
-          </div>
-        </div>
-
-        <div class="program-card">
-          <h3>Oberlin Parks & Rec Youth Basketball</h3>
-          <p class="serves">Serves: Oberlin area</p>
-          <div class="program-details">
-            <p><strong>Ages:</strong> K-2nd grade (beginner/rec)</p>
-            <p><strong>Cost:</strong> $30 resident, $40 non-resident</p>
-            <p><strong>Website:</strong> <a href="https://cityofoberlin.com/city-government/departments/recreation/youth-recreation/youth-basketball/" target="_blank" rel="noopener">Oberlin Recreation</a></p>
-          </div>
-          <div class="fields">
-            <strong>Location:</strong> Oberlin Enrichment & Activity Center (OEAC)
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sports-section" id="other">
-    <div class="container">
-      <h2>🏊 Other Sports & Activities</h2>
-
-      <div class="programs-grid">
-        <div class="program-card">
-          <h3>Splash Zone Swimming</h3>
-          <p class="serves">Lorain County Metro Parks</p>
-          <div class="program-details">
-            <p><strong>Features:</strong> 8-lane indoor competition pool, swim teams, lessons, open swim</p>
-            <p><strong>Phone:</strong> <a href="tel:440-774-5059">440-774-5059</a></p>
-            <p><strong>Admin:</strong> 12882 Diagonal Rd, LaGrange — <a href="tel:440-458-5121">440-458-5121</a></p>
-            <p><em>Oberlin resident discount available</em></p>
-          </div>
-        </div>
-
-        <div class="program-card">
-          <h3>Keystone Youth Wrestling</h3>
-          <p class="serves">Keystone Schools, LaGrange</p>
-          <div class="program-details">
-            <p><strong>Location:</strong> 580 Opportunity Way, LaGrange</p>
-            <p><strong>Ages:</strong> Elementary and up</p>
-            <p><em>Check school website for season info</em></p>
-          </div>
-        </div>
-
-        <div class="program-card">
-          <h3>Neutral Ground Martial Arts</h3>
-          <p class="serves">Grafton</p>
-          <div class="program-details">
-            <p><strong>Programs:</strong> Juniors martial arts for kids</p>
-            <p><strong>Website:</strong> <a href="https://graftonmartialarts.com/program/juniors-martial-arts/" target="_blank" rel="noopener">graftonmartialarts.com</a></p>
-          </div>
-        </div>
-
-        <div class="program-card">
-          <h3>MovementWorks Dance & Fitness</h3>
-          <p class="serves">Oberlin (serves Grafton/LaGrange)</p>
-          <div class="program-details">
-            <p><strong>Classes:</strong> Hip-hop, jazz, ballet, acro, tap, tumbling, cheer, yoga</p>
-            <p><strong>Ages:</strong> 6 months and up</p>
-            <p><strong>Website:</strong> <a href="https://www.movementworksdance.com" target="_blank" rel="noopener">movementworksdance.com</a></p>
-          </div>
-        </div>
-
-        <div class="program-card">
-          <h3>Keystone Youth Sports</h3>
-          <p class="serves">LaGrange - multi-sport organization</p>
-          <div class="program-details">
-            <p><strong>Sports:</strong> Basketball, soccer, baseball/softball (Hot Stove), football/cheer</p>
-            <p><strong>Website:</strong> <a href="https://keystoneyouthsports.com" target="_blank" rel="noopener">keystoneyouthsports.com</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="nearby-note">
-        <h3>Nearby Facilities</h3>
-        <p><strong>French Creek Family YMCA</strong> (Avon) — Indoor pool, youth programs, Ninjazone — <a href="tel:440-934-9622">440-934-9622</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <div class="container">
-      <div class="card">
-        <h2>Know a Program We're Missing?</h2>
-        <p>Help us keep this directory complete and accurate.</p>
-        <a href="mailto:neil@neilofneils.com" class="btn">Submit a Program</a>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    .page-header {
-      background: var(--color-bg-surface);
-      padding: var(--space-3xl) 0 var(--space-2xl);
-      border-bottom: 1px solid var(--color-border-light);
-    }
-
-    .lead {
-      font-size: var(--font-size-xl);
-      color: var(--color-text-secondary);
-      max-width: 700px;
-    }
-
-    .quick-nav {
-      background: var(--color-bg);
-      padding: var(--space-lg) 0;
-      border-bottom: 1px solid var(--color-border-light);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-md);
-      justify-content: center;
-    }
-
-    .nav-links a {
-      padding: var(--space-sm) var(--space-md);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      color: var(--color-text-secondary);
-      font-size: var(--font-size-sm);
-      transition: all 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      background: var(--color-bg-surface);
-      border-color: var(--color-text);
-      color: var(--color-text);
-    }
-
-    .sports-section {
-      padding: var(--space-2xl) 0;
-    }
-
-    .sports-section.alt {
-      background: var(--color-bg-surface);
-    }
-
-    .sports-section h2 {
-      margin-bottom: var(--space-sm);
-    }
-
-    .section-intro {
-      color: var(--color-text-secondary);
-      margin-bottom: var(--space-xl);
-      max-width: 700px;
-    }
-
-    .programs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--space-lg);
-    }
-
-    .program-card {
-      background: var(--color-bg);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-md);
-      padding: var(--space-lg);
-    }
-
-    .sports-section.alt .program-card {
-      background: white;
-    }
-
-    .program-card h3 {
-      margin-bottom: var(--space-xs);
-    }
-
-    .program-card .serves {
-      font-size: var(--font-size-sm);
-      color: var(--color-text-tertiary);
-      margin-bottom: var(--space-md);
-      padding-bottom: var(--space-sm);
-      border-bottom: 1px solid var(--color-border-light);
-    }
-
-    .program-details p {
-      font-size: var(--font-size-sm);
-      margin-bottom: var(--space-xs);
-    }
-
-    .fields {
-      margin-top: var(--space-md);
-      padding-top: var(--space-md);
-      border-top: 1px solid var(--color-border-light);
-      font-size: var(--font-size-sm);
-      color: var(--color-text-secondary);
-    }
-
-    .note {
-      margin-top: var(--space-lg);
-      font-size: var(--font-size-sm);
-      color: var(--color-text-tertiary);
-      font-style: italic;
-    }
-
-    .nearby-note {
-      margin-top: var(--space-2xl);
-      padding: var(--space-lg);
-      background: var(--color-bg-surface);
-      border-radius: var(--radius-md);
-    }
-
-    .nearby-note h3 {
-      margin-bottom: var(--space-sm);
-      font-size: var(--font-size-base);
-    }
-
-    .cta {
-      padding: var(--space-2xl) 0 var(--space-3xl);
-      background: var(--color-bg-surface);
-    }
-
-    .cta .card {
-      text-align: center;
-      max-width: 500px;
-      margin: 0 auto;
-      background: white;
-    }
-
-    @media (max-width: 600px) {
-      .nav-links {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .nav-links a {
-        text-align: center;
-      }
-
-      .programs-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </BaseLayout>
