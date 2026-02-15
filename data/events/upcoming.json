@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-02-15T17:40:00.000Z",
+  "events": [
+    {
+      "title": "Grafton Village Council Meeting",
+      "date": "2026-02-18",
+      "time": "19:00",
+      "location": "Grafton Village Hall",
+      "description": "Regular council meeting. Agenda: 2026 Budget Discussion",
+      "category": "government",
+      "community": "Grafton"
+    },
+    {
+      "title": "Oberlin Planning Commission",
+      "date": "2026-02-20",
+      "time": "18:30",
+      "location": "Oberlin City Hall",
+      "description": "Monthly planning commission meeting. Public welcome.",
+      "category": "government",
+      "community": "Oberlin"
+    },
+    {
+      "title": "Youth Baseball Registration Closes",
+      "date": "2026-03-01",
+      "time": null,
+      "location": "Online",
+      "description": "Last day to register for spring baseball season (ages 6-12)",
+      "category": "sports",
+      "community": "Grafton"
+    },
+    {
+      "title": "Carlisle Township Trustees Meeting",
+      "date": "2026-02-19",
+      "time": "19:00",
+      "location": "Carlisle Township Hall",
+      "description": "Regular trustees meeting",
+      "category": "government",
+      "community": "Carlisle Township"
+    },
+    {
+      "title": "Grafton Library Story Time",
+      "date": "2026-02-17",
+      "time": "10:00",
+      "location": "Grafton-Midview Public Library",
+      "description": "Weekly story time for ages 2-5",
+      "category": "community",
+      "community": "Grafton"
+    }
+  ]
+}

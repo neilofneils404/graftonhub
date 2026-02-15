@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-02-15T17:40:00.000Z",
+  "registrations": [
+    {
+      "sport": "Baseball",
+      "ages": "6-12",
+      "community": "Grafton",
+      "organization": "Grafton Youth Baseball League",
+      "deadline": "2026-03-01",
+      "status": "open",
+      "cost": "$85",
+      "link": "/sports#baseball"
+    },
+    {
+      "sport": "Soccer",
+      "ages": "4-18",
+      "community": "Grafton",
+      "organization": "Grafton Youth Soccer",
+      "deadline": "2026-06-01",
+      "status": "upcoming",
+      "cost": "$90-120",
+      "link": "/sports#soccer"
+    },
+    {
+      "sport": "Softball",
+      "ages": "8-14",
+      "community": "Oberlin",
+      "organization": "Oberlin Girls Softball League",
+      "deadline": "2026-03-15",
+      "status": "upcoming",
+      "cost": "$75",
+      "link": "/sports#softball"
+    },
+    {
+      "sport": "Basketball",
+      "ages": "7-14",
+      "community": "Midview",
+      "organization": "Midview Youth Basketball",
+      "deadline": "2026-11-01",
+      "status": "future",
+      "cost": "TBD",
+      "link": "/sports#basketball"
+    }
+  ]
+}

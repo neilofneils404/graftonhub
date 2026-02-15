@@ -4,399 +4,475 @@ import '../styles/global.css';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 
-// Load real weather data from NWS API
+// Load weather data
 let weatherData;
 try {
   const weatherPath = join(process.cwd(), 'data/weather/current.json');
   const weatherJson = await readFile(weatherPath, 'utf-8');
   weatherData = JSON.parse(weatherJson);
 } catch (error) {
-  // Fallback if weather data unavailable
   weatherData = {
     current: { temp: '--', conditions: 'Data unavailable', wind: '--' },
     forecast: []
   };
 }
 
+// Load news data
+let newsData;
+try {
+  const newsPath = join(process.cwd(), 'data/news/latest.json');
+  const newsJson = await readFile(newsPath, 'utf-8');
+  newsData = JSON.parse(newsJson);
+} catch (error) {
+  newsData = { articles: [] };
+}
+
+// Load events data
+let eventsData;
+try {
+  const eventsPath = join(process.cwd(), 'data/events/upcoming.json');
+  const eventsJson = await readFile(eventsPath, 'utf-8');
+  eventsData = JSON.parse(eventsJson);
+} catch (error) {
+  eventsData = { events: [] };
+}
+
+// Load active registrations
+let registrationsData;
+try {
+  const regsPath = join(process.cwd(), 'data/sports/active-registrations.json');
+  const regsJson = await readFile(regsPath, 'utf-8');
+  registrationsData = JSON.parse(regsJson);
+} catch (error) {
+  registrationsData = { registrations: [] };
+}
+
+// Format date helpers
+function formatDate(dateStr: string) {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('en-US', { 
+    weekday: 'short', 
+    month: 'short', 
+    day: 'numeric' 
+  });
+}
+
+function formatTime(timeStr: string | null) {
+  if (!timeStr) return '';
+  const [hours, minutes] = timeStr.split(':');
+  const hour = parseInt(hours);
+  const ampm = hour >= 12 ? 'PM' : 'AM';
+  const displayHour = hour > 12 ? hour - 12 : hour === 0 ? 12 : hour;
+  return `${displayHour}:${minutes} ${ampm}`;
+}
+
+function timeAgo(dateStr: string) {
+  const date = new Date(dateStr);
+  const now = new Date();
+  const diffMs = now.getTime() - date.getTime();
+  const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+  
+  if (diffHours < 1) return 'Just now';
+  if (diffHours < 24) return `${diffHours}h ago`;
+  if (diffDays === 1) return 'Yesterday';
+  if (diffDays < 7) return `${diffDays}d ago`;
+  return formatDate(dateStr);
+}
+
+// Filter upcoming events (next 2 weeks)
+const upcomingEvents = eventsData.events
+  .filter(e => new Date(e.date) >= new Date())
+  .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+  .slice(0, 5);
+
+// Filter active registrations
+const activeRegs = registrationsData.registrations
+  .filter(r => r.status === 'open')
+  .slice(0, 3);
+
 const currentTime = new Date().toLocaleString('en-US', { 
   timeZone: 'America/New_York',
   weekday: 'long',
   month: 'long', 
   day: 'numeric',
-  hour: 'numeric',
-  minute: '2-digit'
+  year: 'numeric'
 });
 ---
 
-<BaseLayout title="Home">
-  <div class="search-container">
-    <div class="search-wrapper">
-      <span class="search-icon">🔍</span>
-      <input 
-        type="search" 
-        class="search-input" 
-        placeholder="What are you looking for?"
-        aria-label="Search GraftonHub"
-      />
+<BaseLayout title="GraftonHub - Local News, Events & Information">
+  <!-- Compact Weather Bar -->
+  <div class="weather-bar">
+    <div class="container">
+      <div class="weather-compact">
+        <span class="weather-temp">{weatherData.current.temp}°F</span>
+        <span class="weather-condition">{weatherData.current.conditions}</span>
+        <span class="weather-location">Lorain County</span>
+      </div>
+      <div class="current-date">{currentTime}</div>
     </div>
   </div>
 
-  <section class="hero">
+  <!-- Main Content Grid -->
+  <section class="content-grid">
     <div class="container">
-      <div class="hero-content">
-        <div class="welcome">
-          <h1>Welcome to GraftonHub</h1>
-          <p class="subtitle">Your local community hub for Grafton, Oberlin, LaGrange, Carlisle Township, and Eaton Township</p>
-          <p class="current-time">{currentTime}</p>
+      <div class="grid">
+        <!-- Left Column: News -->
+        <div class="news-section">
+          <h2 class="section-title">Latest Local News</h2>
+          {newsData.articles.length === 0 ? (
+            <p class="empty-state">Fetching latest news...</p>
+          ) : (
+            <ul class="news-list">
+              {newsData.articles.slice(0, 8).map(article => (
+                <li class="news-item">
+                  <a href={article.link} target="_blank" rel="noopener noreferrer">
+                    <h3 class="news-title">{article.title}</h3>
+                  </a>
+                  <div class="news-meta">
+                    <span class="news-source">{article.source}</span>
+                    <span class="news-time">{timeAgo(article.pubDate)}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
-        
-        <div class="weather-card card">
-          <div class="weather-header">
-            <h3>Current Weather</h3>
-            <span class="weather-location">Lorain County, OH</span>
-          </div>
-          <div class="weather-current">
-            <div class="temp-display">
-              <span class="temperature">{weatherData.current.temp}°</span>
-              <span class="temp-unit">F</span>
-            </div>
-            <div class="conditions">
-              <p class="weather-conditions">{weatherData.current.conditions}</p>
-              <p class="weather-wind">{weatherData.current.wind}</p>
-            </div>
-          </div>
-          <div class="weather-forecast">
-            {weatherData.forecast.map(day => (
-              <div class="forecast-item">
-                <span class="forecast-day">{day.day}</span>
-                <span class="forecast-temp">{day.high}°/{day.low}°</span>
-                <span class="forecast-conditions">{day.conditions}</span>
-              </div>
-            ))}
-          </div>
+
+        <!-- Middle Column: Events & Meetings -->
+        <div class="events-section">
+          <h2 class="section-title">This Week</h2>
+          {upcomingEvents.length === 0 ? (
+            <p class="empty-state">No upcoming events scheduled</p>
+          ) : (
+            <ul class="events-list">
+              {upcomingEvents.map(event => (
+                <li class="event-item">
+                  <div class="event-date">
+                    {formatDate(event.date)}
+                    {event.time && ` • ${formatTime(event.time)}`}
+                  </div>
+                  <h3 class="event-title">{event.title}</h3>
+                  <div class="event-details">
+                    <span class="event-location">{event.location}</span>
+                    {event.community && (
+                      <span class="event-community">{event.community}</span>
+                    )}
+                  </div>
+                  {event.description && (
+                    <p class="event-description">{event.description}</p>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+          <a href="/events" class="view-all-link">View all events →</a>
+        </div>
+
+        <!-- Right Column: Active Registrations -->
+        <div class="registrations-section">
+          <h2 class="section-title">Active Registrations</h2>
+          {activeRegs.length === 0 ? (
+            <p class="empty-state">No active registrations</p>
+          ) : (
+            <ul class="registrations-list">
+              {activeRegs.map(reg => (
+                <li class="registration-item">
+                  <h3 class="reg-sport">{reg.sport}</h3>
+                  <div class="reg-details">
+                    <div>Ages {reg.ages} • {reg.community}</div>
+                    <div class="reg-deadline">
+                      Deadline: {formatDate(reg.deadline)}
+                    </div>
+                    <div class="reg-cost">{reg.cost}</div>
+                  </div>
+                  <a href={reg.link} class="reg-link">Details & Register →</a>
+                </li>
+              ))}
+            </ul>
+          )}
+          <a href="/sports" class="view-all-link">View all programs →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="featured-section">
+  <!-- Quick Links Footer Section -->
+  <section class="quick-access">
     <div class="container">
-      <div class="card card-featured">
-        <span class="badge badge-new">📢 Featured</span>
-        <h3>Youth Baseball Registration Open</h3>
-        <p>Sign up now for spring baseball season! Ages 6-12, registration deadline March 1st.</p>
-        <a href="/sports/baseball-registration" class="btn btn-primary">Learn More & Register</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="categories">
-    <div class="container">
-      <h2>What Can We Help You Find?</h2>
-      
-      <div class="category-grid">
-        <a href="/sports" class="category-card card">
-          <span class="category-icon">⚽</span>
-          <h3>Sports & Recreation</h3>
-          <p>Youth sports, adult leagues, recreation programs, and registration info</p>
-        </a>
-
-        <a href="/services" class="category-card card">
-          <span class="category-icon">🏛️</span>
-          <h3>Services & Utilities</h3>
-          <p>Set up utilities, find government services, and get permits</p>
-        </a>
-
-        <a href="/schools" class="category-card card">
-          <span class="category-icon">🎒</span>
-          <h3>Schools</h3>
-          <p>Calendars, sports schedules, district info, and contact details</p>
-        </a>
-
-        <a href="/news" class="category-card card">
-          <span class="category-icon">📰</span>
-          <h3>Local News</h3>
-          <p>Stay informed with the latest community news and updates</p>
-        </a>
-
-        <a href="/events" class="category-card card">
-          <span class="category-icon">📅</span>
-          <h3>Events</h3>
-          <p>Community events, meetings, festivals, and activities</p>
-        </a>
-
-        <a href="/government" class="category-card card">
-          <span class="category-icon">🏛️</span>
-          <h3>Local Government</h3>
-          <p>Meeting schedules, agendas, township services, and contacts</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="quick-links">
-    <div class="container">
-      <h2>Quick Access</h2>
-      <div class="quick-links-grid">
-        <a href="/new-residents" class="quick-link">
-          <span>👋</span>
-          <span>New to the Area?</span>
-        </a>
-        <a href="/utilities" class="quick-link">
-          <span>💡</span>
-          <span>Utility Setup</span>
-        </a>
-        <a href="/schools/calendars" class="quick-link">
-          <span>📚</span>
-          <span>School Calendars</span>
-        </a>
-        <a href="/sports/registration" class="quick-link">
-          <span>🏃</span>
-          <span>Sports Registration</span>
-        </a>
+      <h2 class="section-title">Quick Access</h2>
+      <div class="quick-links">
+        <a href="/new-residents" class="quick-link">New to the Area?</a>
+        <a href="/new-residents#utilities" class="quick-link">Utility Setup</a>
+        <a href="/schools" class="quick-link">School Calendars</a>
+        <a href="/government" class="quick-link">Meeting Agendas</a>
+        <a href="/services" class="quick-link">Local Services</a>
+        <a href="/about" class="quick-link">About This Site</a>
       </div>
     </div>
   </section>
 
   <style>
-    .hero {
-      padding: var(--space-2xl) 0;
-    }
-
-    .hero-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-2xl);
-      align-items: start;
-    }
-
-    .welcome h1 {
-      font-size: var(--font-size-3xl);
-      color: var(--color-primary);
-      margin-bottom: var(--space-md);
-    }
-
-    .subtitle {
-      font-size: var(--font-size-lg);
-      color: var(--color-text-secondary);
-      margin-bottom: var(--space-lg);
-      line-height: var(--line-height-relaxed);
-    }
-
-    .current-time {
-      font-size: var(--font-size-sm);
-      color: var(--color-text-tertiary);
-    }
-
-    .weather-card {
-      background: var(--color-bg-elevated);
-    }
-
-    .weather-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: var(--space-lg);
-    }
-
-    .weather-header h3 {
-      margin: 0;
-      color: var(--color-text-primary);
-    }
-
-    .weather-location {
-      font-size: var(--font-size-sm);
-      color: var(--color-text-tertiary);
-    }
-
-    .weather-current {
-      display: flex;
-      gap: var(--space-xl);
-      align-items: center;
-      padding: var(--space-lg) 0;
-      border-bottom: 1px solid var(--color-border-light);
-    }
-
-    .temp-display {
-      display: flex;
-      align-items: flex-start;
-    }
-
-    .temperature {
-      font-size: 4rem;
-      font-weight: var(--font-weight-bold);
-      color: var(--color-primary);
-      line-height: 1;
-    }
-
-    .temp-unit {
-      font-size: var(--font-size-2xl);
-      color: var(--color-text-tertiary);
-      margin-top: 0.5rem;
-    }
-
-    .conditions {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-xs);
-    }
-
-    .weather-conditions {
-      font-size: var(--font-size-lg);
-      font-weight: var(--font-weight-medium);
-      color: var(--color-text-primary);
-    }
-
-    .weather-wind {
-      font-size: var(--font-size-sm);
-      color: var(--color-text-secondary);
-    }
-
-    .weather-forecast {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-sm);
-      margin-top: var(--space-lg);
-    }
-
-    .forecast-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    /* Weather Bar */
+    .weather-bar {
+      background: var(--color-bg-alt);
+      border-bottom: 1px solid var(--color-border);
       padding: var(--space-sm) 0;
       font-size: var(--font-size-sm);
     }
 
-    .forecast-day {
-      font-weight: var(--font-weight-medium);
-      color: var(--color-text-primary);
-      flex: 1;
+    .weather-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .forecast-temp {
+    .weather-compact {
+      display: flex;
+      gap: var(--space-md);
+      align-items: center;
+    }
+
+    .weather-temp {
       font-weight: var(--font-weight-semibold);
-      color: var(--color-primary);
-      flex: 1;
-      text-align: center;
+      font-size: var(--font-size-base);
     }
 
-    .forecast-conditions {
-      color: var(--color-text-secondary);
-      flex: 2;
-      text-align: right;
-    }
-
-    .featured-section {
-      padding: var(--space-2xl) 0 0;
-    }
-
-    .featured-section h3 {
-      margin-top: var(--space-md);
-      margin-bottom: var(--space-sm);
-    }
-
-    .featured-section p {
-      margin-bottom: var(--space-lg);
+    .weather-condition {
       color: var(--color-text-secondary);
     }
 
-    .categories {
-      padding: var(--space-3xl) 0;
+    .weather-location {
+      color: var(--color-text-tertiary);
+      font-size: var(--font-size-xs);
     }
 
-    .categories h2 {
-      text-align: center;
-      margin-bottom: var(--space-2xl);
-      color: var(--color-text-primary);
+    .current-date {
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-xs);
     }
 
-    .category-grid {
+    /* Main Content Grid */
+    .content-grid {
+      padding: var(--space-2xl) 0;
+    }
+
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--space-xl);
+      grid-template-columns: 2fr 1.5fr 1fr;
+      gap: var(--space-2xl);
     }
 
-    .category-card {
-      text-decoration: none;
-      color: inherit;
-      text-align: center;
-      padding: var(--space-xl);
-      transition: all var(--transition-base);
+    .section-title {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-sm);
+      border-bottom: 2px solid var(--color-border);
     }
 
-    .category-card:hover {
-      border-color: var(--color-primary);
-      text-decoration: none;
+    /* News Section */
+    .news-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
-    .category-icon {
-      font-size: 3rem;
-      display: block;
+    .news-item {
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-title {
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-semibold);
+      line-height: var(--line-height-normal);
+      margin-bottom: var(--space-xs);
+    }
+
+    .news-title:hover {
+      color: var(--color-link-hover);
+    }
+
+    .news-meta {
+      display: flex;
+      gap: var(--space-md);
+      font-size: var(--font-size-xs);
+      color: var(--color-text-tertiary);
+    }
+
+    .news-source {
+      font-weight: var(--font-weight-medium);
+    }
+
+    /* Events Section */
+    .events-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .event-item {
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .event-item:last-child {
+      border-bottom: none;
+    }
+
+    .event-date {
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--space-xs);
+    }
+
+    .event-title {
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--space-xs);
+    }
+
+    .event-details {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .event-community {
+      font-size: var(--font-size-xs);
+      color: var(--color-text-tertiary);
+      margin-left: var(--space-sm);
+    }
+
+    .event-description {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-normal);
+      margin: 0;
+    }
+
+    /* Registrations Section */
+    .registrations-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .registration-item {
+      padding: var(--space-md);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius-md);
       margin-bottom: var(--space-md);
     }
 
-    .category-card h3 {
-      color: var(--color-primary);
+    .reg-sport {
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-bold);
       margin-bottom: var(--space-sm);
     }
 
-    .category-card p {
-      color: var(--color-text-secondary);
+    .reg-details {
       font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .reg-details > div {
+      margin: var(--space-xs) 0;
+    }
+
+    .reg-deadline {
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text);
+    }
+
+    .reg-link {
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-medium);
+    }
+
+    .view-all-link {
+      display: inline-block;
+      margin-top: var(--space-md);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-medium);
+    }
+
+    /* Quick Access */
+    .quick-access {
+      background: var(--color-bg-alt);
+      padding: var(--space-2xl) 0;
+      margin-top: var(--space-3xl);
     }
 
     .quick-links {
-      padding: var(--space-2xl) 0 var(--space-3xl);
-      background: var(--color-bg-surface);
-    }
-
-    .quick-links h2 {
-      text-align: center;
-      margin-bottom: var(--space-xl);
-    }
-
-    .quick-links-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: var(--space-md);
     }
 
     .quick-link {
-      display: flex;
-      align-items: center;
-      gap: var(--space-md);
-      padding: var(--space-lg);
-      background: var(--color-bg-elevated);
-      border: 1px solid var(--color-border-light);
+      padding: var(--space-sm) var(--space-md);
+      border: 1px solid var(--color-border);
       border-radius: var(--border-radius-md);
-      text-decoration: none;
-      color: var(--color-text-primary);
-      font-weight: var(--font-weight-medium);
-      transition: all var(--transition-base);
+      background: white;
+      font-size: var(--font-size-sm);
+      transition: all 0.2s ease;
     }
 
     .quick-link:hover {
-      border-color: var(--color-primary);
-      background: var(--color-bg-elevated);
-      box-shadow: var(--shadow-md);
+      border-color: var(--color-text);
       text-decoration: none;
     }
 
-    .quick-link span:first-child {
-      font-size: 1.5rem;
+    .empty-state {
+      color: var(--color-text-tertiary);
+      font-style: italic;
+      padding: var(--space-lg) 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .registrations-section {
+        grid-column: 1 / -1;
+      }
+
+      .registrations-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--space-md);
+      }
     }
 
     @media (max-width: 768px) {
-      .hero-content {
+      .grid {
         grid-template-columns: 1fr;
       }
 
-      .category-grid {
-        grid-template-columns: 1fr;
+      .weather-bar .container {
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: flex-start;
       }
 
-      .temperature {
-        font-size: 3rem;
+      .quick-links {
+        flex-direction: column;
+      }
+
+      .quick-link {
+        display: block;
       }
     }
   </style>

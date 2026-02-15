@@ -86,13 +86,13 @@ const { title, description = "Your local community hub for Grafton, Oberlin, LaG
 
   <style>
     .site-header {
-      background: var(--color-bg-elevated);
-      border-bottom: 1px solid var(--color-border-light);
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
       padding: var(--space-md) 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: var(--shadow-sm);
+      background: white;
     }
 
     .nav-content {
@@ -107,12 +107,12 @@ const { title, description = "Your local community hub for Grafton, Oberlin, LaG
       gap: var(--space-sm);
       font-size: var(--font-size-xl);
       font-weight: var(--font-weight-bold);
-      color: var(--color-primary);
+      color: var(--color-text);
       text-decoration: none;
     }
 
     .logo:hover {
-      color: var(--color-primary-dark);
+      color: var(--color-link);
       text-decoration: none;
     }
 
@@ -127,18 +127,18 @@ const { title, description = "Your local community hub for Grafton, Oberlin, LaG
 
     .nav-links a {
       color: var(--color-text-secondary);
-      font-weight: var(--font-weight-medium);
-      transition: color var(--transition-base);
+      font-weight: var(--font-weight-normal);
+      font-size: var(--font-size-sm);
     }
 
     .nav-links a:hover {
-      color: var(--color-primary);
-      text-decoration: none;
+      color: var(--color-text);
+      text-decoration: underline;
     }
 
     .site-footer {
-      background: var(--color-text-primary);
-      color: var(--color-bg-base);
+      background: var(--color-bg-alt);
+      border-top: 1px solid var(--color-border);
       padding: var(--space-2xl) 0 var(--space-lg);
       margin-top: var(--space-3xl);
     }
@@ -151,40 +151,42 @@ const { title, description = "Your local community hub for Grafton, Oberlin, LaG
     }
 
     .footer-section h4 {
-      color: var(--color-primary-light);
-      font-size: var(--font-size-lg);
+      color: var(--color-text);
+      font-size: var(--font-size-base);
       margin-bottom: var(--space-md);
+      font-weight: var(--font-weight-semibold);
     }
 
     .footer-section p {
-      color: var(--color-bg-surface);
+      color: var(--color-text-secondary);
       font-size: var(--font-size-sm);
       line-height: var(--line-height-relaxed);
     }
 
     .footer-section ul {
       list-style: none;
+      padding: 0;
     }
 
     .footer-section ul li {
-      color: var(--color-bg-surface);
+      color: var(--color-text-secondary);
       font-size: var(--font-size-sm);
       margin-bottom: var(--space-sm);
     }
 
     .footer-section a {
-      color: var(--color-bg-surface);
+      color: var(--color-link);
     }
 
     .footer-section a:hover {
-      color: var(--color-primary-light);
+      color: var(--color-link-hover);
     }
 
     .footer-bottom {
       text-align: center;
       padding-top: var(--space-lg);
-      border-top: 1px solid rgba(245, 239, 230, 0.2);
-      color: var(--color-bg-surface);
+      border-top: 1px solid var(--color-border);
+      color: var(--color-text-secondary);
       font-size: var(--font-size-sm);
     }
 
@@ -194,12 +196,12 @@ const { title, description = "Your local community hub for Grafton, Oberlin, LaG
     }
 
     .footer-links a {
-      color: var(--color-bg-surface);
-      text-decoration: underline;
+      color: var(--color-link);
+      text-decoration: none;
     }
 
     .footer-links a:hover {
-      color: var(--color-primary-light);
+      text-decoration: underline;
     }
 
     .update-time {

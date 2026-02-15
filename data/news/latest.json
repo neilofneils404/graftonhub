@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-02-15T17:45:00.000Z",
+  "articles": [
+    {
+      "title": "Lorain County Schools Announce Weather Policy Changes",
+      "link": "#",
+      "description": "School districts update snow day procedures for remainder of winter season",
+      "pubDate": "2026-02-15T10:30:00.000Z",
+      "source": "Chronicle-Telegram"
+    },
+    {
+      "title": "New Traffic Signal Approved for SR 10 and Grafton Road",
+      "link": "#",
+      "description": "State funds approved for intersection safety improvements",
+      "pubDate": "2026-02-15T08:15:00.000Z",
+      "source": "Cleveland.com"
+    },
+    {
+      "title": "Oberlin Library Announces Summer Reading Program Dates",
+      "link": "#",
+      "description": "Registration opens March 1 for annual summer reading challenge",
+      "pubDate": "2026-02-14T14:20:00.000Z",
+      "source": "Oberlin News"
+    },
+    {
+      "title": "Midview Schools Recognized for STEM Excellence",
+      "link": "#",
+      "description": "District receives state award for innovative science programs",
+      "pubDate": "2026-02-14T09:00:00.000Z",
+      "source": "Chronicle-Telegram"
+    },
+    {
+      "title": "Grafton Village to Host Community Planning Meeting",
+      "link": "#",
+      "description": "Public input sought on Main Street revitalization project",
+      "pubDate": "2026-02-13T16:45:00.000Z",
+      "source": "Local Announcement"
+    },
+    {
+      "title": "Lorain County Small Business Grants Available",
+      "link": "#",
+      "description": "County economic development office opens application period",
+      "pubDate": "2026-02-13T11:30:00.000Z",
+      "source": "Cleveland.com"
+    },
+    {
+      "title": "Youth Soccer Registration Opens for Spring Season",
+      "link": "#",
+      "description": "Multiple leagues across Lorain County accepting signups",
+      "pubDate": "2026-02-12T15:00:00.000Z",
+      "source": "Sports Announcement"
+    },
+    {
+      "title": "Oberlin Planning Commission Approves New Housing Development",
+      "link": "#",
+      "description": "Mixed-use project planned for East College Street",
+      "pubDate": "2026-02-12T10:15:00.000Z",
+      "source": "Oberlin News"
+    }
+  ]
+}
