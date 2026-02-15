@@ -26,6 +26,8 @@ pnpm-debug.log*
 # Internal documentation (not for public repo)
 CONTRIBUTING.md
 LAUNCH-READY.md
+MAINTENANCE.md
+maintenance-log.md
 research/
 notes/
 internal/
