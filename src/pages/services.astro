@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="Local Services | GraftonHub" description="Local services and businesses in Grafton, Oberlin, LaGrange and surrounding areas.">
+  <div class="page-header">
+    <div class="container">
+      <h1>🛠️ Local Services</h1>
+      <p class="lead">Find local businesses and services in your community</p>
+    </div>
+  </div>
+
+  <section class="coming-soon">
+    <div class="container">
+      <div class="card">
+        <h2>Coming Soon</h2>
+        <p>We're building a directory of local services including:</p>
+        <ul>
+          <li>Restaurants & Dining</li>
+          <li>Auto Repair & Services</li>
+          <li>Home Services (plumbing, electrical, HVAC)</li>
+          <li>Healthcare & Medical</li>
+          <li>Professional Services</li>
+          <li>Shopping & Retail</li>
+        </ul>
+        <p class="help-text">Own a local business? Want to be listed? <a href="mailto:neil@neilofneils.com">Contact us</a></p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .page-header {
+      background: var(--color-bg-surface);
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .page-header h1 {
+      margin-bottom: var(--space-md);
+    }
+
+    .lead {
+      font-size: var(--font-size-xl);
+      color: var(--color-text-secondary);
+      max-width: 700px;
+    }
+
+    .coming-soon {
+      padding: var(--space-3xl) 0;
+    }
+
+    .coming-soon .card {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .coming-soon h2 {
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-lg);
+    }
+
+    .coming-soon ul {
+      text-align: left;
+      margin: var(--space-lg) auto;
+      max-width: 400px;
+    }
+
+    .coming-soon li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .help-text {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-tertiary);
+      margin-top: var(--space-xl);
+    }
+  </style>
+</BaseLayout>

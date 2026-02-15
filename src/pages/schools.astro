@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="Schools & Education | GraftonHub" description="School information for Grafton, Oberlin, LaGrange and surrounding areas.">
+  <div class="page-header">
+    <div class="container">
+      <h1>🏫 Schools & Education</h1>
+      <p class="lead">School calendars, district information, and educational resources</p>
+    </div>
+  </div>
+
+  <section class="coming-soon">
+    <div class="container">
+      <div class="card">
+        <h2>Coming Soon</h2>
+        <p>We're working on gathering school information for:</p>
+        <ul>
+          <li><strong>Midview Local Schools</strong> - Grafton, Eaton Township</li>
+          <li><strong>Oberlin City Schools</strong> - Oberlin</li>
+          <li><strong>Keystone Local Schools</strong> - LaGrange, Carlisle Township</li>
+        </ul>
+        <p>In the meantime, visit the district websites directly:</p>
+        <div class="links">
+          <a href="https://www.midviewk12.org" target="_blank" rel="noopener" class="btn">Midview Schools</a>
+          <a href="https://www.oberlinschools.net" target="_blank" rel="noopener" class="btn">Oberlin Schools</a>
+          <a href="https://www.keystonelocalschools.org" target="_blank" rel="noopener" class="btn">Keystone Schools</a>
+        </div>
+        <p class="help-text">Know something we should include? <a href="mailto:neil@neilofneils.com">Let us know</a></p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .page-header {
+      background: var(--color-bg-surface);
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .page-header h1 {
+      margin-bottom: var(--space-md);
+    }
+
+    .lead {
+      font-size: var(--font-size-xl);
+      color: var(--color-text-secondary);
+      max-width: 700px;
+    }
+
+    .coming-soon {
+      padding: var(--space-3xl) 0;
+    }
+
+    .coming-soon .card {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .coming-soon h2 {
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-lg);
+    }
+
+    .coming-soon ul {
+      text-align: left;
+      margin: var(--space-lg) auto;
+      max-width: 400px;
+    }
+
+    .coming-soon li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      justify-content: center;
+      margin: var(--space-xl) 0;
+    }
+
+    .help-text {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-tertiary);
+      margin-top: var(--space-xl);
+    }
+  </style>
+</BaseLayout>

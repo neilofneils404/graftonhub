@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="Local Government | GraftonHub" description="Local government information for Grafton, Oberlin, LaGrange, Carlisle and Eaton Townships.">
+  <div class="page-header">
+    <div class="container">
+      <h1>🏛️ Local Government</h1>
+      <p class="lead">Meeting schedules, agendas, and contact information for local government</p>
+    </div>
+  </div>
+
+  <section class="coming-soon">
+    <div class="container">
+      <div class="card">
+        <h2>Coming Soon</h2>
+        <p>We're compiling government information for:</p>
+        <ul>
+          <li><strong>Grafton Village</strong></li>
+          <li><strong>City of Oberlin</strong></li>
+          <li><strong>LaGrange Village</strong></li>
+          <li><strong>Carlisle Township</strong></li>
+          <li><strong>Eaton Township</strong></li>
+          <li><strong>Lorain County</strong></li>
+        </ul>
+        <p>In the meantime, visit these official sites:</p>
+        <div class="links">
+          <a href="https://www.cityofoberlin.com" target="_blank" rel="noopener" class="btn">City of Oberlin</a>
+          <a href="https://www.loraincounty.us" target="_blank" rel="noopener" class="btn">Lorain County</a>
+        </div>
+        <p class="help-text">Know a meeting schedule or website we should include? <a href="mailto:neil@neilofneils.com">Let us know</a></p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .page-header {
+      background: var(--color-bg-surface);
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .page-header h1 {
+      margin-bottom: var(--space-md);
+    }
+
+    .lead {
+      font-size: var(--font-size-xl);
+      color: var(--color-text-secondary);
+      max-width: 700px;
+    }
+
+    .coming-soon {
+      padding: var(--space-3xl) 0;
+    }
+
+    .coming-soon .card {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .coming-soon h2 {
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-lg);
+    }
+
+    .coming-soon ul {
+      text-align: left;
+      margin: var(--space-lg) auto;
+      max-width: 400px;
+    }
+
+    .coming-soon li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      justify-content: center;
+      margin: var(--space-xl) 0;
+    }
+
+    .help-text {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-tertiary);
+      margin-top: var(--space-xl);
+    }
+  </style>
+</BaseLayout>

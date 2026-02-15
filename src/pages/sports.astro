@@ -30,32 +30,32 @@ import '../styles/global.css';
     <div class="container">
       <div class="search-box card">
         <h3>🔍 Find a Program</h3>
-        <p>What's your child's age and what sport are they interested in?</p>
+        <p>Filter programs by age or sport:</p>
         <div class="filter-grid">
-          <select class="filter-select">
-            <option>Select Age Group</option>
-            <option>4-6 years</option>
-            <option>7-9 years</option>
-            <option>10-12 years</option>
-            <option>13-15 years</option>
-            <option>16-18 years</option>
+          <select class="filter-select" id="age-filter">
+            <option value="">All Ages</option>
+            <option value="4-6">4-6 years</option>
+            <option value="7-9">7-9 years</option>
+            <option value="10-12">10-12 years</option>
+            <option value="13-15">13-15 years</option>
+            <option value="16-18">16-18 years</option>
           </select>
-          <select class="filter-select">
-            <option>Select Sport</option>
-            <option>Baseball</option>
-            <option>Basketball</option>
-            <option>Football</option>
-            <option>Soccer</option>
-            <option>Softball</option>
-            <option>Volleyball</option>
-            <option>Wrestling</option>
+          <select class="filter-select" id="sport-filter">
+            <option value="">All Sports</option>
+            <option value="baseball">Baseball</option>
+            <option value="softball">Softball</option>
+            <option value="soccer">Soccer</option>
+            <option value="basketball">Basketball</option>
+            <option value="football">Football</option>
           </select>
+          <button class="btn btn-secondary" id="clear-filters">Clear Filters</button>
         </div>
+        <p class="filter-results" id="filter-results"></p>
       </div>
 
-      <h2>⚾ Baseball & Softball</h2>
+      <h2 class="sport-heading" data-sport="baseball">⚾ Baseball & Softball</h2>
       
-      <div class="program-card card" id="baseball">
+      <div class="program-card card" id="baseball" data-sport="baseball" data-ages="6,7,8,9,10,11,12">
         <div class="program-header">
           <h3>Grafton Youth Baseball League</h3>
           <span class="badge badge-new">Registration Open</span>
@@ -92,7 +92,7 @@ import '../styles/global.css';
         </div>
       </div>
 
-      <div class="program-card card">
+      <div class="program-card card" data-sport="softball" data-ages="8,9,10,11,12,13,14">
         <div class="program-header">
           <h3>Oberlin Girls Softball League</h3>
         </div>
@@ -117,9 +117,9 @@ import '../styles/global.css';
         </div>
       </div>
 
-      <h2>⚽ Soccer</h2>
+      <h2 class="sport-heading" data-sport="soccer">⚽ Soccer</h2>
 
-      <div class="program-card card">
+      <div class="program-card card" data-sport="soccer" data-ages="4,5,6,7,8,9,10,11,12,13,14,15,16,17,18">
         <div class="program-header">
           <h3>Grafton Youth Soccer</h3>
           <span class="badge badge-category">Fall 2026</span>
@@ -148,7 +148,7 @@ import '../styles/global.css';
         </div>
       </div>
 
-      <div class="program-card card">
+      <div class="program-card card" data-sport="soccer" data-ages="5,6,7,8,9,10,11,12,13,14">
         <div class="program-header">
           <h3>LaGrange Youth Soccer Association</h3>
         </div>
@@ -170,9 +170,9 @@ import '../styles/global.css';
         </div>
       </div>
 
-      <h2>🏀 Basketball</h2>
+      <h2 class="sport-heading" data-sport="basketball">🏀 Basketball</h2>
 
-      <div class="program-card card">
+      <div class="program-card card" data-sport="basketball" data-ages="7,8,9,10,11,12,13,14">
         <div class="program-header">
           <h3>Midview Youth Basketball</h3>
           <span class="badge badge-category">Winter 2026-27</span>
@@ -194,9 +194,9 @@ import '../styles/global.css';
         </div>
       </div>
 
-      <h2>🏈 Football</h2>
+      <h2 class="sport-heading" data-sport="football">🏈 Football</h2>
 
-      <div class="program-card card">
+      <div class="program-card card" data-sport="football" data-ages="8,9,10,11,12,13,14">
         <div class="program-header">
           <h3>Lorain County Youth Football League</h3>
         </div>
@@ -246,7 +246,7 @@ import '../styles/global.css';
       <div class="card help-card">
         <h3>❓ Can't Find What You're Looking For?</h3>
         <p>We're working to keep this page current with all local youth sports opportunities. If you know of a program we're missing, or if any information is outdated, please let us know!</p>
-        <p><a href="mailto:hello@graftonhub.com">Report an error or suggest an addition</a></p>
+        <p><a href="mailto:neil@neilofneils.com?subject=GraftonHub Sports Feedback">Report an error or suggest an addition</a></p>
       </div>
     </div>
   </section>
@@ -418,6 +418,30 @@ import '../styles/global.css';
       margin-bottom: var(--space-md);
     }
 
+    .filter-results {
+      margin-top: var(--space-md);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+    }
+
+    .program-card.hidden,
+    .sport-heading.hidden {
+      display: none;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--color-border);
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--border-radius-md);
+      cursor: pointer;
+      font-size: var(--font-size-sm);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-text);
+    }
+
     @media (max-width: 768px) {
       .program-header {
         flex-direction: column;
@@ -432,4 +456,84 @@ import '../styles/global.css';
       }
     }
   </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const ageFilter = document.getElementById('age-filter');
+      const sportFilter = document.getElementById('sport-filter');
+      const clearBtn = document.getElementById('clear-filters');
+      const resultsText = document.getElementById('filter-results');
+      const programCards = document.querySelectorAll('.program-card');
+      const sportHeadings = document.querySelectorAll('.sport-heading');
+
+      function filterPrograms() {
+        const selectedAge = ageFilter.value;
+        const selectedSport = sportFilter.value;
+        
+        let visibleCount = 0;
+        const visibleSports = new Set();
+
+        programCards.forEach(card => {
+          const cardSport = card.dataset.sport;
+          const cardAges = card.dataset.ages ? card.dataset.ages.split(',') : [];
+          
+          let showCard = true;
+
+          // Filter by sport
+          if (selectedSport && cardSport !== selectedSport) {
+            showCard = false;
+          }
+
+          // Filter by age
+          if (selectedAge && showCard) {
+            const [minAge, maxAge] = selectedAge.split('-').map(Number);
+            const agesInRange = cardAges.some(age => {
+              const ageNum = parseInt(age);
+              return ageNum >= minAge && ageNum <= maxAge;
+            });
+            if (!agesInRange) {
+              showCard = false;
+            }
+          }
+
+          if (showCard) {
+            card.classList.remove('hidden');
+            visibleCount++;
+            visibleSports.add(cardSport);
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        // Show/hide sport headings based on visible programs
+        sportHeadings.forEach(heading => {
+          const headingSport = heading.dataset.sport;
+          if (selectedSport && headingSport !== selectedSport) {
+            heading.classList.add('hidden');
+          } else if (visibleSports.has(headingSport) || (!selectedAge && !selectedSport)) {
+            heading.classList.remove('hidden');
+          } else {
+            heading.classList.add('hidden');
+          }
+        });
+
+        // Update results text
+        if (selectedAge || selectedSport) {
+          resultsText.textContent = `Showing ${visibleCount} program${visibleCount !== 1 ? 's' : ''}`;
+        } else {
+          resultsText.textContent = '';
+        }
+      }
+
+      function clearFilters() {
+        ageFilter.value = '';
+        sportFilter.value = '';
+        filterPrograms();
+      }
+
+      ageFilter.addEventListener('change', filterPrograms);
+      sportFilter.addEventListener('change', filterPrograms);
+      clearBtn.addEventListener('click', clearFilters);
+    });
+  </script>
 </BaseLayout>

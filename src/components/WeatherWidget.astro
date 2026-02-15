@@ -1,0 +1,66 @@
+---
+// Weather widget with client-side fetching for live data
+---
+
+<div class="weather-widget" id="weather-widget">
+  <span class="weather-temp" id="weather-temp">--°F</span>
+  <span class="weather-condition" id="weather-condition">Loading...</span>
+  <span class="weather-location">Lorain County</span>
+</div>
+
+<script>
+  // NWS API for Grafton/Lorain County area
+  // Grid point for lat 41.27, lon -82.05 (Grafton area)
+  const NWS_FORECAST_URL = 'https://api.weather.gov/gridpoints/CLE/61,51/forecast';
+  const NWS_CURRENT_URL = 'https://api.weather.gov/gridpoints/CLE/61,51/forecast/hourly';
+
+  async function fetchWeather() {
+    try {
+      const response = await fetch(NWS_CURRENT_URL, {
+        headers: {
+          'User-Agent': 'GraftonHub (neil@neilofneils.com)',
+          'Accept': 'application/geo+json'
+        }
+      });
+      
+      if (!response.ok) throw new Error('Weather fetch failed');
+      
+      const data = await response.json();
+      const current = data.properties.periods[0];
+      
+      document.getElementById('weather-temp').textContent = `${current.temperature}°${current.temperatureUnit}`;
+      document.getElementById('weather-condition').textContent = current.shortForecast;
+    } catch (error) {
+      console.error('Weather fetch error:', error);
+      document.getElementById('weather-condition').textContent = 'Weather unavailable';
+    }
+  }
+
+  // Fetch on page load
+  fetchWeather();
+  
+  // Refresh every 15 minutes
+  setInterval(fetchWeather, 15 * 60 * 1000);
+</script>
+
+<style>
+  .weather-widget {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+  }
+
+  .weather-temp {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+  }
+
+  .weather-condition {
+    color: var(--color-text-secondary);
+  }
+
+  .weather-location {
+    color: var(--color-text-tertiary);
+    font-size: var(--font-size-xs);
+  }
+</style>
