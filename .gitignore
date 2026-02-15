@@ -22,3 +22,10 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Internal documentation (not for public repo)
+CONTRIBUTING.md
+LAUNCH-READY.md
+research/
+notes/
+internal/
