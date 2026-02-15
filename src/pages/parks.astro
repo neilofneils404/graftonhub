@@ -1,0 +1,446 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+const pageTitle = "Parks & Recreation";
+const pageDescription = "Parks, trails, playgrounds, and recreation facilities serving Grafton, Oberlin, LaGrange, Carlisle Township, and Eaton Township.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <div class="page-header">
+    <div class="container">
+      <h1>🌲 {pageTitle}</h1>
+      <p class="lead">Parks, trails, and outdoor recreation for our communities</p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Metro Parks System -->
+    <section class="metro-parks">
+      <h2>Lorain County Metro Parks</h2>
+      <p class="intro">The county Metro Parks system operates 28 reservations with 110+ miles of trails across 10,000+ acres. Three major parks serve our area:</p>
+
+      <div class="park-cards">
+        <div class="park-card featured">
+          <h3>🏛️ Carlisle Reservation</h3>
+          <p class="location">LaGrange (System Headquarters)</p>
+          <div class="park-details">
+            <p><strong>Size:</strong> 1,917 acres (largest in system)</p>
+            <p><strong>Address:</strong> 12882 Diagonal Rd, LaGrange, OH 44050</p>
+            <p><strong>Phone:</strong> <a href="tel:440-458-5121">440-458-5121</a></p>
+            
+            <h4>Facilities</h4>
+            <ul>
+              <li>11+ miles hiking/biking trails (paved and natural)</li>
+              <li>6+ miles equestrian trails</li>
+              <li>Visitor Center with exhibits and indoor play area</li>
+              <li>Duck Pond picnic area with playground and shelters</li>
+              <li>Sugar Shack (maple sugaring Feb-Mar)</li>
+              <li>Nielsen Observatory (astronomy programs)</li>
+              <li>Forest Hills Golf Course (18 holes)</li>
+            </ul>
+
+            <h4>Major Events</h4>
+            <ul>
+              <li>Maple Sugaring (February-March)</li>
+              <li>Halloween Fair</li>
+              <li>Holiday Lights (drive-through/walk)</li>
+              <li>Hearts A Glow (Valentine's at Schoepfle Garden)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="park-card featured">
+          <h3>🌳 Indian Hollow Reservation</h3>
+          <p class="location">Grafton Area</p>
+          <div class="park-details">
+            <p><strong>Multiple tracts:</strong> Sheldon Woods, Royal Oaks, Midview Soccer Complex</p>
+            
+            <h4>Sheldon Woods</h4>
+            <ul>
+              <li>Mountain biking trails</li>
+              <li>5+ miles of trails along Black River</li>
+              <li>2 picnic shelters (reservable)</li>
+              <li>Playground</li>
+              <li>Fishing access</li>
+            </ul>
+
+            <h4>Midview Soccer Complex</h4>
+            <ul>
+              <li>15 soccer fields</li>
+              <li>Concessions building</li>
+              <li>2 shelters</li>
+              <li>Playground</li>
+            </ul>
+
+            <h4>Royal Oaks</h4>
+            <ul>
+              <li>Fitness trail</li>
+              <li>3 fishing ponds</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="park-card featured">
+          <h3>💦 Splash Zone</h3>
+          <p class="location">Oberlin</p>
+          <div class="park-details">
+            <p><strong>Address:</strong> 95 W Hamilton Rd, Oberlin, OH 44074</p>
+            
+            <h4>Indoor Facilities</h4>
+            <ul>
+              <li>8-lane competition pool</li>
+              <li>Teaching pool</li>
+              <li>Fieldhouse (basketball/volleyball courts)</li>
+            </ul>
+
+            <h4>Outdoor Water Park (Seasonal)</h4>
+            <ul>
+              <li>6,000 sq ft water park</li>
+              <li>Two 24-ft waterslides</li>
+              <li>Splash features</li>
+              <li>Tot pool</li>
+              <li>Open noon-7:45pm daily</li>
+            </ul>
+
+            <h4>Hours</h4>
+            <p>Mon-Thu 6am-8pm, Fri 6am-5pm, Sat 8am-5pm, Sun 11am-5pm</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="metro-info">
+        <h3>North Coast Inland Trail</h3>
+        <p><strong>13.1 miles</strong> of paved trail from Elyria through Oberlin to Kipton. Perfect for biking, walking, running.</p>
+        <p><strong>Trailheads:</strong> Butternut Ridge Rd (Oberlin), Gateway Blvd (Elyria)</p>
+      </div>
+
+      <div class="metro-info">
+        <h3>Programs & Activities</h3>
+        <div class="programs-grid">
+          <div>
+            <h4>Summer Camps</h4>
+            <p>K-12th grade, April-August</p>
+            <p>Nature, outdoor adventure, boating, fishing, acting camps</p>
+          </div>
+          <div>
+            <h4>Homeschool Explorers</h4>
+            <p>Ages 7-12, $3/child</p>
+            <p>Monthly programs Sept-May</p>
+          </div>
+          <div>
+            <h4>Hiking Stick Program</h4>
+            <p>April 1-June 30</p>
+            <p>Complete 10 hikes at 6 parks, earn hiking stick</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="metro-contact">
+        <p><strong>Metro Parks Main Office:</strong> <a href="tel:440-458-5121">440-458-5121</a> | <a href="mailto:pr@loraincountymetroparks.com">pr@loraincountymetroparks.com</a></p>
+        <p><strong>Website:</strong> <a href="https://www.loraincountymetroparks.com" target="_blank" rel="noopener">loraincountymetroparks.com</a></p>
+        <p><strong>Reservations:</strong> <a href="https://secure.rec1.com" target="_blank" rel="noopener">secure.rec1.com</a> (account required)</p>
+        <p><strong>Hours:</strong> All parks open 8am-sunset daily</p>
+      </div>
+    </section>
+
+    <!-- Local Parks by Locality -->
+    <section class="local-parks">
+      <h2>Local Parks by Community</h2>
+
+      <div class="locality-parks">
+        <h3>Village of Grafton</h3>
+        <div class="park-list">
+          <div class="park-item">
+            <h4>North Park</h4>
+            <p><strong>Location:</strong> 1230 Elm St</p>
+            <p>Playground, basketball court, picnic shelter (rentable $100/day), restrooms, Splash Station (summer water play), community room</p>
+          </div>
+          <div class="park-item">
+            <h4>Willow Park</h4>
+            <p><strong>Location:</strong> South Main St</p>
+            <p>Pavilion/stage (rentable $100/day), updated playground with inclusive equipment, restrooms (summer), Memory Lane trees</p>
+            <p><em>Hosts concerts and 4th of July celebration</em></p>
+          </div>
+          <div class="park-item">
+            <h4>Reservoir Park</h4>
+            <p><strong>Location:</strong> South Main St</p>
+            <p>4 baseball fields, fishing, Reservoir Trails, restrooms/concessions (summer)</p>
+          </div>
+          <div class="park-item">
+            <h4>Bicentennial Park (Gazebo Park)</h4>
+            <p><strong>Location:</strong> Main & Mechanic Sts</p>
+            <p>Gazebo, benches, popular for weddings/photos (rentable $50/4hr weekends)</p>
+          </div>
+        </div>
+        <p class="contact"><strong>Rentals/Info:</strong> <a href="tel:440-926-2401">440-926-2401</a> opt. 2 | 960 Main St</p>
+      </div>
+
+      <div class="locality-parks">
+        <h3>Village of LaGrange</h3>
+        <div class="park-list">
+          <div class="park-item">
+            <h4>LaGrange Community Park</h4>
+            <p><strong>Location:</strong> 422 W Main St (Rt 303)</p>
+            <p>7 soccer fields, 5 baseball/softball fields, multipurpose field, modern playground, bocce, picnic pavilions, walking trails, winter ice rink/sledding hill, 465-space parking</p>
+            <p><em>Jointly operated by Village & Township</em></p>
+          </div>
+          <div class="park-item">
+            <h4>Veterans Memorial Park</h4>
+            <p><strong>Location:</strong> 101 West St (Rt 303)</p>
+            <p>Playground, picnic pavilion, tennis/basketball courts, Veterans Memorial</p>
+          </div>
+        </div>
+        <p class="contact"><strong>Park Board:</strong> <a href="mailto:lagrangecommunitypark@gmail.com">lagrangecommunitypark@gmail.com</a> | <a href="https://www.lagrangecommunitypark.org" target="_blank" rel="noopener">lagrangecommunitypark.org</a></p>
+      </div>
+
+      <div class="locality-parks">
+        <h3>City of Oberlin</h3>
+        <div class="park-list">
+          <div class="park-item">
+            <h4>Oberlin Recreation Complex</h4>
+            <p><strong>Location:</strong> 225 W Hamilton Rd</p>
+            <p>77 acres - 5 baseball/softball fields (lighted), 8 soccer fields, 2 picnic pavilions, concessions/restrooms</p>
+            <p><em>Adjacent to Metro Parks Splash Zone</em></p>
+          </div>
+          <div class="park-item">
+            <h4>Spring Street Park</h4>
+            <p><strong>Location:</strong> 100 Spring St</p>
+            <p>12 acres - Large playground, 2 picnic shelters, gazebo, adjacent to bike path</p>
+          </div>
+          <div class="park-item">
+            <h4>Park Street Park</h4>
+            <p><strong>Location:</strong> 40 S Park St</p>
+            <p>Playground, 2 basketball courts, baseball field, walking path, picnic pavilion</p>
+          </div>
+          <div class="park-item">
+            <h4>Depot Park</h4>
+            <p><strong>Location:</strong> 246 S Main St</p>
+            <p>Children's playground (accessible features), Oberlin Fitness Zone (outdoor gym), adjacent to bike path</p>
+          </div>
+        </div>
+        <p class="contact"><strong>Recreation Dept:</strong> <a href="tel:440-775-7254">440-775-7254</a> | 36 S Prospect St | <a href="mailto:Recreation@CityofOberlin.com">Recreation@CityofOberlin.com</a></p>
+        <p class="contact"><strong>Pavilion Rentals:</strong> $15 residents / $30 non-residents</p>
+      </div>
+
+      <div class="locality-parks">
+        <h3>Carlisle & Eaton Townships</h3>
+        <p>These townships do not operate their own parks. Residents primarily use the Lorain County Metro Parks system, particularly <strong>Carlisle Reservation</strong> (headquarters located in the townships) and <strong>Indian Hollow Reservation</strong>.</p>
+        <p class="contact"><strong>Carlisle Township:</strong> <a href="tel:440-458-5667">440-458-5667</a></p>
+        <p class="contact"><strong>Eaton Township:</strong> <a href="tel:440-748-2236">440-748-2236</a></p>
+      </div>
+    </section>
+
+    <!-- Recreation Programs -->
+    <section class="rec-programs">
+      <h2>Recreation Programs</h2>
+      
+      <div class="program-cards">
+        <div class="program-card">
+          <h3>Oberlin Recreation Department</h3>
+          <p>Adult programs, youth camps, fitness activities</p>
+          <p><strong>Summer Playground Experience:</strong> 7 weeks, June-July at OEAC</p>
+          <p><strong>Programs:</strong> Arts/crafts, board games, indoor gym activities, "Healthy Oberlin" initiative</p>
+          <p>Check Facebook for current offerings: <a href="https://www.facebook.com/p/City-of-Oberlin-Recreation-Department-100069749992078/" target="_blank" rel="noopener">City of Oberlin Recreation</a></p>
+        </div>
+
+        <div class="program-card">
+          <h3>LaGrange Village Programs</h3>
+          <p><strong>Indoor Walking:</strong> Mon-Thu 9-10:30am (Village Hall, 301 Liberty St)</p>
+          <p><strong>Indoor Walking:</strong> Tue/Thu 6-8pm school year (Keystone Middle School)</p>
+          <p><strong>Pickleball:</strong> Tue 10:30am-12pm (Village gym)</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <style>
+    .page-header {
+      background: var(--color-bg-surface);
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .lead {
+      font-size: var(--font-size-xl);
+      color: var(--color-text-secondary);
+      max-width: 700px;
+    }
+
+    section {
+      padding: var(--space-2xl) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      margin-bottom: var(--space-lg);
+      border-bottom: 2px solid var(--color-primary);
+      padding-bottom: var(--space-sm);
+    }
+
+    h3 {
+      margin-top: var(--space-lg);
+      margin-bottom: var(--space-md);
+    }
+
+    h4 {
+      margin-top: var(--space-md);
+      margin-bottom: var(--space-sm);
+      font-size: var(--font-size-base);
+      color: var(--color-text-secondary);
+    }
+
+    .intro {
+      font-size: var(--font-size-lg);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-xl);
+    }
+
+    .park-cards {
+      display: grid;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-xl);
+    }
+
+    .park-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+    }
+
+    .park-card.featured {
+      border-color: var(--color-primary);
+      border-width: 2px;
+    }
+
+    .park-card h3 {
+      margin-top: 0;
+    }
+
+    .location {
+      color: var(--color-text-tertiary);
+      font-style: italic;
+      margin-bottom: var(--space-md);
+    }
+
+    .park-details ul {
+      margin-left: var(--space-lg);
+      margin-bottom: var(--space-md);
+    }
+
+    .park-details li {
+      margin-bottom: var(--space-xs);
+    }
+
+    .metro-info {
+      background: var(--color-bg-surface);
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .metro-info h3 {
+      margin-top: 0;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-md);
+    }
+
+    .metro-contact {
+      background: #ecfdf5;
+      border: 1px solid #6ee7b7;
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+    }
+
+    .metro-contact p {
+      margin-bottom: var(--space-sm);
+    }
+
+    .metro-contact p:last-child {
+      margin-bottom: 0;
+    }
+
+    .locality-parks {
+      margin-bottom: var(--space-2xl);
+      padding-bottom: var(--space-xl);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .locality-parks:last-child {
+      border-bottom: none;
+    }
+
+    .park-list {
+      display: grid;
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+
+    .park-item {
+      background: var(--color-bg-surface);
+      padding: var(--space-md);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--color-primary);
+    }
+
+    .park-item h4 {
+      margin-top: 0;
+      color: var(--color-text);
+    }
+
+    .park-item p {
+      margin-bottom: var(--space-xs);
+      font-size: var(--font-size-sm);
+    }
+
+    .park-item em {
+      color: var(--color-text-tertiary);
+    }
+
+    .contact {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      margin-top: var(--space-md);
+    }
+
+    .program-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-xl);
+    }
+
+    .program-card {
+      background: var(--color-bg-surface);
+      padding: var(--space-lg);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+    }
+
+    .program-card h3 {
+      margin-top: 0;
+    }
+
+    .program-card p {
+      margin-bottom: var(--space-sm);
+      font-size: var(--font-size-sm);
+    }
+
+    @media (max-width: 768px) {
+      .programs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>
