@@ -5,15 +5,21 @@
   
   /* Neutral palette - let content shine */
   --color-text: #1a1a1a;
+  --color-text-primary: #1a1a1a;
   --color-text-secondary: #666666;
   --color-text-tertiary: #999999;
   
   --color-bg: #ffffff;
+  --color-bg-base: #ffffff;
   --color-bg-alt: #fafafa;
   --color-bg-elevated: #ffffff;
+  --color-bg-surface: #fafafa;
   
   --color-border: #e0e0e0;
   --color-border-light: #f0f0f0;
+  
+  --color-primary: #2563eb;
+  --color-secondary: #16a34a;
   
   /* Standard web blue for links */
   --color-link: #0066cc;
@@ -212,6 +218,47 @@ ul, ol {
 .badge-new {
   background: #dbeafe;
   color: var(--color-accent);
+}
+
+/* === DARK MODE === */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #e4e4e7;
+    --color-text-primary: #e4e4e7;
+    --color-text-secondary: #a1a1aa;
+    --color-text-tertiary: #71717a;
+    
+    --color-bg: #18181b;
+    --color-bg-base: #18181b;
+    --color-bg-alt: #27272a;
+    --color-bg-elevated: #27272a;
+    --color-bg-surface: #27272a;
+    
+    --color-border: #3f3f46;
+    --color-border-light: #27272a;
+    
+    --color-primary: #3b82f6;
+    --color-secondary: #22c55e;
+    
+    --color-link: #60a5fa;
+    --color-link-hover: #93c5fd;
+    --color-link-visited: #c084fc;
+    
+    --color-accent: #3b82f6;
+    --color-success: #22c55e;
+    --color-warning: #f97316;
+    --color-error: #ef4444;
+  }
+  
+  body {
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text);
+  }
 }
 
 /* === RESPONSIVE === */
