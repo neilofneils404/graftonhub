@@ -1,0 +1,440 @@
+{
+  "meta": {
+    "lastUpdated": "2026-02-15",
+    "version": "1.0",
+    "notes": "Phase 1 initial data collection - needs verification and expansion"
+  },
+  "county": {
+    "name": "Lorain County",
+    "website": "https://www.loraincountyohio.gov",
+    "emergency": {
+      "dispatch911": "911",
+      "sheriff": {
+        "name": "Lorain County Sheriff's Office",
+        "phone": "440-329-3709",
+        "address": "9896 Murray Ridge Rd, Elyria, OH 44035",
+        "website": "https://loraincountysheriff.com",
+        "note": "Provides law enforcement for townships (Carlisle, Eaton)"
+      },
+      "emergencyAlerts": {
+        "name": "Lorain County WENS",
+        "url": "https://www.loraincountyohio.gov/wens",
+        "note": "Sign up for emergency alerts"
+      }
+    }
+  },
+  "localities": {
+    "grafton": {
+      "name": "Village of Grafton",
+      "type": "village",
+      "population": "~6,500",
+      "zipCode": "44044",
+      "government": {
+        "website": "https://villageofgrafton.org",
+        "facebook": "https://www.facebook.com/p/The-Village-of-Grafton-61568902899359/",
+        "address": "960 Main Street, Grafton, OH 44044",
+        "meetings": {
+          "council": "Mondays at 7:30 PM (check website for schedule)",
+          "location": "Village Hall"
+        }
+      },
+      "emergency": {
+        "police": {
+          "type": "village",
+          "nonEmergency": "440-926-2662",
+          "note": "Lorain County 911 Dispatch"
+        },
+        "fire": {
+          "name": "Grafton Fire Department",
+          "nonEmergency": "440-926-2075",
+          "note": "Lorain County 911 Dispatch"
+        }
+      },
+      "utilities": {
+        "electric": {
+          "provider": "Grafton Power and Light (GPPL)",
+          "type": "municipal",
+          "phone": "440-926-2401",
+          "address": "960 Main Street, Grafton, OH 44044",
+          "website": "https://villageofgrafton.org/our-government/utilities/",
+          "note": "One of only 4 public power communities in Lorain County. Member of American Municipal Power."
+        },
+        "water": {
+          "provider": "Village of Grafton Water Department",
+          "source": "RLCWA (Regional Lorain County Water Authority)",
+          "phone": "440-926-2401"
+        },
+        "sewer": {
+          "provider": "Village of Grafton Sewer Department",
+          "phone": "440-926-2401"
+        },
+        "gas": {
+          "provider": "Dominion Energy Ohio",
+          "phone": "800-362-7557",
+          "website": "https://www.dominionenergy.com"
+        },
+        "trash": {
+          "provider": "TBD - verify",
+          "note": "Check with village office"
+        }
+      },
+      "schools": {
+        "district": "midview"
+      },
+      "library": "grafton-midview"
+    },
+    "carlisle-township": {
+      "name": "Carlisle Township",
+      "type": "township",
+      "population": "~8,000",
+      "zipCodes": ["44044", "44035"],
+      "government": {
+        "website": "https://www.carlisletownship.com",
+        "address": "11969 State Route 301, Grafton, OH 44044",
+        "phone": "440-458-5667",
+        "email": "CarlisleTwp@windstream.net",
+        "meetings": {
+          "trustees": "1st and 3rd Monday of each month at 7:00 PM",
+          "location": "Carlisle Township Town Hall"
+        },
+        "officials": {
+          "zoningInspector": {
+            "name": "Tim Ehrke",
+            "phone": "440-458-4491",
+            "email": "CalisleTwpZoning@windstream.net"
+          },
+          "roadSuperintendent": {
+            "name": "Paul Sniezek",
+            "phone": "440-458-6688",
+            "email": "CarlisleTwpRoadDept@windstream.net"
+          }
+        }
+      },
+      "emergency": {
+        "police": {
+          "type": "county",
+          "provider": "Lorain County Sheriff",
+          "nonEmergency": "440-329-3709"
+        },
+        "fire": {
+          "name": "Carlisle Township Fire Department",
+          "chief": "Steve Higgins",
+          "phone": "440-458-5177",
+          "email": "CarlisleChief@windstream.net",
+          "address": "11950 LaGrange Rd, LaGrange, OH 44050"
+        }
+      },
+      "utilities": {
+        "electric": {
+          "provider": "Ohio Edison (FirstEnergy)",
+          "phone": "800-633-4766",
+          "website": "https://www.firstenergycorp.com/ohio_edison.html"
+        },
+        "water": {
+          "provider": "Varies - wells or RLCWA",
+          "note": "Contact township for your area"
+        },
+        "sewer": {
+          "provider": "Varies - septic or Lorain County",
+          "note": "Contact township for your area"
+        },
+        "gas": {
+          "provider": "Dominion Energy Ohio",
+          "phone": "800-362-7557"
+        },
+        "trash": {
+          "note": "Private haulers - contact township for options"
+        }
+      },
+      "schools": {
+        "district": "midview",
+        "note": "Part of Midview Local Schools"
+      },
+      "library": "grafton-midview",
+      "communities": ["Brentwood Lake"]
+    },
+    "lagrange": {
+      "name": "Village of LaGrange",
+      "type": "village",
+      "population": "~2,400",
+      "zipCode": "44050",
+      "government": {
+        "website": "https://www.villageoflagrangeohio.gov",
+        "address": "301 Liberty Street, LaGrange, OH 44050",
+        "meetings": {
+          "council": "2nd Thursday of each month at 7:00 PM (Committee of the Whole at 6:45 PM)",
+          "location": "Village of LaGrange Municipal Building"
+        },
+        "parkBoard": {
+          "website": "https://www.LagrangeCommunityPark.org",
+          "meetings": "2nd Tuesday at 7:00 PM, plus 4th Tuesday March-October",
+          "location": "101 West Street (former library)"
+        }
+      },
+      "emergency": {
+        "police": {
+          "type": "village",
+          "note": "LaGrange Police - dispatched by Lorain County 911"
+        },
+        "fire": {
+          "name": "LaGrange Fire Department",
+          "note": "Dispatched by Lorain County 911"
+        }
+      },
+      "utilities": {
+        "electric": {
+          "provider": "Ohio Edison (FirstEnergy)",
+          "phone": "800-633-4766"
+        },
+        "water": {
+          "provider": "Village of LaGrange",
+          "note": "Contact village office"
+        },
+        "sewer": {
+          "provider": "Village of LaGrange",
+          "note": "Contact village office"
+        },
+        "gas": {
+          "provider": "Dominion Energy Ohio",
+          "phone": "800-362-7557"
+        }
+      },
+      "schools": {
+        "district": "keystone"
+      },
+      "library": "TBD",
+      "note": "French for 'the farm' or 'the barn'"
+    },
+    "oberlin": {
+      "name": "City of Oberlin",
+      "type": "city",
+      "population": "~8,300",
+      "zipCode": "44074",
+      "government": {
+        "website": "https://cityofoberlin.com",
+        "phone": "440-775-1531",
+        "email": "info@cityofoberlin.com",
+        "address": "85 S Main St, Oberlin, OH 44074",
+        "council": {
+          "president": "Eboni A. Johnson",
+          "presidentPhone": "614-398-1913",
+          "vicePresident": "Michael McFarlin",
+          "vicePresidentPhone": "440-707-6553"
+        }
+      },
+      "emergency": {
+        "police": {
+          "name": "Oberlin Police Department",
+          "nonEmergency": "440-774-1061",
+          "email": "Police@OberlinPD.com"
+        },
+        "fire": {
+          "name": "Oberlin Fire Department",
+          "nonEmergency": "440-774-3211",
+          "email": "FireInfo@CityofOberlin.com"
+        }
+      },
+      "utilities": {
+        "electric": {
+          "provider": "Oberlin Municipal Light and Power System (OMLPS)",
+          "type": "municipal",
+          "phone": "440-775-7260",
+          "note": "Municipal electric utility"
+        },
+        "water": {
+          "provider": "City of Oberlin Public Works",
+          "phone": "440-775-7218"
+        },
+        "sewer": {
+          "provider": "City of Oberlin Public Works",
+          "phone": "440-775-7218"
+        },
+        "gas": {
+          "provider": "Dominion Energy Ohio",
+          "phone": "800-362-7557"
+        },
+        "trash": {
+          "provider": "City of Oberlin Public Works",
+          "phone": "440-775-7218"
+        },
+        "financeUtilityOffice": {
+          "phone": ["440-775-7211", "440-775-7214"]
+        }
+      },
+      "departments": {
+        "publicWorks": "440-775-7218",
+        "recreation": {
+          "phone": "440-775-7254",
+          "email": "Recreation@CityofOberlin.com"
+        },
+        "building": "440-775-7182",
+        "planningDevelopment": "440-776-4827",
+        "sustainability": "440-775-7257",
+        "humanResources": {
+          "phone": "440-775-7205",
+          "email": "HR@CityofOberlin.com"
+        },
+        "cityManager": "440-775-7217",
+        "clerkOfCouncil": "440-775-7203",
+        "lawDepartment": "440-774-8519",
+        "cemetery": "440-774-2820"
+      },
+      "schools": {
+        "district": "oberlin"
+      },
+      "library": "oberlin",
+      "college": {
+        "name": "Oberlin College",
+        "website": "https://www.oberlin.edu"
+      }
+    },
+    "eaton-township": {
+      "name": "Eaton Township",
+      "type": "township",
+      "population": "~5,500",
+      "zipCodes": ["44044", "44035"],
+      "government": {
+        "website": "https://www.eatontownship.org",
+        "address": "12043 S. Avon Belden Rd, Grafton, OH 44044",
+        "phone": "440-748-2236",
+        "fax": "440-748-1928",
+        "email": "secretary@eatontownship.org",
+        "hours": "Monday-Friday 8am-3pm",
+        "officials": {
+          "trustees": [
+            {"name": "Steve Franks", "phone": "330-635-1391"}
+          ]
+        }
+      },
+      "emergency": {
+        "police": {
+          "type": "county",
+          "provider": "Lorain County Sheriff",
+          "nonEmergency": "440-329-3709"
+        },
+        "fire": {
+          "note": "TBD - verify fire coverage"
+        }
+      },
+      "utilities": {
+        "electric": {
+          "provider": "Ohio Edison (FirstEnergy)",
+          "phone": "800-633-4766"
+        },
+        "water": {
+          "provider": "Varies - wells or RLCWA",
+          "note": "Contact township"
+        },
+        "sewer": {
+          "provider": "Varies - septic systems",
+          "note": "Contact township"
+        },
+        "gas": {
+          "provider": "Dominion Energy Ohio",
+          "phone": "800-362-7557"
+        }
+      },
+      "schools": {
+        "district": "midview"
+      },
+      "library": "grafton-midview",
+      "communities": ["Eaton Estates"],
+      "borders": ["North Ridgeville", "Olmsted Township (Cuyahoga)", "Columbia Township", "Liverpool Township (Medina)", "Grafton Township", "Grafton", "Carlisle Township", "Elyria"],
+      "clup": {
+        "email": "CLUP@eatontownship.org",
+        "note": "Community Land Use Program"
+      }
+    }
+  },
+  "schools": {
+    "midview": {
+      "name": "Midview Local Schools",
+      "website": "https://www.midviewk12.org",
+      "phone": "440-748-5353",
+      "address": "13050 Durkee Rd, Grafton, OH 44044",
+      "coverage": ["Grafton Village", "Grafton Township", "Eaton Township", "Carlisle Township (part)", "Elyria (small portion)"],
+      "enrollment": "~2,534 students",
+      "schools": 7,
+      "mascot": "Middies",
+      "colors": "TBD"
+    },
+    "keystone": {
+      "name": "Keystone Local Schools",
+      "website": "https://www.keystonelocalschools.org",
+      "phone": "440-355-2424",
+      "address": "531 Opportunity Way, LaGrange, OH 44050",
+      "coverage": ["LaGrange Village", "LaGrange Township"],
+      "enrollment": "~1,472 students",
+      "mascot": "Wildcats"
+    },
+    "oberlin": {
+      "name": "Oberlin City Schools",
+      "website": "https://www.oberlinschools.net",
+      "coverage": ["City of Oberlin", "Oberlin Township"],
+      "enrollment": "~782 students"
+    }
+  },
+  "libraries": {
+    "grafton-midview": {
+      "name": "Grafton-Midview Public Library",
+      "website": "https://www.gmplibrary.org",
+      "address": "983 Main St, Grafton, OH 44044",
+      "phone": "440-926-3317",
+      "hours": {
+        "monday": "9:30am - 8:00pm",
+        "tuesday": "9:30am - 8:00pm",
+        "wednesday": "9:30am - 5:00pm",
+        "thursday": "9:30am - 8:00pm",
+        "friday": "9:30am - 5:00pm",
+        "saturday": "9:30am - 5:00pm",
+        "sunday": "1:00pm - 5:00pm"
+      }
+    },
+    "oberlin": {
+      "name": "Oberlin Public Library",
+      "website": "https://www.oberlinlibrary.org",
+      "address": "65 S Main St, Oberlin, OH 44074",
+      "phone": "TBD"
+    }
+  },
+  "utilities": {
+    "regional": {
+      "electric": {
+        "ohioEdison": {
+          "name": "Ohio Edison (FirstEnergy)",
+          "phone": "800-633-4766",
+          "website": "https://www.firstenergycorp.com/ohio_edison.html",
+          "outages": "https://www.firstenergycorp.com/outages.html",
+          "coverage": "Carlisle Township, Eaton Township, LaGrange, rural areas"
+        }
+      },
+      "gas": {
+        "dominion": {
+          "name": "Dominion Energy Ohio",
+          "phone": "800-362-7557",
+          "website": "https://www.dominionenergy.com",
+          "coverage": "Entire region"
+        }
+      },
+      "water": {
+        "rlcwa": {
+          "name": "Regional Lorain County Water Authority",
+          "website": "https://www.rlcwa.com",
+          "note": "Supplies water to Grafton and other areas"
+        }
+      }
+    }
+  },
+  "youthSports": {
+    "note": "To be populated - existing Youth Sports page has this data"
+  },
+  "churches": {
+    "note": "To be populated in Phase 2"
+  },
+  "businesses": {
+    "note": "To be populated in Phase 2/3"
+  },
+  "restaurants": {
+    "note": "To be populated in Phase 2/3"
+  }
+}

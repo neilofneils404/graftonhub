@@ -1,35 +1,188 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
+import localities from '../data/localities.json';
 ---
 
-<BaseLayout title="Local Government | GraftonHub" description="Local government information for Grafton, Oberlin, LaGrange, Carlisle and Eaton Townships.">
+<BaseLayout title="Local Government | GraftonHub" description="Government contacts, meeting schedules, and official websites for Grafton, Oberlin, LaGrange, Carlisle Township, and Eaton Township.">
   <div class="page-header">
     <div class="container">
       <h1>🏛️ Local Government</h1>
-      <p class="lead">Meeting schedules, agendas, and contact information for local government</p>
+      <p class="lead">Official websites, meeting schedules, and contact information for your local government</p>
     </div>
   </div>
 
-  <section class="coming-soon">
+  <section class="quick-nav">
+    <div class="container">
+      <div class="nav-links">
+        <a href="#grafton">Grafton</a>
+        <a href="#carlisle">Carlisle Township</a>
+        <a href="#lagrange">LaGrange</a>
+        <a href="#oberlin">Oberlin</a>
+        <a href="#eaton">Eaton Township</a>
+        <a href="#county">Lorain County</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="localities">
+    <div class="container">
+      
+      <!-- GRAFTON -->
+      <div class="locality-card" id="grafton">
+        <h2>🏘️ Village of Grafton</h2>
+        <div class="card-content">
+          <div class="info-block">
+            <h3>Contact Information</h3>
+            <p><strong>Address:</strong> 960 Main Street, Grafton, OH 44044</p>
+            <p><strong>Website:</strong> <a href="https://villageofgrafton.org" target="_blank" rel="noopener">villageofgrafton.org</a></p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/p/The-Village-of-Grafton-61568902899359/" target="_blank" rel="noopener">Village of Grafton</a></p>
+          </div>
+          <div class="info-block">
+            <h3>Council Meetings</h3>
+            <p><strong>When:</strong> Mondays at 7:30 PM (check website for schedule)</p>
+            <p><strong>Where:</strong> Village Hall</p>
+            <p><a href="https://villageofgrafton.org" target="_blank" rel="noopener">View agendas and minutes →</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARLISLE TOWNSHIP -->
+      <div class="locality-card" id="carlisle">
+        <h2>🏡 Carlisle Township</h2>
+        <div class="card-content">
+          <div class="info-block">
+            <h3>Contact Information</h3>
+            <p><strong>Address:</strong> 11969 State Route 301, Grafton, OH 44044</p>
+            <p><strong>Phone:</strong> <a href="tel:440-458-5667">440-458-5667</a></p>
+            <p><strong>Email:</strong> <a href="mailto:CarlisleTwp@windstream.net">CarlisleTwp@windstream.net</a></p>
+            <p><strong>Website:</strong> <a href="https://www.carlisletownship.com" target="_blank" rel="noopener">carlisletownship.com</a></p>
+          </div>
+          <div class="info-block">
+            <h3>Trustee Meetings</h3>
+            <p><strong>When:</strong> 1st and 3rd Monday of each month at 7:00 PM</p>
+            <p><strong>Where:</strong> Carlisle Township Town Hall</p>
+          </div>
+          <div class="info-block">
+            <h3>Key Contacts</h3>
+            <p><strong>Zoning Inspector:</strong> Tim Ehrke — <a href="tel:440-458-4491">440-458-4491</a></p>
+            <p><strong>Road Department:</strong> Paul Sniezek — <a href="tel:440-458-6688">440-458-6688</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAGRANGE -->
+      <div class="locality-card" id="lagrange">
+        <h2>🌾 Village of LaGrange</h2>
+        <div class="card-content">
+          <div class="info-block">
+            <h3>Contact Information</h3>
+            <p><strong>Address:</strong> 301 Liberty Street, LaGrange, OH 44050</p>
+            <p><strong>Website:</strong> <a href="https://www.villageoflagrangeohio.gov" target="_blank" rel="noopener">villageoflagrangeohio.gov</a></p>
+          </div>
+          <div class="info-block">
+            <h3>Council Meetings</h3>
+            <p><strong>Committee of the Whole:</strong> 2nd Thursday at 6:45 PM</p>
+            <p><strong>Council Meeting:</strong> 2nd Thursday at 7:00 PM</p>
+            <p><strong>Where:</strong> Village of LaGrange Municipal Building</p>
+          </div>
+          <div class="info-block">
+            <h3>Park Board</h3>
+            <p><strong>Website:</strong> <a href="https://www.LagrangeCommunityPark.org" target="_blank" rel="noopener">LagrangeCommunityPark.org</a></p>
+            <p><strong>Meetings:</strong> 2nd Tuesday at 7:00 PM (plus 4th Tuesday Mar-Oct)</p>
+            <p><strong>Where:</strong> 101 West Street (former library)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OBERLIN -->
+      <div class="locality-card" id="oberlin">
+        <h2>🎓 City of Oberlin</h2>
+        <div class="card-content">
+          <div class="info-block">
+            <h3>Contact Information</h3>
+            <p><strong>Address:</strong> 85 S Main St, Oberlin, OH 44074</p>
+            <p><strong>Phone:</strong> <a href="tel:440-775-1531">440-775-1531</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@cityofoberlin.com">info@cityofoberlin.com</a></p>
+            <p><strong>Website:</strong> <a href="https://cityofoberlin.com" target="_blank" rel="noopener">cityofoberlin.com</a></p>
+          </div>
+          <div class="info-block">
+            <h3>City Council</h3>
+            <p><strong>President:</strong> Eboni A. Johnson — <a href="tel:614-398-1913">614-398-1913</a></p>
+            <p><strong>Vice President:</strong> Michael McFarlin — <a href="tel:440-707-6553">440-707-6553</a></p>
+            <p><a href="https://cityofoberlin.com/city-government/city-council/" target="_blank" rel="noopener">All council members →</a></p>
+          </div>
+          <div class="info-block">
+            <h3>City Departments</h3>
+            <ul class="compact-list">
+              <li><strong>City Manager:</strong> <a href="tel:440-775-7217">440-775-7217</a></li>
+              <li><strong>Finance/Utilities:</strong> <a href="tel:440-775-7211">440-775-7211</a></li>
+              <li><strong>Public Works:</strong> <a href="tel:440-775-7218">440-775-7218</a></li>
+              <li><strong>Recreation:</strong> <a href="tel:440-775-7254">440-775-7254</a></li>
+              <li><strong>Building:</strong> <a href="tel:440-775-7182">440-775-7182</a></li>
+              <li><strong>Planning:</strong> <a href="tel:440-776-4827">440-776-4827</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- EATON TOWNSHIP -->
+      <div class="locality-card" id="eaton">
+        <h2>🌲 Eaton Township</h2>
+        <div class="card-content">
+          <div class="info-block">
+            <h3>Contact Information</h3>
+            <p><strong>Address:</strong> 12043 S. Avon Belden Rd, Grafton, OH 44044</p>
+            <p><strong>Phone:</strong> <a href="tel:440-748-2236">440-748-2236</a></p>
+            <p><strong>Fax:</strong> 440-748-1928</p>
+            <p><strong>Email:</strong> <a href="mailto:secretary@eatontownship.org">secretary@eatontownship.org</a></p>
+            <p><strong>Website:</strong> <a href="https://www.eatontownship.org" target="_blank" rel="noopener">eatontownship.org</a></p>
+          </div>
+          <div class="info-block">
+            <h3>Office Hours</h3>
+            <p>Monday – Friday: 8:00 AM – 3:00 PM</p>
+            <p>Saturday & Sunday: Closed</p>
+          </div>
+          <div class="info-block">
+            <h3>Trustees</h3>
+            <p><strong>Steve Franks:</strong> <a href="tel:330-635-1391">330-635-1391</a></p>
+            <p><em>Additional trustees — check website</em></p>
+          </div>
+          <div class="info-block">
+            <h3>Community Land Use Program</h3>
+            <p><strong>Email:</strong> <a href="mailto:CLUP@eatontownship.org">CLUP@eatontownship.org</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LORAIN COUNTY -->
+      <div class="locality-card county" id="county">
+        <h2>🏢 Lorain County</h2>
+        <div class="card-content">
+          <div class="info-block">
+            <h3>County Government</h3>
+            <p><strong>Website:</strong> <a href="https://www.loraincountyohio.gov" target="_blank" rel="noopener">loraincountyohio.gov</a></p>
+            <p><strong>Community Calendar:</strong> <a href="https://www.loraincounty.com" target="_blank" rel="noopener">loraincounty.com</a></p>
+          </div>
+          <div class="info-block">
+            <h3>Sheriff's Office</h3>
+            <p><strong>Non-Emergency:</strong> <a href="tel:440-329-3709">440-329-3709</a></p>
+            <p><strong>Address:</strong> 9896 Murray Ridge Rd, Elyria, OH 44035</p>
+            <p><strong>Website:</strong> <a href="https://loraincountysheriff.com" target="_blank" rel="noopener">loraincountysheriff.com</a></p>
+            <p><em>The Sheriff provides law enforcement for Carlisle Township and Eaton Township.</em></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta">
     <div class="container">
       <div class="card">
-        <h2>Coming Soon</h2>
-        <p>We're compiling government information for:</p>
-        <ul>
-          <li><strong>Grafton Village</strong></li>
-          <li><strong>City of Oberlin</strong></li>
-          <li><strong>LaGrange Village</strong></li>
-          <li><strong>Carlisle Township</strong></li>
-          <li><strong>Eaton Township</strong></li>
-          <li><strong>Lorain County</strong></li>
-        </ul>
-        <p>In the meantime, visit these official sites:</p>
-        <div class="links">
-          <a href="https://www.cityofoberlin.com" target="_blank" rel="noopener" class="btn">City of Oberlin</a>
-          <a href="https://www.loraincounty.us" target="_blank" rel="noopener" class="btn">Lorain County</a>
-        </div>
-        <p class="help-text">Know a meeting schedule or website we should include? <a href="mailto:neil@neilofneils.com">Let us know</a></p>
+        <h2>Something Wrong or Missing?</h2>
+        <p>Government contacts and meeting times change. Help us keep this information accurate.</p>
+        <a href="mailto:neil@neilofneils.com" class="btn">Report an Update</a>
       </div>
     </div>
   </section>
@@ -51,43 +204,121 @@ import '../styles/global.css';
       max-width: 700px;
     }
 
-    .coming-soon {
-      padding: var(--space-3xl) 0;
+    .quick-nav {
+      background: var(--color-bg);
+      padding: var(--space-lg) 0;
+      border-bottom: 1px solid var(--color-border-light);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    .coming-soon .card {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .coming-soon h2 {
-      color: var(--color-text-secondary);
-      margin-bottom: var(--space-lg);
-    }
-
-    .coming-soon ul {
-      text-align: left;
-      margin: var(--space-lg) auto;
-      max-width: 400px;
-    }
-
-    .coming-soon li {
-      margin-bottom: var(--space-sm);
-    }
-
-    .links {
+    .nav-links {
       display: flex;
       flex-wrap: wrap;
       gap: var(--space-md);
       justify-content: center;
-      margin: var(--space-xl) 0;
     }
 
-    .help-text {
+    .nav-links a {
+      padding: var(--space-sm) var(--space-md);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      color: var(--color-text-secondary);
       font-size: var(--font-size-sm);
-      color: var(--color-text-tertiary);
-      margin-top: var(--space-xl);
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: var(--color-bg-surface);
+      border-color: var(--color-text);
+      color: var(--color-text);
+    }
+
+    .localities {
+      padding: var(--space-2xl) 0;
+    }
+
+    .locality-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      margin-bottom: var(--space-xl);
+      scroll-margin-top: 80px;
+    }
+
+    .locality-card.county {
+      background: var(--color-bg-surface);
+    }
+
+    .locality-card h2 {
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .card-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-xl);
+    }
+
+    .info-block h3 {
+      font-size: var(--font-size-md);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .info-block p {
+      margin-bottom: var(--space-xs);
+    }
+
+    .compact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .compact-list li {
+      margin-bottom: var(--space-xs);
+    }
+
+    .cta {
+      padding: var(--space-2xl) 0 var(--space-3xl);
+    }
+
+    .cta .card {
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .cta h2 {
+      margin-bottom: var(--space-md);
+    }
+
+    .cta p {
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-lg);
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-links a {
+        text-align: center;
+      }
+
+      .card-content {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </BaseLayout>

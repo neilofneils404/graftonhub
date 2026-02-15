@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="Emergency Services | GraftonHub" description="Police, fire, EMS and emergency contacts for Grafton, Oberlin, LaGrange, Carlisle Township, and Eaton Township.">
+  <div class="page-header emergency">
+    <div class="container">
+      <h1>🚨 Emergency Services</h1>
+      <div class="emergency-banner">
+        <span class="dial">DIAL 911</span>
+        <span>for all emergencies</span>
+      </div>
+      <p class="lead">Non-emergency contacts for police, fire, and EMS by locality</p>
+    </div>
+  </div>
+
+  <section class="localities">
+    <div class="container">
+      
+      <!-- GRAFTON -->
+      <div class="locality-card" id="grafton">
+        <h2>Village of Grafton</h2>
+        <div class="services-grid">
+          <div class="service police">
+            <h3>👮 Police</h3>
+            <p class="provider">Grafton Village Police</p>
+            <p class="note">Dispatched by Lorain County 911</p>
+            <p><strong>Non-Emergency:</strong> <a href="tel:440-926-2662" class="phone">440-926-2662</a></p>
+          </div>
+          <div class="service fire">
+            <h3>🚒 Fire & EMS</h3>
+            <p class="provider">Grafton Fire Department</p>
+            <p class="note">Dispatched by Lorain County 911</p>
+            <p><strong>Non-Emergency:</strong> <a href="tel:440-926-2075" class="phone">440-926-2075</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARLISLE TOWNSHIP -->
+      <div class="locality-card" id="carlisle">
+        <h2>Carlisle Township</h2>
+        <div class="services-grid">
+          <div class="service police">
+            <h3>👮 Police</h3>
+            <p class="provider">Lorain County Sheriff</p>
+            <p class="note">Sheriff provides law enforcement for townships</p>
+            <p><strong>Non-Emergency:</strong> <a href="tel:440-329-3709" class="phone">440-329-3709</a></p>
+          </div>
+          <div class="service fire">
+            <h3>🚒 Fire & EMS</h3>
+            <p class="provider">Carlisle Township Fire Department</p>
+            <p><strong>Fire Chief:</strong> Steve Higgins</p>
+            <p><strong>Non-Emergency:</strong> <a href="tel:440-458-5177" class="phone">440-458-5177</a></p>
+            <p><strong>Address:</strong> 11950 LaGrange Rd, LaGrange, OH 44050</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAGRANGE -->
+      <div class="locality-card" id="lagrange">
+        <h2>Village of LaGrange</h2>
+        <div class="services-grid">
+          <div class="service police">
+            <h3>👮 Police</h3>
+            <p class="provider">LaGrange Village Police</p>
+            <p class="note">Dispatched by Lorain County 911</p>
+            <p><strong>Non-Emergency:</strong> Call Lorain County Dispatch</p>
+          </div>
+          <div class="service fire">
+            <h3>🚒 Fire & EMS</h3>
+            <p class="provider">LaGrange Fire Department</p>
+            <p class="note">Dispatched by Lorain County 911</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OBERLIN -->
+      <div class="locality-card" id="oberlin">
+        <h2>City of Oberlin</h2>
+        <div class="services-grid">
+          <div class="service police">
+            <h3>👮 Police</h3>
+            <p class="provider">Oberlin Police Department</p>
+            <p><strong>Non-Emergency:</strong> <a href="tel:440-774-1061" class="phone">440-774-1061</a></p>
+            <p><strong>Email:</strong> <a href="mailto:Police@OberlinPD.com">Police@OberlinPD.com</a></p>
+          </div>
+          <div class="service fire">
+            <h3>🚒 Fire & EMS</h3>
+            <p class="provider">Oberlin Fire Department</p>
+            <p><strong>Non-Emergency:</strong> <a href="tel:440-774-3211" class="phone">440-774-3211</a></p>
+            <p><strong>Email:</strong> <a href="mailto:FireInfo@CityofOberlin.com">FireInfo@CityofOberlin.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EATON TOWNSHIP -->
+      <div class="locality-card" id="eaton">
+        <h2>Eaton Township</h2>
+        <div class="services-grid">
+          <div class="service police">
+            <h3>👮 Police</h3>
+            <p class="provider">Lorain County Sheriff</p>
+            <p class="note">Sheriff provides law enforcement for townships</p>
+            <p><strong>Non-Emergency:</strong> <a href="tel:440-329-3709" class="phone">440-329-3709</a></p>
+          </div>
+          <div class="service fire">
+            <h3>🚒 Fire & EMS</h3>
+            <p class="note">Contact township office for fire district information</p>
+            <p><strong>Township:</strong> <a href="tel:440-748-2236" class="phone">440-748-2236</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- COUNTY RESOURCES -->
+      <div class="locality-card county" id="county">
+        <h2>Lorain County Resources</h2>
+        <div class="services-grid three-col">
+          <div class="service">
+            <h3>🏢 Sheriff's Office</h3>
+            <p><strong>Address:</strong> 9896 Murray Ridge Rd, Elyria, OH 44035</p>
+            <p><strong>Non-Emergency:</strong> <a href="tel:440-329-3709" class="phone">440-329-3709</a></p>
+            <p><a href="https://loraincountysheriff.com" target="_blank" rel="noopener">loraincountysheriff.com</a></p>
+          </div>
+          <div class="service">
+            <h3>📱 911 Dispatch Center</h3>
+            <p>Lorain County 911 dispatches for:</p>
+            <ul>
+              <li>Grafton Village Police & Fire</li>
+              <li>LaGrange Village Police & Fire</li>
+              <li>Lorain County Sheriff</li>
+              <li>Metro Parks</li>
+            </ul>
+          </div>
+          <div class="service">
+            <h3>⚠️ Emergency Alerts</h3>
+            <p><strong>WENS:</strong> Lorain County Warning & Emergency Notification System</p>
+            <p><a href="https://www.loraincountyohio.gov" target="_blank" rel="noopener">Sign up at loraincountyohio.gov</a></p>
+            <p class="note">Get alerts for severe weather, emergencies, and community notifications</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="hospitals">
+    <div class="container">
+      <h2>🏥 Nearest Hospitals</h2>
+      <div class="hospital-grid">
+        <div class="hospital-card">
+          <h3>UH Elyria Medical Center</h3>
+          <p><strong>Address:</strong> 630 E River St, Elyria, OH 44035</p>
+          <p><strong>Phone:</strong> <a href="tel:440-329-7500">440-329-7500</a></p>
+          <p><strong>Emergency:</strong> 24/7 Emergency Department</p>
+          <p><em>~10-15 min from Grafton area</em></p>
+        </div>
+        <div class="hospital-card">
+          <h3>Mercy Health - Allen Hospital</h3>
+          <p><strong>Address:</strong> 200 W Lorain St, Oberlin, OH 44074</p>
+          <p><strong>Phone:</strong> <a href="tel:440-775-1211">440-775-1211</a></p>
+          <p><em>Located in Oberlin</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="utilities-emergency">
+    <div class="container">
+      <h2>🔌 Utility Emergencies</h2>
+      <div class="utility-grid">
+        <div class="utility-card">
+          <h3>Electric Outages</h3>
+          <p><strong>Grafton (Municipal):</strong> <a href="tel:440-926-2401">440-926-2401</a></p>
+          <p><strong>Oberlin (OMLPS):</strong> <a href="tel:440-775-7260">440-775-7260</a></p>
+          <p><strong>Ohio Edison:</strong> <a href="tel:800-633-4766">800-633-4766</a></p>
+          <p><a href="https://www.firstenergycorp.com/outages.html" target="_blank" rel="noopener">Report outage online →</a></p>
+        </div>
+        <div class="utility-card">
+          <h3>Gas Leaks & Emergencies</h3>
+          <p><strong>Dominion Energy:</strong> <a href="tel:800-362-7557" class="phone urgent">800-362-7557</a></p>
+          <p class="warning">If you smell gas, leave immediately and call from outside.</p>
+        </div>
+        <div class="utility-card">
+          <h3>Water Emergencies</h3>
+          <p><strong>Grafton:</strong> <a href="tel:440-926-2401">440-926-2401</a></p>
+          <p><strong>Oberlin:</strong> <a href="tel:440-775-7218">440-775-7218</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .page-header.emergency {
+      background: #1a1a1a;
+      color: white;
+      padding: var(--space-3xl) 0 var(--space-2xl);
+    }
+
+    .page-header.emergency h1 {
+      margin-bottom: var(--space-lg);
+    }
+
+    .emergency-banner {
+      background: #dc2626;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-md);
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-md);
+      font-size: var(--font-size-xl);
+      margin-bottom: var(--space-lg);
+    }
+
+    .emergency-banner .dial {
+      font-weight: 800;
+      font-size: var(--font-size-2xl);
+    }
+
+    .page-header.emergency .lead {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .localities, .hospitals, .utilities-emergency {
+      padding: var(--space-2xl) 0;
+    }
+
+    .localities {
+      background: var(--color-bg-surface);
+    }
+
+    .locality-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      margin-bottom: var(--space-xl);
+    }
+
+    .locality-card.county {
+      background: #f0f9ff;
+      border-color: #bae6fd;
+    }
+
+    .locality-card h2 {
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-xl);
+    }
+
+    .services-grid.three-col {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .service h3 {
+      margin-bottom: var(--space-sm);
+    }
+
+    .service .provider {
+      font-weight: 600;
+      margin-bottom: var(--space-xs);
+    }
+
+    .service .note {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-tertiary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .phone {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+    }
+
+    .phone.urgent {
+      color: #dc2626;
+    }
+
+    .service ul {
+      font-size: var(--font-size-sm);
+      margin-top: var(--space-sm);
+      padding-left: var(--space-lg);
+    }
+
+    .hospitals h2, .utilities-emergency h2 {
+      margin-bottom: var(--space-xl);
+    }
+
+    .hospital-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-xl);
+    }
+
+    .hospital-card, .utility-card {
+      background: var(--color-bg-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+    }
+
+    .hospital-card h3, .utility-card h3 {
+      margin-bottom: var(--space-md);
+    }
+
+    .hospital-card p, .utility-card p {
+      margin-bottom: var(--space-xs);
+    }
+
+    .utility-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-xl);
+    }
+
+    .warning {
+      background: #fef3c7;
+      color: #92400e;
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-sm);
+      margin-top: var(--space-sm);
+    }
+
+    @media (max-width: 600px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .emergency-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</BaseLayout>

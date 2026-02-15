@@ -19,73 +19,158 @@ import '../styles/global.css';
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h1>Welcome to GraftonHub</h1>
-      <p class="tagline">Free community information for Grafton, Oberlin, LaGrange, and surrounding areas</p>
-      <p class="subtitle">No tracking. No ads. Just useful local info.</p>
+      <h1>GraftonHub</h1>
+      <p class="tagline">Your community information hub</p>
+      <div class="communities">
+        Grafton • Carlisle Township • LaGrange • Oberlin • Eaton Township
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="quick-links">
+    <div class="container">
+      <div class="quick-grid">
+        <a href="/emergency" class="quick-card emergency">
+          <span class="icon">🚨</span>
+          <span class="label">Emergency Services</span>
+        </a>
+        <a href="/government" class="quick-card">
+          <span class="icon">🏛️</span>
+          <span class="label">Government</span>
+        </a>
+        <a href="/schools" class="quick-card">
+          <span class="icon">🎒</span>
+          <span class="label">Schools</span>
+        </a>
+        <a href="/utilities" class="quick-card">
+          <span class="icon">⚡</span>
+          <span class="label">Utilities</span>
+        </a>
+        <a href="/sports" class="quick-card">
+          <span class="icon">⚽</span>
+          <span class="label">Youth Sports</span>
+        </a>
+        <a href="/new-residents" class="quick-card">
+          <span class="icon">🏠</span>
+          <span class="label">New Residents</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Main Content -->
   <section class="main-content">
     <div class="container">
-      <div class="card-grid">
+      <div class="content-grid">
         
-        <!-- New Residents -->
-        <a href="/new-residents" class="feature-card">
-          <div class="card-icon">🏠</div>
-          <h2>New to the Area?</h2>
-          <p>Complete guide to setting up utilities, registering vehicles, enrolling in schools, and everything else you need when moving to the area.</p>
-          <span class="card-link">View Guide →</span>
-        </a>
+        <!-- Left Column - Key Info -->
+        <div class="content-column">
+          <h2>Essential Information</h2>
 
-        <!-- Youth Sports -->
-        <a href="/sports" class="feature-card">
-          <div class="card-icon">⚽</div>
-          <h2>Youth Sports</h2>
-          <p>Find baseball, soccer, basketball, and football programs. Registration info, contacts, costs, and deadlines for local youth leagues.</p>
-          <span class="card-link">Find Programs →</span>
-        </a>
+          <div class="info-card">
+            <h3>🚨 Emergencies: Dial 911</h3>
+            <p>Non-emergency contacts by location:</p>
+            <ul class="compact-list">
+              <li><strong>Grafton:</strong> <a href="tel:440-926-2662">440-926-2662</a> (Police) • <a href="tel:440-926-2075">440-926-2075</a> (Fire)</li>
+              <li><strong>Oberlin:</strong> <a href="tel:440-774-1061">440-774-1061</a> (Police) • <a href="tel:440-774-3211">440-774-3211</a> (Fire)</li>
+              <li><strong>Townships:</strong> <a href="tel:440-329-3709">440-329-3709</a> (Lorain County Sheriff)</li>
+            </ul>
+            <a href="/emergency" class="see-all">All emergency contacts →</a>
+          </div>
 
-        <!-- Local News Sources -->
-        <div class="feature-card news-card">
-          <div class="card-icon">📰</div>
-          <h2>Local News</h2>
-          <p>Stay informed with these local news sources:</p>
-          <ul class="news-links">
-            <li><a href="https://www.chroniclet.com/news/lorain-county/" target="_blank" rel="noopener">Chronicle-Telegram</a></li>
-            <li><a href="https://www.cleveland.com/lorain-county/" target="_blank" rel="noopener">Cleveland.com - Lorain County</a></li>
-            <li><a href="https://www.morningjournal.com/" target="_blank" rel="noopener">Morning Journal</a></li>
-          </ul>
+          <div class="info-card">
+            <h3>🏛️ Local Government</h3>
+            <ul class="compact-list">
+              <li><a href="https://villageofgrafton.org" target="_blank" rel="noopener">Village of Grafton</a></li>
+              <li><a href="https://www.carlisletownship.com" target="_blank" rel="noopener">Carlisle Township</a></li>
+              <li><a href="https://www.villageoflagrangeohio.gov" target="_blank" rel="noopener">Village of LaGrange</a></li>
+              <li><a href="https://cityofoberlin.com" target="_blank" rel="noopener">City of Oberlin</a></li>
+              <li><a href="https://www.eatontownship.org" target="_blank" rel="noopener">Eaton Township</a></li>
+            </ul>
+            <a href="/government" class="see-all">Meeting schedules & contacts →</a>
+          </div>
+
+          <div class="info-card">
+            <h3>🎒 School Districts</h3>
+            <ul class="compact-list">
+              <li><a href="https://www.midviewk12.org" target="_blank" rel="noopener">Midview Local Schools</a> — Grafton, Eaton Twp, Carlisle Twp</li>
+              <li><a href="https://www.keystonelocalschools.org" target="_blank" rel="noopener">Keystone Local Schools</a> — LaGrange</li>
+              <li><a href="https://www.oberlinschools.net" target="_blank" rel="noopener">Oberlin City Schools</a> — Oberlin</li>
+            </ul>
+            <a href="/schools" class="see-all">All schools & libraries →</a>
+          </div>
         </div>
 
-        <!-- Schools -->
-        <a href="/schools" class="feature-card">
-          <div class="card-icon">🏫</div>
-          <h2>Schools</h2>
-          <p>Information and links for Midview, Oberlin, and Keystone school districts.</p>
-          <span class="card-link">School Info →</span>
-        </a>
+        <!-- Right Column - Resources -->
+        <div class="content-column">
+          <h2>Community Resources</h2>
 
-        <!-- Government -->
-        <a href="/government" class="feature-card">
-          <div class="card-icon">🏛️</div>
-          <h2>Local Government</h2>
-          <p>Contact info and links for village, city, and township governments in the area.</p>
-          <span class="card-link">Government Info →</span>
-        </a>
+          <div class="info-card">
+            <h3>📚 Libraries</h3>
+            <ul class="compact-list">
+              <li><a href="https://www.gmplibrary.org" target="_blank" rel="noopener">Grafton-Midview Public Library</a><br>
+                <span class="subtext">983 Main St, Grafton • <a href="tel:440-926-3317">440-926-3317</a></span></li>
+              <li><a href="https://www.oberlinlibrary.org" target="_blank" rel="noopener">Oberlin Public Library</a><br>
+                <span class="subtext">65 S Main St, Oberlin</span></li>
+            </ul>
+          </div>
 
-        <!-- Parks & Recreation -->
-        <div class="feature-card">
-          <div class="card-icon">🌲</div>
-          <h2>Parks & Recreation</h2>
-          <p>Explore local metro parks and outdoor spaces:</p>
-          <ul class="news-links">
-            <li><a href="https://www.loraincountymetroparks.com/" target="_blank" rel="noopener">Lorain County Metro Parks</a></li>
-            <li><a href="https://www.loraincountymetroparks.com/reservation/indian-hollow" target="_blank" rel="noopener">Indian Hollow Reservation</a></li>
-          </ul>
+          <div class="info-card">
+            <h3>📰 Local News</h3>
+            <ul class="compact-list">
+              <li><a href="https://www.chroniclet.com/news/lorain-county/" target="_blank" rel="noopener">Chronicle-Telegram</a></li>
+              <li><a href="https://www.cleveland.com/lorain-county/" target="_blank" rel="noopener">Cleveland.com - Lorain County</a></li>
+              <li><a href="https://www.morningjournal.com/" target="_blank" rel="noopener">Morning Journal</a></li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🌲 Parks & Recreation</h3>
+            <ul class="compact-list">
+              <li><a href="https://www.loraincountymetroparks.com/" target="_blank" rel="noopener">Lorain County Metro Parks</a></li>
+              <li><a href="https://www.loraincountymetroparks.com/reservation/indian-hollow" target="_blank" rel="noopener">Indian Hollow Reservation</a></li>
+              <li><a href="https://www.loraincountymetroparks.com/reservation/findley-state-park" target="_blank" rel="noopener">Findley State Park</a></li>
+            </ul>
+          </div>
+
+          <div class="info-card highlight">
+            <h3>🏠 New to the Area?</h3>
+            <p>Complete guide to setting up utilities, registering vehicles, enrolling in schools, and finding your way around.</p>
+            <a href="/new-residents" class="btn">New Residents Guide →</a>
+          </div>
         </div>
-
       </div>
+    </div>
+  </section>
+
+  <!-- Utility Quick Reference -->
+  <section class="utility-reference">
+    <div class="container">
+      <h2>⚡ Utility Quick Reference</h2>
+      <div class="utility-grid">
+        <div class="utility-item">
+          <h4>Grafton Electric</h4>
+          <p>Grafton Power & Light (Municipal)</p>
+          <a href="tel:440-926-2401">440-926-2401</a>
+        </div>
+        <div class="utility-item">
+          <h4>Oberlin Electric</h4>
+          <p>OMLPS (Municipal)</p>
+          <a href="tel:440-775-7260">440-775-7260</a>
+        </div>
+        <div class="utility-item">
+          <h4>Ohio Edison</h4>
+          <p>Townships & LaGrange</p>
+          <a href="tel:800-633-4766">800-633-4766</a>
+        </div>
+        <div class="utility-item">
+          <h4>Dominion Gas</h4>
+          <p>All Areas</p>
+          <a href="tel:800-362-7557">800-362-7557</a>
+        </div>
+      </div>
+      <p class="utility-note"><a href="/utilities">Full utility setup guide by location →</a></p>
     </div>
   </section>
 
@@ -93,8 +178,8 @@ import '../styles/global.css';
   <section class="about-section">
     <div class="container">
       <h2>About GraftonHub</h2>
-      <p>GraftonHub is a free community resource. We don't track you, we don't run ads, and we don't sell your data. Just straightforward local information for our neighbors.</p>
-      <p>This site is a work in progress. Have a suggestion? <a href="mailto:neil@neilofneils.com">Let us know</a>.</p>
+      <p>A free community resource for Grafton and surrounding areas. No tracking. No ads. No data collection. Just useful local information for our neighbors.</p>
+      <p class="help-text">Have a suggestion or found an error? <a href="mailto:neil@neilofneils.com">Let us know</a></p>
     </div>
   </section>
 
@@ -131,8 +216,8 @@ import '../styles/global.css';
 
   <style>
     .weather-bar {
-      background: #f5f5f5;
-      border-bottom: 1px solid #e0e0e0;
+      background: #1a1a1a;
+      color: white;
       padding: 0.5rem 0;
       font-size: 0.875rem;
     }
@@ -154,114 +239,202 @@ import '../styles/global.css';
     }
 
     .weather-condition {
-      color: #666;
+      color: #ccc;
     }
 
     .weather-location {
-      color: #999;
+      color: #888;
       font-size: 0.75rem;
     }
 
     .current-date {
-      color: #666;
+      color: #888;
       font-size: 0.75rem;
     }
 
     .hero {
-      padding: 3rem 0;
+      padding: 3rem 0 2rem;
       text-align: center;
-      border-bottom: 1px solid #e0e0e0;
+      background: var(--color-bg-surface);
+      border-bottom: 1px solid var(--color-border-light);
     }
 
     .hero h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
     }
 
     .tagline {
       font-size: 1.25rem;
-      color: #333;
-      margin-bottom: 0.25rem;
-    }
-
-    .subtitle {
-      color: #666;
-      font-size: 0.95rem;
-    }
-
-    .main-content {
-      padding: 3rem 0;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .feature-card {
-      display: block;
-      padding: 1.5rem;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      background: white;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    a.feature-card:hover {
-      border-color: #333;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .card-icon {
-      font-size: 2rem;
+      color: var(--color-text-secondary);
       margin-bottom: 0.75rem;
     }
 
-    .feature-card h2 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .feature-card p {
-      color: #666;
-      font-size: 0.95rem;
-      line-height: 1.5;
-      margin-bottom: 0.75rem;
-    }
-
-    .card-link {
-      color: #0066cc;
-      font-weight: 500;
+    .communities {
+      color: var(--color-text-tertiary);
       font-size: 0.9rem;
     }
 
-    .news-links {
+    .quick-links {
+      padding: 1.5rem 0;
+      background: white;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1rem;
+    }
+
+    .quick-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0.5rem;
+      text-decoration: none;
+      color: var(--color-text);
+      border-radius: var(--radius-md);
+      transition: background 0.2s;
+    }
+
+    .quick-card:hover {
+      background: var(--color-bg-surface);
+    }
+
+    .quick-card.emergency {
+      background: #fef2f2;
+    }
+
+    .quick-card.emergency:hover {
+      background: #fee2e2;
+    }
+
+    .quick-card .icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .quick-card .label {
+      font-size: 0.8rem;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .main-content {
+      padding: 2rem 0;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .content-column h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-tertiary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .info-card {
+      padding: 1.25rem;
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      margin-bottom: 1rem;
+    }
+
+    .info-card.highlight {
+      background: #fffbeb;
+      border-color: #fcd34d;
+    }
+
+    .info-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .compact-list {
       list-style: none;
       padding: 0;
-      margin: 0;
+      margin: 0 0 0.75rem 0;
     }
 
-    .news-links li {
-      margin: 0.5rem 0;
+    .compact-list li {
+      padding: 0.35rem 0;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--color-border-light);
     }
 
-    .news-links a {
-      color: #0066cc;
-      text-decoration: none;
+    .compact-list li:last-child {
+      border-bottom: none;
     }
 
-    .news-links a:hover {
-      text-decoration: underline;
+    .subtext {
+      font-size: 0.8rem;
+      color: var(--color-text-tertiary);
+    }
+
+    .see-all {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .utility-reference {
+      padding: 2rem 0;
+      background: var(--color-bg-surface);
+      border-top: 1px solid var(--color-border-light);
+    }
+
+    .utility-reference h2 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .utility-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .utility-item {
+      background: white;
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      text-align: center;
+      border: 1px solid var(--color-border-light);
+    }
+
+    .utility-item h4 {
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .utility-item p {
+      font-size: 0.8rem;
+      color: var(--color-text-tertiary);
+      margin-bottom: 0.5rem;
+    }
+
+    .utility-item a {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .utility-note {
+      text-align: center;
+      font-size: 0.9rem;
     }
 
     .about-section {
-      background: #f9f9f9;
       padding: 2rem 0;
       text-align: center;
-      border-top: 1px solid #e0e0e0;
+      border-top: 1px solid var(--color-border-light);
     }
 
     .about-section h2 {
@@ -270,13 +443,32 @@ import '../styles/global.css';
     }
 
     .about-section p {
-      color: #666;
+      color: var(--color-text-secondary);
       max-width: 600px;
       margin: 0.5rem auto;
       font-size: 0.95rem;
     }
 
-    @media (max-width: 768px) {
+    .help-text {
+      font-size: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      .quick-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .utility-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
       .weather-bar .container {
         flex-direction: column;
         gap: 0.25rem;
@@ -286,7 +478,11 @@ import '../styles/global.css';
         font-size: 1.75rem;
       }
 
-      .card-grid {
+      .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .utility-grid {
         grid-template-columns: 1fr;
       }
     }

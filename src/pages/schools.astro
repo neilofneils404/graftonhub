@@ -3,31 +3,211 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
 ---
 
-<BaseLayout title="Schools & Education | GraftonHub" description="School information for Grafton, Oberlin, LaGrange and surrounding areas.">
+<BaseLayout title="Schools & Education | GraftonHub" description="School districts, libraries, and educational resources for Grafton, Oberlin, LaGrange, and surrounding areas.">
   <div class="page-header">
     <div class="container">
-      <h1>🏫 Schools & Education</h1>
-      <p class="lead">School calendars, district information, and educational resources</p>
+      <h1>🎒 Schools & Education</h1>
+      <p class="lead">School districts serving our communities, plus libraries and educational resources</p>
     </div>
   </div>
 
-  <section class="coming-soon">
+  <section class="which-district">
+    <div class="container">
+      <div class="card highlight">
+        <h2>Which School District Am I In?</h2>
+        <div class="district-guide">
+          <div class="district-item">
+            <strong>Grafton, Eaton Township, most of Carlisle Township:</strong>
+            <span>→ Midview Local Schools</span>
+          </div>
+          <div class="district-item">
+            <strong>LaGrange, LaGrange Township:</strong>
+            <span>→ Keystone Local Schools</span>
+          </div>
+          <div class="district-item">
+            <strong>Oberlin, Oberlin Township:</strong>
+            <span>→ Oberlin City Schools</span>
+          </div>
+        </div>
+        <p class="note">School district boundaries can vary by street. Contact the district to confirm.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="districts">
+    <div class="container">
+      <h2>School Districts</h2>
+
+      <!-- MIDVIEW -->
+      <div class="district-card" id="midview">
+        <div class="district-header">
+          <div>
+            <h3>⚓ Midview Local Schools</h3>
+            <p class="tagline">Home of the Middies</p>
+          </div>
+          <div class="stats">
+            <span>~2,534 students</span>
+            <span>7 schools</span>
+          </div>
+        </div>
+        <div class="district-content">
+          <div class="info-block">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 13050 Durkee Rd, Grafton, OH 44044</p>
+            <p><strong>Phone:</strong> <a href="tel:440-748-5353">440-748-5353</a></p>
+            <p><strong>Website:</strong> <a href="https://www.midviewk12.org" target="_blank" rel="noopener">midviewk12.org</a></p>
+          </div>
+          <div class="info-block">
+            <h4>Communities Served</h4>
+            <ul>
+              <li>Village of Grafton</li>
+              <li>Grafton Township</li>
+              <li>Eaton Township</li>
+              <li>Carlisle Township (partial)</li>
+              <li>City of Elyria (small portion)</li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h4>Schools in District</h4>
+            <ul>
+              <li>Midview High School</li>
+              <li>Midview Middle School</li>
+              <li>Elementary schools (5)</li>
+            </ul>
+            <p><a href="https://www.midviewk12.org" target="_blank" rel="noopener">View all schools →</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- KEYSTONE -->
+      <div class="district-card" id="keystone">
+        <div class="district-header">
+          <div>
+            <h3>🐾 Keystone Local Schools</h3>
+            <p class="tagline">Home of the Wildcats</p>
+          </div>
+          <div class="stats">
+            <span>~1,472 students</span>
+          </div>
+        </div>
+        <div class="district-content">
+          <div class="info-block">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 531 Opportunity Way, LaGrange, OH 44050</p>
+            <p><strong>Phone:</strong> <a href="tel:440-355-2424">440-355-2424</a></p>
+            <p><strong>Website:</strong> <a href="https://www.keystonelocalschools.org" target="_blank" rel="noopener">keystonelocalschools.org</a></p>
+          </div>
+          <div class="info-block">
+            <h4>Communities Served</h4>
+            <ul>
+              <li>Village of LaGrange</li>
+              <li>LaGrange Township</li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h4>Schools in District</h4>
+            <ul>
+              <li>Keystone High School</li>
+              <li>Keystone Middle School</li>
+              <li>Keystone Elementary School</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- OBERLIN -->
+      <div class="district-card" id="oberlin">
+        <div class="district-header">
+          <div>
+            <h3>🎓 Oberlin City Schools</h3>
+            <p class="tagline">Home of the Phoenix</p>
+          </div>
+          <div class="stats">
+            <span>~782 students</span>
+          </div>
+        </div>
+        <div class="district-content">
+          <div class="info-block">
+            <h4>Contact</h4>
+            <p><strong>Website:</strong> <a href="https://www.oberlinschools.net" target="_blank" rel="noopener">oberlinschools.net</a></p>
+          </div>
+          <div class="info-block">
+            <h4>Communities Served</h4>
+            <ul>
+              <li>City of Oberlin</li>
+              <li>Oberlin Township</li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h4>Notable</h4>
+            <p>Located in the same community as Oberlin College, with various partnerships and programs.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="libraries">
+    <div class="container">
+      <h2>📚 Public Libraries</h2>
+      <div class="library-grid">
+
+        <div class="library-card">
+          <h3>Grafton-Midview Public Library</h3>
+          <p><strong>Address:</strong> 983 Main St, Grafton, OH 44044</p>
+          <p><strong>Phone:</strong> <a href="tel:440-926-3317">440-926-3317</a></p>
+          <p><strong>Website:</strong> <a href="https://www.gmplibrary.org" target="_blank" rel="noopener">gmplibrary.org</a></p>
+          <div class="hours">
+            <h4>Hours</h4>
+            <table>
+              <tr><td>Monday</td><td>9:30am – 8:00pm</td></tr>
+              <tr><td>Tuesday</td><td>9:30am – 8:00pm</td></tr>
+              <tr><td>Wednesday</td><td>9:30am – 5:00pm</td></tr>
+              <tr><td>Thursday</td><td>9:30am – 8:00pm</td></tr>
+              <tr><td>Friday</td><td>9:30am – 5:00pm</td></tr>
+              <tr><td>Saturday</td><td>9:30am – 5:00pm</td></tr>
+              <tr><td>Sunday</td><td>1:00pm – 5:00pm</td></tr>
+            </table>
+          </div>
+          <p class="serves"><em>Serves Grafton, Eaton Township, Carlisle Township</em></p>
+        </div>
+
+        <div class="library-card">
+          <h3>Oberlin Public Library</h3>
+          <p><strong>Address:</strong> 65 S Main St, Oberlin, OH 44074</p>
+          <p><strong>Website:</strong> <a href="https://www.oberlinlibrary.org" target="_blank" rel="noopener">oberlinlibrary.org</a></p>
+          <p class="serves"><em>Serves City of Oberlin and surrounding area</em></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="youth-sports-link">
     <div class="container">
       <div class="card">
-        <h2>Coming Soon</h2>
-        <p>We're working on gathering school information for:</p>
-        <ul>
-          <li><strong>Midview Local Schools</strong> - Grafton, Eaton Township</li>
-          <li><strong>Oberlin City Schools</strong> - Oberlin</li>
-          <li><strong>Keystone Local Schools</strong> - LaGrange, Carlisle Township</li>
-        </ul>
-        <p>In the meantime, visit the district websites directly:</p>
-        <div class="links">
-          <a href="https://www.midviewk12.org" target="_blank" rel="noopener" class="btn">Midview Schools</a>
-          <a href="https://www.oberlinschools.net" target="_blank" rel="noopener" class="btn">Oberlin Schools</a>
-          <a href="https://www.keystonelocalschools.org" target="_blank" rel="noopener" class="btn">Keystone Schools</a>
+        <h2>⚽ Looking for Youth Sports?</h2>
+        <p>Find registration info for youth sports leagues in our area.</p>
+        <a href="/sports" class="btn">View Youth Sports Directory →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="higher-ed">
+    <div class="container">
+      <h2>🎓 Higher Education</h2>
+      <div class="college-grid">
+        <div class="college-card">
+          <h3>Oberlin College</h3>
+          <p>A private liberal arts college in Oberlin, founded in 1833. Known for its Conservatory of Music.</p>
+          <p><a href="https://www.oberlin.edu" target="_blank" rel="noopener">oberlin.edu</a></p>
         </div>
-        <p class="help-text">Know something we should include? <a href="mailto:neil@neilofneils.com">Let us know</a></p>
+        <div class="college-card">
+          <h3>Lorain County Community College</h3>
+          <p>Community college in Elyria offering associate degrees and workforce training.</p>
+          <p><a href="https://www.lorainccc.edu" target="_blank" rel="noopener">lorainccc.edu</a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -39,53 +219,202 @@ import '../styles/global.css';
       border-bottom: 1px solid var(--color-border-light);
     }
 
-    .page-header h1 {
-      margin-bottom: var(--space-md);
-    }
-
     .lead {
       font-size: var(--font-size-xl);
       color: var(--color-text-secondary);
       max-width: 700px;
     }
 
-    .coming-soon {
-      padding: var(--space-3xl) 0;
+    .which-district {
+      padding: var(--space-2xl) 0;
+      background: #fffbeb;
     }
 
-    .coming-soon .card {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
+    .which-district .card.highlight {
+      background: white;
+      border: 2px solid #fbbf24;
     }
 
-    .coming-soon h2 {
-      color: var(--color-text-secondary);
+    .which-district h2 {
       margin-bottom: var(--space-lg);
     }
 
-    .coming-soon ul {
-      text-align: left;
-      margin: var(--space-lg) auto;
-      max-width: 400px;
+    .district-guide {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
     }
 
-    .coming-soon li {
+    .district-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      padding: var(--space-md);
+      background: var(--color-bg-surface);
+      border-radius: var(--radius-sm);
+    }
+
+    .district-item strong {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .district-item span {
+      color: var(--color-text-secondary);
+      font-weight: 600;
+    }
+
+    .which-district .note {
+      margin-top: var(--space-lg);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-tertiary);
+    }
+
+    .districts, .libraries, .higher-ed {
+      padding: var(--space-2xl) 0;
+    }
+
+    .districts h2, .libraries h2, .higher-ed h2 {
+      margin-bottom: var(--space-xl);
+    }
+
+    .district-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-xl);
+      overflow: hidden;
+    }
+
+    .district-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: var(--space-lg);
+      background: var(--color-bg-surface);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .district-header h3 {
+      margin-bottom: var(--space-xs);
+    }
+
+    .tagline {
+      color: var(--color-text-tertiary);
+      font-style: italic;
+    }
+
+    .stats {
+      display: flex;
+      gap: var(--space-md);
+    }
+
+    .stats span {
+      background: var(--color-bg);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-sm);
+    }
+
+    .district-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-xl);
+      padding: var(--space-lg);
+    }
+
+    .info-block h4 {
+      font-size: var(--font-size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-tertiary);
       margin-bottom: var(--space-sm);
     }
 
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-md);
-      justify-content: center;
-      margin: var(--space-xl) 0;
+    .info-block ul {
+      padding-left: var(--space-lg);
+      margin: 0;
     }
 
-    .help-text {
+    .info-block li {
+      margin-bottom: var(--space-xs);
+    }
+
+    .library-grid, .college-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-xl);
+    }
+
+    .library-card, .college-card {
+      background: var(--color-bg-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+    }
+
+    .library-card h3, .college-card h3 {
+      margin-bottom: var(--space-md);
+    }
+
+    .hours {
+      margin: var(--space-md) 0;
+    }
+
+    .hours h4 {
+      font-size: var(--font-size-sm);
+      margin-bottom: var(--space-sm);
+    }
+
+    .hours table {
+      font-size: var(--font-size-sm);
+      width: 100%;
+    }
+
+    .hours td {
+      padding: var(--space-xs) 0;
+    }
+
+    .hours td:last-child {
+      text-align: right;
+      color: var(--color-text-secondary);
+    }
+
+    .serves {
       font-size: var(--font-size-sm);
       color: var(--color-text-tertiary);
-      margin-top: var(--space-xl);
+      margin-top: var(--space-md);
+    }
+
+    .youth-sports-link {
+      padding: var(--space-xl) 0;
+      background: var(--color-bg-surface);
+    }
+
+    .youth-sports-link .card {
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .youth-sports-link h2 {
+      margin-bottom: var(--space-md);
+    }
+
+    .youth-sports-link p {
+      margin-bottom: var(--space-lg);
+      color: var(--color-text-secondary);
+    }
+
+    @media (max-width: 600px) {
+      .district-header {
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+
+      .stats {
+        flex-wrap: wrap;
+      }
     }
   </style>
 </BaseLayout>
