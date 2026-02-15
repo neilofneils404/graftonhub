@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="About GraftonHub" description="Learn about GraftonHub, our mission, and how we serve the local community.">
+  <div class="page-header">
+    <div class="container content">
+      <h1>About GraftonHub</h1>
+      <p class="lead">A free community resource for Grafton, Oberlin, LaGrange, Carlisle Township, and Eaton Township</p>
+    </div>
+  </div>
+
+  <section class="about-section">
+    <div class="container content">
+      <div class="card">
+        <h2>Our Mission</h2>
+        <p>GraftonHub exists to make local information easy to find. Whether you're a longtime resident or just moved here, we want to help you quickly discover:</p>
+        <ul>
+          <li>How to register your child for youth sports</li>
+          <li>Where to set up utilities when you move</li>
+          <li>What's happening in the community this week</li>
+          <li>When the next school board meeting is</li>
+          <li>How to contact local government offices</li>
+        </ul>
+        <p>No ads. No tracking. No subscription fees. Just helpful information, updated twice daily.</p>
+      </div>
+
+      <div class="card">
+        <h2>How It Works</h2>
+        <p>GraftonHub automatically gathers public information from official sources:</p>
+        <ul>
+          <li><strong>Weather:</strong> National Weather Service (official government data)</li>
+          <li><strong>News:</strong> Chronicle-Telegram, Cleveland.com, and local news outlets</li>
+          <li><strong>Schools:</strong> Midview, Oberlin, and Keystone district websites</li>
+          <li><strong>Government:</strong> Village, township, and city official websites</li>
+          <li><strong>Events:</strong> Public calendars and community announcements</li>
+        </ul>
+        <p>We update the site twice a day (morning and evening) to keep information current.</p>
+      </div>
+
+      <div class="card privacy-card">
+        <h2>🔒 Your Privacy</h2>
+        <p><strong>We don't track you.</strong> GraftonHub doesn't use cookies, analytics, or any tracking technology. We don't collect your personal information. We don't know who visits the site, and we don't want to.</p>
+        <p>This is a community service, not a data-mining operation.</p>
+      </div>
+
+      <div class="card disclaimer-card">
+        <h2>⚠️ Important Disclaimer</h2>
+        <p>GraftonHub aggregates information from multiple public sources. While we work hard to keep everything accurate and up-to-date, <strong>information can change</strong>.</p>
+        <p><strong>Always verify critical information</strong> (registration deadlines, meeting times, contact numbers) with the official source before making decisions.</p>
+        <p>We're not affiliated with any government entity, school district, or organization mentioned on this site. We're just neighbors trying to help.</p>
+      </div>
+
+      <div class="card contact-card">
+        <h2>📧 Contact & Corrections</h2>
+        <p>Found something wrong? Know about an event we missed? Want to suggest a feature?</p>
+        <p><strong>We want to hear from you:</strong></p>
+        <p class="contact-email"><a href="mailto:hello@graftonhub.com">hello@graftonhub.com</a></p>
+        <p class="note">Please include specific details when reporting errors (what's wrong, where you found it, what it should say). Screenshots help!</p>
+      </div>
+
+      <div class="card">
+        <h2>🤝 Community Involvement</h2>
+        <p><strong>We're open to suggestions!</strong> If you represent a local organization and want to make sure your information is included, reach out. If you have ideas for making this more useful, tell us.</p>
+        <p>This site exists to serve the community. Your feedback makes it better.</p>
+      </div>
+
+      <div class="card">
+        <h2>💡 Why We Built This</h2>
+        <p>Local information is scattered across dozens of websites, Facebook groups, and physical bulletin boards. Finding what you need often requires knowing where to look.</p>
+        <p>We wanted to create one place where you can find answers to common questions without hunting through multiple sites or asking in Facebook groups.</p>
+        <p>Think of it as a digital community bulletin board—except it updates itself.</p>
+      </div>
+
+      <div class="card technical-card">
+        <h2>🔧 Technical Details</h2>
+        <p>For the curious:</p>
+        <ul>
+          <li><strong>Built with:</strong> Astro (static site generator)</li>
+          <li><strong>Hosted on:</strong> Cloudflare Pages (free tier)</li>
+          <li><strong>Updated:</strong> Twice daily via automated scripts</li>
+          <li><strong>Search:</strong> Client-side (no server required)</li>
+          <li><strong>Cost to run:</strong> ~$12/year for the domain</li>
+        </ul>
+        <p>Open-source technology, built by a local resident who wanted to help.</p>
+      </div>
+
+      <div class="card credits-card">
+        <h2>❤️ Credits</h2>
+        <p>GraftonHub was created and maintained by a local resident with help from community members who contribute information and corrections.</p>
+        <p>Special thanks to all the local organizations who make their information publicly accessible.</p>
+      </div>
+
+      <div class="card final-note">
+        <h2>🏡 We're Neighbors</h2>
+        <p>This isn't a business. There's no company behind GraftonHub, no investors, no monetization plan.</p>
+        <p>It's just a neighbor trying to make life a little easier for everyone who lives here.</p>
+        <p>We hope you find it useful.</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--color-bg-surface) 0%, var(--color-bg-base) 100%);
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .page-header h1 {
+      color: var(--color-primary);
+      margin-bottom: var(--space-md);
+    }
+
+    .lead {
+      font-size: var(--font-size-xl);
+      color: var(--color-text-secondary);
+    }
+
+    .about-section {
+      padding: var(--space-3xl) 0;
+    }
+
+    .about-section .card {
+      margin-bottom: var(--space-2xl);
+    }
+
+    .about-section h2 {
+      color: var(--color-primary);
+      margin-bottom: var(--space-lg);
+    }
+
+    .about-section p {
+      line-height: var(--line-height-relaxed);
+      margin-bottom: var(--space-md);
+    }
+
+    .about-section ul {
+      margin: var(--space-md) 0;
+      padding-left: var(--space-xl);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .about-section li {
+      margin: var(--space-sm) 0;
+    }
+
+    .privacy-card {
+      background: linear-gradient(
+        to bottom right,
+        var(--color-bg-elevated),
+        var(--color-bg-surface)
+      );
+      border-left: 4px solid var(--color-secondary);
+    }
+
+    .disclaimer-card {
+      background: linear-gradient(
+        to bottom right,
+        #FFF9E6,
+        var(--color-bg-elevated)
+      );
+      border-left: 4px solid var(--color-accent-yellow);
+    }
+
+    .contact-card {
+      background: var(--color-bg-surface);
+    }
+
+    .contact-email {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-semibold);
+      margin: var(--space-lg) 0;
+    }
+
+    .note {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-tertiary);
+      font-style: italic;
+    }
+
+    .technical-card {
+      background: var(--color-bg-surface);
+    }
+
+    .credits-card {
+      background: linear-gradient(
+        to bottom right,
+        var(--color-bg-elevated),
+        #FFF5F0
+      );
+    }
+
+    .final-note {
+      background: linear-gradient(
+        135deg,
+        #FFF5F0 0%,
+        var(--color-bg-elevated) 50%,
+        #F0F7F0 100%
+      );
+      border: 2px solid var(--color-primary-light);
+    }
+
+    .final-note h2 {
+      color: var(--color-primary);
+    }
+
+    @media (max-width: 768px) {
+      .about-section ul {
+        padding-left: var(--space-lg);
+      }
+    }
+  </style>
+</BaseLayout>

@@ -1,0 +1,435 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="Youth Sports & Recreation" description="Find youth sports programs, registration info, and recreation opportunities in Grafton, Oberlin, and surrounding areas.">
+  <div class="page-header">
+    <div class="container">
+      <h1>⚽ Youth Sports & Recreation</h1>
+      <p class="lead">Find programs, register for teams, and get your kids active in the community</p>
+    </div>
+  </div>
+
+  <section class="featured-banner">
+    <div class="container">
+      <div class="card card-featured">
+        <span class="badge badge-new">📢 Registration Open</span>
+        <h2>Spring Baseball & Softball Registration</h2>
+        <p><strong>Ages 6-12 • Season starts April 15</strong></p>
+        <p>Registration deadline: <strong>March 1, 2026</strong></p>
+        <p>Cost: $85 per child (includes uniform, equipment use)</p>
+        <div class="cta-buttons">
+          <a href="#baseball" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sports-section">
+    <div class="container">
+      <div class="search-box card">
+        <h3>🔍 Find a Program</h3>
+        <p>What's your child's age and what sport are they interested in?</p>
+        <div class="filter-grid">
+          <select class="filter-select">
+            <option>Select Age Group</option>
+            <option>4-6 years</option>
+            <option>7-9 years</option>
+            <option>10-12 years</option>
+            <option>13-15 years</option>
+            <option>16-18 years</option>
+          </select>
+          <select class="filter-select">
+            <option>Select Sport</option>
+            <option>Baseball</option>
+            <option>Basketball</option>
+            <option>Football</option>
+            <option>Soccer</option>
+            <option>Softball</option>
+            <option>Volleyball</option>
+            <option>Wrestling</option>
+          </select>
+        </div>
+      </div>
+
+      <h2>⚾ Baseball & Softball</h2>
+      
+      <div class="program-card card" id="baseball">
+        <div class="program-header">
+          <h3>Grafton Youth Baseball League</h3>
+          <span class="badge badge-new">Registration Open</span>
+        </div>
+        <div class="program-details">
+          <div class="detail-item">
+            <strong>Ages:</strong> 6-12
+          </div>
+          <div class="detail-item">
+            <strong>Season:</strong> April 15 - July 15, 2026
+          </div>
+          <div class="detail-item">
+            <strong>Cost:</strong> $85 per player
+          </div>
+          <div class="detail-item">
+            <strong>Registration Deadline:</strong> March 1, 2026
+          </div>
+          <div class="detail-item">
+            <strong>Practices:</strong> Weekday evenings (2x per week)
+          </div>
+          <div class="detail-item">
+            <strong>Games:</strong> Saturdays, home field at Lions Park
+          </div>
+        </div>
+        <div class="program-info">
+          <p><strong>What's Included:</strong> Team uniform, equipment use (bats, helmets, catcher's gear), professional coaching, end-of-season tournament</p>
+          <p><strong>Location:</strong> Lions Park, 45533 SR 10, Oberlin, OH 44074</p>
+        </div>
+        <div class="program-contact">
+          <p><strong>Contact:</strong> Midview Athletics Office</p>
+          <p>📞 <a href="tel:440-926-3491">440-926-3491</a></p>
+          <p>✉️ <a href="mailto:dmay@midviewk12.org">dmay@midviewk12.org</a></p>
+          <a href="https://www.midviewk12.org/o/athletics" target="_blank" class="btn btn-primary">Register Online</a>
+        </div>
+      </div>
+
+      <div class="program-card card">
+        <div class="program-header">
+          <h3>Oberlin Girls Softball League</h3>
+        </div>
+        <div class="program-details">
+          <div class="detail-item">
+            <strong>Ages:</strong> 8-14
+          </div>
+          <div class="detail-item">
+            <strong>Season:</strong> May - July 2026
+          </div>
+          <div class="detail-item">
+            <strong>Cost:</strong> $75 per player
+          </div>
+          <div class="detail-item">
+            <strong>Next Registration:</strong> Opens March 15
+          </div>
+        </div>
+        <div class="program-contact">
+          <p><strong>Contact:</strong> Oberlin Recreation Department</p>
+          <p>📞 <a href="tel:440-775-7223">440-775-7223</a></p>
+          <p><a href="https://www.cityofoberlin.com/recreation-department/" target="_blank">cityofoberlin.com/recreation</a></p>
+        </div>
+      </div>
+
+      <h2>⚽ Soccer</h2>
+
+      <div class="program-card card">
+        <div class="program-header">
+          <h3>Grafton Youth Soccer</h3>
+          <span class="badge badge-category">Fall 2026</span>
+        </div>
+        <div class="program-details">
+          <div class="detail-item">
+            <strong>Ages:</strong> 4-18 (multiple divisions)
+          </div>
+          <div class="detail-item">
+            <strong>Season:</strong> August - October 2026
+          </div>
+          <div class="detail-item">
+            <strong>Cost:</strong> $90-$120 depending on age group
+          </div>
+          <div class="detail-item">
+            <strong>Registration Opens:</strong> June 1, 2026
+          </div>
+        </div>
+        <div class="program-info">
+          <p><strong>Divisions:</strong> Pre-K (age 4), Kindergarten, 1st-2nd grade, 3rd-4th grade, 5th-6th grade, Middle School, High School</p>
+          <p><strong>Practice Fields:</strong> Veteran Memorial Park, various local fields</p>
+        </div>
+        <div class="program-contact">
+          <p><strong>Contact:</strong> Grafton Youth Soccer Association</p>
+          <p>📧 <a href="mailto:info@graftonyouthsoccer.org">info@graftonyouthsoccer.org</a></p>
+        </div>
+      </div>
+
+      <div class="program-card card">
+        <div class="program-header">
+          <h3>LaGrange Youth Soccer Association</h3>
+        </div>
+        <div class="program-details">
+          <div class="detail-item">
+            <strong>Ages:</strong> 5-14
+          </div>
+          <div class="detail-item">
+            <strong>Season:</strong> September - November 2026
+          </div>
+          <div class="detail-item">
+            <strong>Cost:</strong> $85 per player
+          </div>
+        </div>
+        <div class="program-contact">
+          <p><strong>Contact:</strong> Keystone Local Schools Athletics</p>
+          <p>📞 <a href="tel:440-355-6118">440-355-6118</a></p>
+          <p><a href="https://www.keystonelocalschools.org" target="_blank">keystonelocalschools.org</a></p>
+        </div>
+      </div>
+
+      <h2>🏀 Basketball</h2>
+
+      <div class="program-card card">
+        <div class="program-header">
+          <h3>Midview Youth Basketball</h3>
+          <span class="badge badge-category">Winter 2026-27</span>
+        </div>
+        <div class="program-details">
+          <div class="detail-item">
+            <strong>Ages:</strong> 7-14
+          </div>
+          <div class="detail-item">
+            <strong>Season:</strong> November 2026 - February 2027
+          </div>
+          <div class="detail-item">
+            <strong>Registration Opens:</strong> September 2026
+          </div>
+        </div>
+        <div class="program-contact">
+          <p><strong>Contact:</strong> Midview Athletics</p>
+          <p>📞 <a href="tel:440-926-3491">440-926-3491</a></p>
+        </div>
+      </div>
+
+      <h2>🏈 Football</h2>
+
+      <div class="program-card card">
+        <div class="program-header">
+          <h3>Lorain County Youth Football League</h3>
+        </div>
+        <div class="program-details">
+          <div class="detail-item">
+            <strong>Ages:</strong> 8-14 (by weight divisions)
+          </div>
+          <div class="detail-item">
+            <strong>Season:</strong> August - November 2026
+          </div>
+          <div class="detail-item">
+            <strong>Registration Opens:</strong> May 2026
+          </div>
+        </div>
+        <div class="program-info">
+          <p><strong>Note:</strong> Includes flag football for younger ages and tackle for older divisions. Safety equipment provided.</p>
+        </div>
+        <div class="program-contact">
+          <p>📧 Contact your local school athletics office for details</p>
+        </div>
+      </div>
+
+      <h2>📋 General Information</h2>
+
+      <div class="info-grid">
+        <div class="info-card card">
+          <h3>💰 Financial Assistance</h3>
+          <p>Many programs offer scholarships or payment plans. Don't let cost be a barrier—reach out to the program coordinator.</p>
+        </div>
+
+        <div class="info-card card">
+          <h3>🩺 Sports Physicals</h3>
+          <p>Required for most programs. Local clinics often offer group sports physicals in spring/summer. Check with your school for scheduled dates.</p>
+        </div>
+
+        <div class="info-card card">
+          <h3>👨‍👩‍👧‍👦 Volunteer Coaching</h3>
+          <p>Programs always need volunteer coaches and assistant coaches. No experience necessary—training provided. Great way to be involved!</p>
+        </div>
+
+        <div class="info-card card">
+          <h3>📅 Signup Reminders</h3>
+          <p>Most programs fill up quickly. Mark registration dates on your calendar and sign up early to guarantee a spot.</p>
+        </div>
+      </div>
+
+      <div class="card help-card">
+        <h3>❓ Can't Find What You're Looking For?</h3>
+        <p>We're working to keep this page current with all local youth sports opportunities. If you know of a program we're missing, or if any information is outdated, please let us know!</p>
+        <p><a href="mailto:hello@graftonhub.com">Report an error or suggest an addition</a></p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--color-bg-surface) 0%, var(--color-bg-base) 100%);
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .page-header h1 {
+      color: var(--color-primary);
+      margin-bottom: var(--space-md);
+    }
+
+    .lead {
+      font-size: var(--font-size-xl);
+      color: var(--color-text-secondary);
+      max-width: 700px;
+    }
+
+    .featured-banner {
+      padding: var(--space-2xl) 0;
+    }
+
+    .featured-banner h2 {
+      margin-top: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+
+    .featured-banner p {
+      margin: var(--space-sm) 0;
+      font-size: var(--font-size-lg);
+    }
+
+    .cta-buttons {
+      margin-top: var(--space-lg);
+    }
+
+    .sports-section {
+      padding: var(--space-2xl) 0 var(--space-3xl);
+    }
+
+    .sports-section h2 {
+      color: var(--color-primary);
+      margin: var(--space-3xl) 0 var(--space-xl);
+      padding-top: var(--space-xl);
+      border-top: 2px solid var(--color-border-light);
+    }
+
+    .sports-section h2:first-of-type {
+      margin-top: var(--space-2xl);
+      border-top: none;
+    }
+
+    .search-box {
+      margin-bottom: var(--space-2xl);
+    }
+
+    .search-box h3 {
+      margin-bottom: var(--space-sm);
+    }
+
+    .filter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+
+    .filter-select {
+      padding: var(--space-md);
+      font-size: var(--font-size-base);
+      border: 2px solid var(--color-border-medium);
+      border-radius: var(--border-radius-md);
+      background: white;
+      cursor: pointer;
+    }
+
+    .program-card {
+      margin-bottom: var(--space-xl);
+    }
+
+    .program-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: var(--space-lg);
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+
+    .program-header h3 {
+      margin: 0;
+      color: var(--color-text-primary);
+    }
+
+    .program-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-md);
+      padding: var(--space-lg);
+      background: var(--color-bg-surface);
+      border-radius: var(--border-radius-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .detail-item {
+      font-size: var(--font-size-sm);
+    }
+
+    .detail-item strong {
+      display: block;
+      color: var(--color-text-tertiary);
+      font-size: var(--font-size-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--space-xs);
+    }
+
+    .program-info {
+      margin-bottom: var(--space-lg);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .program-info p {
+      margin: var(--space-sm) 0;
+    }
+
+    .program-contact {
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border-light);
+    }
+
+    .program-contact p {
+      margin: var(--space-xs) 0;
+    }
+
+    .program-contact a.btn {
+      margin-top: var(--space-md);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      margin: var(--space-2xl) 0;
+    }
+
+    .info-card h3 {
+      font-size: var(--font-size-lg);
+      margin-bottom: var(--space-md);
+    }
+
+    .info-card p {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .help-card {
+      margin-top: var(--space-2xl);
+      background: var(--color-bg-surface);
+    }
+
+    .help-card h3 {
+      color: var(--color-primary);
+      margin-bottom: var(--space-md);
+    }
+
+    @media (max-width: 768px) {
+      .program-header {
+        flex-direction: column;
+      }
+
+      .program-details {
+        grid-template-columns: 1fr;
+      }
+
+      .filter-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>

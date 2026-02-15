@@ -1,0 +1,354 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="New Residents Guide" description="Everything you need to know when moving to Grafton, Oberlin, or the surrounding area.">
+  <div class="page-header">
+    <div class="container">
+      <h1>👋 Welcome to the Area!</h1>
+      <p class="lead">Your first-week checklist for getting settled in Grafton and surrounding communities</p>
+    </div>
+  </div>
+
+  <section class="checklist-section">
+    <div class="container content">
+      <div class="card checklist-card">
+        <h2>✅ Your First Week Checklist</h2>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="utilities" />
+          <label for="utilities">
+            <h3>Set Up Utilities</h3>
+            <div class="checklist-details">
+              <div class="utility-grid">
+                <div class="utility-item">
+                  <strong>⚡ Electric</strong>
+                  <p>AEP Ohio (Ohio Edison)</p>
+                  <p><a href="tel:1-800-672-2231">1-800-672-2231</a></p>
+                  <p><a href="https://www.aepohio.com" target="_blank">aepohio.com</a></p>
+                </div>
+                
+                <div class="utility-item">
+                  <strong>🔥 Natural Gas</strong>
+                  <p>Columbia Gas of Ohio</p>
+                  <p><a href="tel:1-800-344-4077">1-800-344-4077</a></p>
+                  <p><a href="https://www.columbiagasohio.com" target="_blank">columbiagasohio.com</a></p>
+                </div>
+                
+                <div class="utility-item">
+                  <strong>💧 Water & Sewer</strong>
+                  <p><strong>Grafton:</strong> Village of Grafton Water Department</p>
+                  <p><a href="tel:440-926-2204">440-926-2204</a></p>
+                  <p><strong>Oberlin:</strong> Oberlin Water Department</p>
+                  <p><a href="tel:440-775-7210">440-775-7210</a></p>
+                  <p class="note">Townships: Many properties use private wells. Check with your landlord/seller.</p>
+                </div>
+                
+                <div class="utility-item">
+                  <strong>🗑️ Trash & Recycling</strong>
+                  <p>Rumpke Waste & Recycling</p>
+                  <p><a href="tel:1-800-828-8171">1-800-828-8171</a></p>
+                  <p><a href="https://www.rumpke.com" target="_blank">rumpke.com</a></p>
+                  <p class="note">Some townships have their own services - check with your township office.</p>
+                </div>
+                
+                <div class="utility-item">
+                  <strong>📡 Internet & Cable</strong>
+                  <p><strong>Spectrum:</strong> <a href="tel:1-855-243-8892">1-855-243-8892</a></p>
+                  <p><strong>AT&T:</strong> <a href="tel:1-800-288-2020">1-800-288-2020</a></p>
+                  <p><strong>Frontier:</strong> <a href="tel:1-800-921-8101">1-800-921-8101</a></p>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+
+        <div class="checklist-item">
+          <input type="checkbox" id="register-vehicle" />
+          <label for="register-vehicle">
+            <h3>Register Vehicles</h3>
+            <div class="checklist-details">
+              <p><strong>Lorain County BMV</strong></p>
+              <p>Multiple locations - nearest is Elyria</p>
+              <p>226 Middle Ave, Elyria, OH 44035</p>
+              <p><a href="tel:440-329-5224">440-329-5224</a></p>
+              <p>Bring: title, proof of insurance, driver's license, proof of residency</p>
+            </div>
+          </label>
+        </div>
+
+        <div class="checklist-item">
+          <input type="checkbox" id="voter-registration" />
+          <label for="voter-registration">
+            <h3>Register to Vote</h3>
+            <div class="checklist-details">
+              <p><strong>Lorain County Board of Elections</strong></p>
+              <p>1985 N Ridge Rd E, Lorain, OH 44055</p>
+              <p><a href="tel:440-326-5900">440-326-5900</a></p>
+              <p><a href="https://www.loraincounty.com/boe/" target="_blank">Register online</a> or in person</p>
+            </div>
+          </label>
+        </div>
+
+        <div class="checklist-item">
+          <input type="checkbox" id="schools" />
+          <label for="schools">
+            <h3>Enroll Children in School</h3>
+            <div class="checklist-details">
+              <p><strong>Midview Local Schools</strong> (Grafton, Carlisle Twp, Eaton Twp)</p>
+              <p><a href="tel:440-926-3700">440-926-3700</a> • <a href="https://www.midviewk12.org" target="_blank">midviewk12.org</a></p>
+              
+              <p><strong>Oberlin City Schools</strong> (Oberlin)</p>
+              <p><a href="tel:440-774-1051">440-774-1051</a> • <a href="https://www.oberlinschools.org" target="_blank">oberlinschools.org</a></p>
+              
+              <p><strong>Keystone Local Schools</strong> (LaGrange Twp)</p>
+              <p><a href="tel:440-355-6118">440-355-6118</a> • <a href="https://www.keystonelocalschools.org" target="_blank">keystonelocalschools.org</a></p>
+            </div>
+          </label>
+        </div>
+
+        <div class="checklist-item">
+          <input type="checkbox" id="library" />
+          <label for="library">
+            <h3>Get a Library Card</h3>
+            <div class="checklist-details">
+              <p><strong>Grafton-Midview Public Library</strong></p>
+              <p>983 Main St, Grafton, OH 44044</p>
+              <p><a href="tel:440-926-3317">440-926-3317</a></p>
+              
+              <p><strong>Oberlin Public Library</strong></p>
+              <p>65 S Main St, Oberlin, OH 44074</p>
+              <p><a href="tel:440-775-4790">440-775-4790</a></p>
+            </div>
+          </label>
+        </div>
+
+        <div class="checklist-item">
+          <input type="checkbox" id="medical" />
+          <label for="medical">
+            <h3>Find Healthcare Providers</h3>
+            <div class="checklist-details">
+              <p><strong>University Hospitals Elyria Medical Center</strong></p>
+              <p>630 E River St, Elyria, OH 44035</p>
+              <p><a href="tel:440-329-7500">440-329-7500</a></p>
+              
+              <p><strong>Cleveland Clinic - Avon</strong></p>
+              <p>33300 Cleveland Clinic Blvd, Avon, OH 44011</p>
+              <p><a href="tel:440-695-2100">440-695-2100</a></p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="card info-card">
+        <h2>📞 Important Local Numbers</h2>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <strong>🚨 Emergency</strong>
+            <p><a href="tel:911">911</a></p>
+          </div>
+          
+          <div class="contact-item">
+            <strong>🏛️ Grafton Village Hall</strong>
+            <p><a href="tel:440-926-2401">440-926-2401</a></p>
+          </div>
+          
+          <div class="contact-item">
+            <strong>👮 Grafton Police (non-emergency)</strong>
+            <p><a href="tel:440-926-2251">440-926-2251</a></p>
+          </div>
+          
+          <div class="contact-item">
+            <strong>🏛️ Oberlin City Hall</strong>
+            <p><a href="tel:440-775-7204">440-775-7204</a></p>
+          </div>
+          
+          <div class="contact-item">
+            <strong>🏢 Carlisle Township</strong>
+            <p><a href="tel:440-965-7052">440-965-7052</a></p>
+          </div>
+          
+          <div class="contact-item">
+            <strong>🏢 Eaton Township</strong>
+            <p><a href="tel:440-748-2922">440-748-2922</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>🎯 Next Steps</h2>
+        <ul class="next-steps">
+          <li><a href="/sports">Check out youth sports programs</a> if you have kids</li>
+          <li><a href="/events">Browse community events</a> to meet neighbors</li>
+          <li><a href="/services">Explore local businesses and services</a></li>
+          <li>Join local Facebook groups for community updates</li>
+          <li>Introduce yourself to your neighbors!</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--color-bg-surface) 0%, var(--color-bg-base) 100%);
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .page-header h1 {
+      color: var(--color-primary);
+      margin-bottom: var(--space-md);
+    }
+
+    .lead {
+      font-size: var(--font-size-xl);
+      color: var(--color-text-secondary);
+      max-width: 700px;
+    }
+
+    .checklist-section {
+      padding: var(--space-3xl) 0;
+    }
+
+    .checklist-card {
+      margin-bottom: var(--space-2xl);
+    }
+
+    .checklist-item {
+      margin: var(--space-xl) 0;
+      padding: var(--space-lg);
+      border: 2px solid var(--color-border-light);
+      border-radius: var(--border-radius-lg);
+      transition: all var(--transition-base);
+    }
+
+    .checklist-item:has(input:checked) {
+      background: var(--color-bg-surface);
+      border-color: var(--color-secondary);
+    }
+
+    .checklist-item input[type="checkbox"] {
+      width: 24px;
+      height: 24px;
+      margin-right: var(--space-md);
+      accent-color: var(--color-secondary);
+      cursor: pointer;
+    }
+
+    .checklist-item label {
+      display: flex;
+      align-items: flex-start;
+      cursor: pointer;
+    }
+
+    .checklist-item h3 {
+      margin: 0 0 var(--space-md) 0;
+      color: var(--color-text-primary);
+    }
+
+    .checklist-details {
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .checklist-details p {
+      margin: var(--space-xs) 0;
+    }
+
+    .checklist-details strong {
+      color: var(--color-text-primary);
+    }
+
+    .checklist-details a {
+      font-weight: var(--font-weight-medium);
+    }
+
+    .utility-grid {
+      display: grid;
+      gap: var(--space-lg);
+      margin-top: var(--space-md);
+    }
+
+    .utility-item {
+      padding: var(--space-md);
+      background: var(--color-bg-elevated);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--border-radius-md);
+    }
+
+    .utility-item strong {
+      display: block;
+      font-size: var(--font-size-lg);
+      color: var(--color-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .note {
+      font-size: var(--font-size-sm);
+      font-style: italic;
+      color: var(--color-text-tertiary);
+      margin-top: var(--space-sm);
+    }
+
+    .info-card {
+      margin-bottom: var(--space-2xl);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-lg);
+    }
+
+    .contact-item {
+      padding: var(--space-md);
+      background: var(--color-bg-surface);
+      border-radius: var(--border-radius-md);
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .contact-item a {
+      font-weight: var(--font-weight-semibold);
+      font-size: var(--font-size-lg);
+    }
+
+    .next-steps {
+      list-style: none;
+      padding: 0;
+    }
+
+    .next-steps li {
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .next-steps li:last-child {
+      border-bottom: none;
+    }
+
+    .next-steps a {
+      font-weight: var(--font-weight-medium);
+    }
+
+    @media (max-width: 768px) {
+      .checklist-item label {
+        flex-direction: column;
+      }
+
+      .checklist-item input[type="checkbox"] {
+        margin-bottom: var(--space-sm);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>

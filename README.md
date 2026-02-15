@@ -1,43 +1,94 @@
-# Astro Starter Kit: Minimal
+# GraftonHub - Community Hub Prototype
 
-```sh
-npm create astro@latest -- --template minimal
+A warm, welcoming community information hub for Grafton, Oberlin, LaGrange, Carlisle Township, and Eaton Township.
+
+## Design Philosophy
+
+**Warm & Inviting** - Inspired by community centers and farmers markets, not tech startups. Terracotta, sage green, and cream colors create a friendly, approachable feel.
+
+**Usefulness First** - Built for real people finding real information:
+- Parents looking for youth sports registration
+- New residents setting up utilities
+- Community members checking events and news
+- Families finding school calendars
+
+**Fully Automated** - Designed to update twice daily with zero manual intervention.
+
+## Current Status
+
+✅ **Complete:**
+- Warm, community-focused design system
+- Homepage with weather, search, category navigation
+- Responsive layout (mobile-friendly)
+- Featured announcements section
+- Base layout with header/footer
+
+🚧 **In Progress:**
+- Real NWS weather API integration
+- Remaining pages (sports, schools, utilities, events, news)
+- Search functionality
+- Data fetching scripts
+- Twice-daily automation
+
+## Quick Start
+
+```bash
+cd ~/Projects/graftonhub
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Visit http://localhost:4321 to see it live.
 
-## 🚀 Project Structure
+## Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
+```
+graftonhub/
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── layouts/        # Base layout with header/footer
+│   ├── pages/          # Homepage (more coming)
+│   ├── components/     # Reusable UI components (coming)
+│   ├── scripts/        # Data fetching scripts
+│   └── styles/         # Global CSS with warm design system
+├── data/               # JSON data files (weather, news, etc.)
+└── public/             # Static assets
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Design System
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+**Colors:**
+- Primary: Terracotta (#D4734B)
+- Secondary: Sage Green (#7A9B76)
+- Background: Warm Cream (#F5EFE6)
+- Accents: Butter Yellow (#F2C94C), Sky Blue (#A8BFCE)
 
-Any static assets, like images, can be placed in the `public/` directory.
+**Typography:**
+- Font: Inter (clean, readable)
+- Body: 16px with generous line-height (1.6)
+- Headings: Bold, warm charcoal color
 
-## 🧞 Commands
+**Components:**
+- Cards with soft shadows (not harsh)
+- Pill-shaped search bar with terracotta border
+- Large, friendly category cards
+- Featured banners with yellow accent
 
-All commands are run from the root of the project, from a terminal:
+## Next Steps
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. Wire up NWS API for real weather data
+2. Build utilities guide page
+3. Build sports registration directory
+4. Add news feed (RSS from Chronicle-Telegram, Cleveland.com)
+5. Create events calendar
+6. Implement search with Pagefind
+7. Set up automation (cron jobs for twice-daily updates)
 
-## 👀 Want to learn more?
+## Philosophy
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This is a **philanthropic project** - no ads, no tracking, no monetization. Just helpful information for our community, freely available to all residents and future residents.
+
+The goal: Make it easy to find what you need, when you need it.
+
+---
+
+Built with ❤️ for our community

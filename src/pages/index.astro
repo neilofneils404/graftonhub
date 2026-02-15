@@ -1,20 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
+import { readFile } from 'fs/promises';
+import { join } from 'path';
 
-// For now, use static weather data - will wire up NWS API next
-const weatherData = {
-  current: {
-    temp: 38,
-    conditions: "Partly Cloudy",
-    wind: "NW 8 mph"
-  },
-  forecast: [
-    { day: "Today", high: 42, low: 32, conditions: "Cloudy" },
-    { day: "Tonight", high: 32, low: 28, conditions: "Clear" },
-    { day: "Tomorrow", high: 45, low: 35, conditions: "Sunny" }
-  ]
-};
+// Load real weather data from NWS API
+let weatherData;
+try {
+  const weatherPath = join(process.cwd(), 'data/weather/current.json');
+  const weatherJson = await readFile(weatherPath, 'utf-8');
+  weatherData = JSON.parse(weatherJson);
+} catch (error) {
+  // Fallback if weather data unavailable
+  weatherData = {
+    current: { temp: '--', conditions: 'Data unavailable', wind: '--' },
+    forecast: []
+  };
+}
 
 const currentTime = new Date().toLocaleString('en-US', { 
   timeZone: 'America/New_York',

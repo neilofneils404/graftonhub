@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-02-15T17:10:31.260Z",
+  "current": {
+    "temp": 46,
+    "conditions": "Partly Sunny",
+    "wind": "6 mph"
+  },
+  "forecast": [
+    {
+      "day": "This Afternoon",
+      "high": 48,
+      "low": 48,
+      "conditions": "Partly Sunny"
+    },
+    {
+      "day": "Tonight",
+      "high": 32,
+      "low": 32,
+      "conditions": "Mostly Cloudy"
+    },
+    {
+      "day": "Washington's Birthday",
+      "high": 51,
+      "low": 51,
+      "conditions": "Partly Sunny"
+    },
+    {
+      "day": "Monday Night",
+      "high": 38,
+      "low": 38,
+      "conditions": "Partly Cloudy"
+    },
+    {
+      "day": "Tuesday",
+      "high": 54,
+      "low": 54,
+      "conditions": "Mostly Cloudy"
+    }
+  ],
+  "alerts": []
+}
