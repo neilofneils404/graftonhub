@@ -80,7 +80,8 @@ const { title, description = "Your local community hub for Grafton, Oberlin, LaG
         <p class="footer-links">
           <a href="/about">About</a> • 
           <a href="mailto:neil@neilofneils.com">Report an Error</a> • 
-          <a href="/about#privacy">Privacy</a>
+          <a href="/about#privacy">Privacy</a> • 
+          <a href="/nancys" class="coffee-link" title="Since 1984">☕</a>
         </p>
         <p class="update-time">Last build: {new Date().toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'medium', timeStyle: 'short' })}</p>
       </div>
@@ -205,6 +206,17 @@ const { title, description = "Your local community hub for Grafton, Oberlin, LaG
 
     .footer-links a:hover {
       text-decoration: underline;
+    }
+
+    .coffee-link {
+      font-size: 1.1em;
+      transition: transform 0.2s ease;
+      display: inline-block;
+      text-decoration: none !important;
+    }
+
+    .coffee-link:hover {
+      transform: scale(1.3) rotate(15deg);
     }
 
     .update-time {

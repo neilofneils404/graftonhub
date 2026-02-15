@@ -1,0 +1,312 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="Nancy's Main Street Diner | A Grafton Legend" description="Since 1984, Nancy's has been serving up home-cooked meals, huge pancakes, and homemade pies in downtown Grafton.">
+  <div class="page-header nancys-header">
+    <div class="container">
+      <h1>☕ Nancy's Main Street Diner</h1>
+      <p class="tagline">A Grafton Institution Since 1984</p>
+    </div>
+  </div>
+
+  <div class="container nancys-content">
+    
+    <section class="hero-section">
+      <div class="diner-card">
+        <p class="location">📍 426 Main Street, Grafton, OH 44044</p>
+        <p class="still-here">Still serving, still family-owned, still making everything from scratch.</p>
+      </div>
+    </section>
+
+    <section class="story">
+      <h2>The Story</h2>
+      <div class="story-content">
+        <p>In the spring of 1984, military veterans Bob and Nancy McCarrick opened a little diner on Main Street. No gimmicks, no shortcuts—just fresh ingredients, family recipes, and a commitment to doing it right.</p>
+        
+        <p>Forty-two years later, Nancy's is still there. Still family-owned (daughter Denise, a U.S. Navy veteran, runs it now). Bob and Nancy still help cook the soups and desserts. The building got a retro makeover in 2005—think 1949 Silk City diner with chrome and stainless steel—but the heart of the place hasn't changed.</p>
+
+        <p>It's the kind of place where the pancakes are the size of your head, the pies are made fresh daily, and the staff might give you a little sass (in the best way). Where everything is made to order, so yeah, it takes a minute—but it's worth the wait.</p>
+
+        <p>In 2024, they celebrated their 40th anniversary by bringing back 1984 prices for a day. That's Nancy's: a place that remembers where it came from and treats every customer like they matter.</p>
+      </div>
+    </section>
+
+    <section class="why-it-matters">
+      <h2>Why It Matters</h2>
+      <div class="matters-grid">
+        <div class="matter-card">
+          <h3>Real Food</h3>
+          <p>No heat lamps. No pre-made anything. Everything from scratch, made to order. The way diners used to be.</p>
+        </div>
+        <div class="matter-card">
+          <h3>Family Legacy</h3>
+          <p>Three generations keeping the doors open. Veterans who served their country, now serving their community.</p>
+        </div>
+        <div class="matter-card">
+          <h3>Small Town Soul</h3>
+          <p>In a world of chains and apps, Nancy's is the real thing: a place where people know your name and your order.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="what-people-say">
+      <h2>What People Say</h2>
+      <div class="quotes">
+        <blockquote>"The sausage gravy is to die for."</blockquote>
+        <blockquote>"Feels like home with nostalgia."</blockquote>
+        <blockquote>"Best breakfast in Ohio. Worth the wait."</blockquote>
+        <blockquote>"Classic small-town diner charm."</blockquote>
+        <blockquote>"Pancakes the size of your head!"</blockquote>
+        <blockquote>"Everything made from scratch—you can taste the difference."</blockquote>
+      </div>
+    </section>
+
+    <section class="the-menu">
+      <h2>The Classics</h2>
+      <div class="menu-highlights">
+        <div class="menu-section">
+          <h3>Breakfast</h3>
+          <ul>
+            <li>Those legendary pancakes</li>
+            <li>French toast that actually tastes like something</li>
+            <li>Biscuits & sausage gravy (see quote above)</li>
+            <li>Homemade bread for toast</li>
+          </ul>
+        </div>
+        <div class="menu-section">
+          <h3>Lunch & Dinner</h3>
+          <ul>
+            <li>Burgers done right</li>
+            <li>Meatloaf like your grandma made</li>
+            <li>Chopped sirloin</li>
+            <li>Half-rack ribs</li>
+          </ul>
+        </div>
+        <div class="menu-section">
+          <h3>The Essentials</h3>
+          <ul>
+            <li>Homemade pies (daily)</li>
+            <li>Real milkshakes</li>
+            <li>Coffee that keeps you coming back</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit">
+      <h2>Hours & Info</h2>
+      <div class="visit-card">
+        <p><strong>Address:</strong> 426 Main Street, Grafton, OH 44044</p>
+        <p><strong>Hours:</strong></p>
+        <ul class="hours-list">
+          <li>Monday & Wednesday: 7:30 AM - 3:00 PM</li>
+          <li>Thursday, Friday, Saturday: 7:30 AM - 7:30 PM</li>
+          <li>Sunday: 7:30 AM - 2:00 PM</li>
+          <li>Closed Tuesdays</li>
+        </ul>
+        <p><strong>Website:</strong> <a href="https://nancysdiner.net" target="_blank" rel="noopener">nancysdiner.net</a></p>
+        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/nancysmainstreet.diner" target="_blank" rel="noopener">Nancy's Main Street Diner</a></p>
+      </div>
+    </section>
+
+    <section class="easter-egg-note">
+      <p><em>You found the easter egg. 🥞</em></p>
+      <p>Nancy's isn't just a diner—it's proof that good things last when you do them right. Forty-two years and counting. Here's to forty-two more.</p>
+      <p class="back-link"><a href="/">← Back to GraftonHub</a></p>
+    </section>
+
+  </div>
+
+  <style>
+    .nancys-header {
+      background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+      color: white;
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      border-bottom: 4px solid #FFD700;
+    }
+
+    .nancys-header h1 {
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .tagline {
+      font-size: var(--font-size-xl);
+      color: #FFE4B5;
+      font-style: italic;
+      max-width: 700px;
+    }
+
+    .nancys-content {
+      padding: var(--space-2xl) 0;
+    }
+
+    section {
+      margin-bottom: var(--space-3xl);
+      padding-bottom: var(--space-2xl);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      color: #8B4513;
+      margin-bottom: var(--space-lg);
+      font-size: 1.75rem;
+    }
+
+    .hero-section {
+      text-align: center;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .diner-card {
+      background: #FFF8DC;
+      border: 3px solid #D2691E;
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .location {
+      font-size: var(--font-size-xl);
+      font-weight: 600;
+      margin-bottom: var(--space-md);
+      color: #8B4513;
+    }
+
+    .still-here {
+      font-size: var(--font-size-lg);
+      font-style: italic;
+      color: var(--color-text-secondary);
+    }
+
+    .story-content p {
+      margin-bottom: var(--space-lg);
+      line-height: 1.8;
+      font-size: var(--font-size-lg);
+    }
+
+    .matters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+    }
+
+    .matter-card {
+      background: var(--color-bg-surface);
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      border-left: 4px solid #D2691E;
+    }
+
+    .matter-card h3 {
+      color: #8B4513;
+      margin-bottom: var(--space-sm);
+    }
+
+    .quotes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-md);
+    }
+
+    blockquote {
+      background: var(--color-bg-surface);
+      padding: var(--space-md);
+      border-left: 3px solid #FFD700;
+      font-style: italic;
+      color: var(--color-text-secondary);
+      margin: 0;
+    }
+
+    .menu-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-xl);
+    }
+
+    .menu-section h3 {
+      color: #8B4513;
+      margin-bottom: var(--space-md);
+      padding-bottom: var(--space-sm);
+      border-bottom: 2px solid #D2691E;
+    }
+
+    .menu-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu-section li {
+      padding: var(--space-xs) 0;
+      color: var(--color-text-secondary);
+    }
+
+    .menu-section li:before {
+      content: "☕ ";
+      color: #D2691E;
+    }
+
+    .visit-card {
+      background: #FFF8DC;
+      padding: var(--space-xl);
+      border-radius: var(--radius-md);
+      border: 2px solid #D2691E;
+      max-width: 600px;
+    }
+
+    .visit-card p {
+      margin-bottom: var(--space-sm);
+    }
+
+    .hours-list {
+      list-style: none;
+      padding-left: var(--space-md);
+      margin: var(--space-sm) 0;
+    }
+
+    .hours-list li {
+      padding: var(--space-xs) 0;
+    }
+
+    .easter-egg-note {
+      text-align: center;
+      background: linear-gradient(135deg, #FFE4B5 0%, #FFF8DC 100%);
+      padding: var(--space-xl);
+      border-radius: var(--radius-md);
+      border: 2px dashed #D2691E;
+    }
+
+    .easter-egg-note em {
+      font-size: var(--font-size-xl);
+      color: #8B4513;
+    }
+
+    .easter-egg-note p {
+      margin: var(--space-md) 0;
+    }
+
+    .back-link {
+      margin-top: var(--space-lg);
+    }
+
+    .back-link a {
+      color: #8B4513;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .matters-grid,
+      .menu-highlights,
+      .quotes {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>

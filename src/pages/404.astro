@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="Page Not Found | GraftonHub" description="Looks like this page got lost">
+  <div class="not-found-page">
+    <div class="container">
+      <div class="not-found-content">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-message">Well, This is Awkward</h2>
+        
+        <p class="main-text">
+          That page doesn't exist. Maybe it never did. Maybe it moved to Florida. Who knows.
+        </p>
+
+        <div class="suggestion-box">
+          <h3>What Now?</h3>
+          <p>You could:</p>
+          <ul class="options">
+            <li><a href="/">Go back to the homepage</a> (the safe choice)</li>
+            <li><a href="/emergency">Make sure you don't need emergency services</a> (hopefully not)</li>
+            <li><a href="/nancys">Head to Nancy's for pancakes</a> (the best choice)</li>
+          </ul>
+        </div>
+
+        <div class="nancys-pitch">
+          <p class="pitch-text">
+            <strong>Real talk:</strong> If you're lost on the internet, you're probably frustrated. 
+            Might as well grab some pancakes while you figure it out. 
+            Nancy's has been serving them since 1984—they're the size of your head and they're worth the trip.
+          </p>
+          <p class="pitch-address">📍 426 Main Street • Downtown Grafton</p>
+          <p class="pitch-cta">
+            <a href="/nancys" class="nancys-button">Tell me more about these pancakes →</a>
+          </p>
+        </div>
+
+        <p class="footer-note">
+          <em>Or just email <a href="mailto:neil@neilofneils.com">neil@neilofneils.com</a> if you think something's actually broken.</em>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .not-found-page {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      padding: var(--space-3xl) 0;
+    }
+
+    .not-found-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .error-code {
+      font-size: 8rem;
+      font-weight: 900;
+      color: #D2691E;
+      margin: 0;
+      line-height: 1;
+      text-shadow: 4px 4px 0 rgba(210, 105, 30, 0.2);
+    }
+
+    .error-message {
+      font-size: 2rem;
+      color: var(--color-text);
+      margin: var(--space-md) 0 var(--space-xl);
+    }
+
+    .main-text {
+      font-size: var(--font-size-lg);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .suggestion-box {
+      background: var(--color-bg-surface);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+      text-align: left;
+    }
+
+    .suggestion-box h3 {
+      margin-top: 0;
+      margin-bottom: var(--space-md);
+      color: var(--color-text);
+    }
+
+    .suggestion-box p {
+      margin-bottom: var(--space-md);
+    }
+
+    .options {
+      list-style: none;
+      padding: 0;
+    }
+
+    .options li {
+      padding: var(--space-sm) 0;
+      padding-left: var(--space-md);
+      position: relative;
+    }
+
+    .options li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+    }
+
+    .nancys-pitch {
+      background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);
+      border: 3px solid #D2691E;
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+      text-align: left;
+    }
+
+    .pitch-text {
+      font-size: var(--font-size-base);
+      line-height: 1.7;
+      margin-bottom: var(--space-md);
+      color: var(--color-text);
+    }
+
+    .pitch-address {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      color: #8B4513;
+      margin-bottom: var(--space-md);
+      text-align: center;
+    }
+
+    .pitch-cta {
+      text-align: center;
+      margin-top: var(--space-lg);
+    }
+
+    .nancys-button {
+      display: inline-block;
+      background: #8B4513;
+      color: white;
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .nancys-button:hover {
+      background: #A0522D;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-note {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-tertiary);
+      margin-top: var(--space-xl);
+    }
+
+    @media (max-width: 768px) {
+      .error-code {
+        font-size: 5rem;
+      }
+
+      .error-message {
+        font-size: 1.5rem;
+      }
+
+      .nancys-pitch {
+        padding: var(--space-lg);
+      }
+    }
+  </style>
+</BaseLayout>
