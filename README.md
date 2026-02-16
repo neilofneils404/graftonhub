@@ -38,6 +38,17 @@ npm run dev        # Local dev server
 npm run build      # Production build
 ```
 
+## Deployment
+
+**Manual deployment to Cloudflare Pages:**
+
+```bash
+npm run build
+npx wrangler pages deploy dist --project-name graftonhub
+```
+
+See [DEPLOY.md](DEPLOY.md) for full deployment guide and troubleshooting.
+
 ## Project Structure
 
 ```
