@@ -1,0 +1,555 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="Pharmacies & Grocery Stores | GraftonHub" description="Local pharmacies, drug stores, and grocery stores serving all 7 localities in southern Lorain County.">
+  <div class="page-header">
+    <div class="container">
+      <h1>💊🛒 Pharmacies & Grocery Stores</h1>
+      <p class="lead">Where to get prescriptions filled and groceries, organized by where you live</p>
+    </div>
+  </div>
+
+  <section class="location-picker">
+    <div class="container">
+      <div class="card">
+        <h2>Where do you live?</h2>
+        <div class="location-buttons">
+          <a href="#grafton" class="location-btn">Grafton</a>
+          <a href="#lagrange" class="location-btn">LaGrange</a>
+          <a href="#oberlin" class="location-btn">Oberlin</a>
+          <a href="#carlisle" class="location-btn">Carlisle Township</a>
+          <a href="#eaton" class="location-btn">Eaton Township</a>
+          <a href="#elyria" class="location-btn">Elyria (Regional)</a>
+          <a href="#medina" class="location-btn">Medina (Regional)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stores-by-location">
+    <div class="container">
+
+      <!-- GRAFTON -->
+      <div class="location-card" id="grafton">
+        <h2>🏘️ Grafton (Village & Township)</h2>
+        
+        <div class="category-section">
+          <h3>💊 Pharmacies</h3>
+          
+          <div class="store-card">
+            <h4>Midview Drug Pharmacy</h4>
+            <p class="store-type">Independent Pharmacy</p>
+            <p><strong>Address:</strong> 35053 Royalton Rd, Grafton, OH 44044</p>
+            <p><strong>Phone:</strong> <a href="tel:440-748-2137">(440) 748-2137</a></p>
+            <p><strong>Hours:</strong> Mon-Fri 10AM-7PM, Sat 10AM-5PM, Sun Closed</p>
+            <p><strong>Services:</strong> Medication adherence, multi-dose packaging, MTM, DME, mobile app refills</p>
+            <p class="distance">📍 In Grafton Township</p>
+          </div>
+
+          <p class="nearby-note"><strong>Nearby options (10 min):</strong> Walmart Pharmacy & Giant Eagle Pharmacy in Elyria</p>
+        </div>
+
+        <div class="category-section">
+          <h3>🛒 Grocery Stores</h3>
+          
+          <div class="store-card">
+            <h4>Alberts Fresh Market / Grafton Sparkle Market</h4>
+            <p class="store-type">Independent Supermarket</p>
+            <p><strong>Address:</strong> 460 Main St, Grafton, OH 44044</p>
+            <p><strong>Phone:</strong> <a href="tel:440-926-3566">(440) 926-3566</a></p>
+            <p><strong>Hours:</strong> Mon-Sat 8AM-9PM, Sun 8AM-6PM</p>
+            <p><strong>Services:</strong> Fresh produce, gluten-free, international options</p>
+            <p class="distance">📍 Grafton Village center</p>
+          </div>
+
+          <div class="store-card">
+            <h4>Schild's IGA</h4>
+            <p class="store-type">IGA Supermarket</p>
+            <p><strong>Address:</strong> 34981 Royalton Rd, Grafton, OH 44044</p>
+            <p><strong>Phone:</strong> <a href="tel:440-748-3751">(440) 748-3751</a></p>
+            <p><strong>Hours:</strong> Mon-Fri 8AM-8PM, Sat-Sun 8AM-6PM</p>
+            <p><strong>Services:</strong> Weekly ads, digital coupons</p>
+            <p class="distance">📍 Grafton Township</p>
+          </div>
+
+          <p class="nearby-note"><strong>Nearby options (10 min):</strong> Walmart Supercenter, Marc's, ALDI, Giant Eagle in Elyria</p>
+        </div>
+      </div>
+
+      <!-- LAGRANGE -->
+      <div class="location-card" id="lagrange">
+        <h2>🌾 LaGrange (Village & Township)</h2>
+        
+        <div class="category-section">
+          <h3>💊 Pharmacies</h3>
+          
+          <div class="store-card">
+            <h4>LaGrange Pharmacy</h4>
+            <p class="store-type">Independent Pharmacy</p>
+            <p><strong>Address:</strong> 540 N Center St, LaGrange, OH 44050</p>
+            <p><strong>Phone:</strong> <a href="tel:440-613-1300">(440) 613-1300</a></p>
+            <p><strong>Hours:</strong> Mon-Fri 9AM-7PM, Sat 10AM-3PM, Sun Closed</p>
+            <p><strong>Services:</strong> Free local delivery, compounding, immunizations, monthly pill packs</p>
+            <p class="distance">📍 LaGrange Village center</p>
+          </div>
+
+          <p class="nearby-note"><strong>Nearby options (10 min):</strong> Discount Drug Mart & Rite Aid in Wellington, CVS & Walmart in Oberlin</p>
+        </div>
+
+        <div class="category-section">
+          <h3>🛒 Grocery Stores</h3>
+          
+          <div class="store-card">
+            <h4>LaGrange IGA</h4>
+            <p class="store-type">Independent Supermarket</p>
+            <p><strong>Address:</strong> 540 N Center St, LaGrange, OH 44050</p>
+            <p><strong>Phone:</strong> <a href="tel:440-355-9920">(440) 355-9920</a></p>
+            <p><strong>Hours:</strong> Early AM-8/9PM daily (fresh bakery opens early)</p>
+            <p><strong>Services:</strong> Fresh produce, meats, seafood, bakery (fresh donuts), locally owned</p>
+            <p class="distance">📍 LaGrange Village center (same plaza as pharmacy)</p>
+          </div>
+
+          <p class="nearby-note"><strong>Nearby options (10 min):</strong> Walmart Supercenter in Oberlin, options in Elyria</p>
+        </div>
+      </div>
+
+      <!-- OBERLIN -->
+      <div class="location-card" id="oberlin">
+        <h2>🎓 Oberlin</h2>
+        
+        <div class="category-section">
+          <h3>💊 Pharmacies</h3>
+          
+          <div class="store-card">
+            <h4>Discount Drug Mart</h4>
+            <p class="store-type">Regional Chain</p>
+            <p><strong>Address:</strong> 12289 Leavitt Rd, Oberlin, OH 44074</p>
+            <p><strong>Hours:</strong> Mon-Sat 8AM-10PM, Sun 9AM-9PM</p>
+            <p><strong>Services:</strong> Drive-thru likely, prescriptions, OTC</p>
+          </div>
+
+          <div class="store-card">
+            <h4>CVS Pharmacy</h4>
+            <p class="store-type">Chain Pharmacy</p>
+            <p><strong>Address:</strong> 297 S Main St, Oberlin, OH 44074</p>
+            <p><strong>Phone:</strong> <a href="tel:440-774-3531">(440) 774-3531</a></p>
+            <p><strong>Hours:</strong> Mon-Thu 9AM-1:30PM, 2PM-8PM (Sat/Sun shorter)</p>
+            <p><strong>Services:</strong> Immunizations, drive-thru</p>
+          </div>
+
+          <div class="store-card">
+            <h4>Walmart Pharmacy</h4>
+            <p class="store-type">Grocery Store Pharmacy</p>
+            <p><strong>Address:</strong> 46440 US Route 20, Oberlin, OH 44074</p>
+            <p><strong>Hours:</strong> Typically 9AM-7PM Mon-Fri (shorter weekends)</p>
+            <p><strong>Services:</strong> Vaccinations, pickup/delivery via app</p>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h3>🛒 Grocery Stores</h3>
+          
+          <div class="store-card">
+            <h4>ALDI</h4>
+            <p class="store-type">Discount Supermarket</p>
+            <p><strong>Address:</strong> 14885 State Route 58, Oberlin, OH 44074</p>
+            <p><strong>Hours:</strong> Mon-Sat 9AM-8PM, Sun 10AM-7PM</p>
+            <p><strong>Services:</strong> Budget groceries, fresh produce, organic options</p>
+          </div>
+
+          <div class="store-card">
+            <h4>The Oberlin Market</h4>
+            <p class="store-type">Natural/Organic Market</p>
+            <p><strong>Address:</strong> 22 Carpenter Ct, Oberlin, OH 44074</p>
+            <p><strong>Phone:</strong> <a href="tel:440-774-8401">(440) 774-8401</a></p>
+            <p><strong>Services:</strong> Natural foods, organic, bulk, bakery, vegetarian/vegan, local produce</p>
+          </div>
+
+          <div class="store-card">
+            <h4>Oberlin IGA Foodliner</h4>
+            <p class="store-type">Supermarket</p>
+            <p><strong>Location:</strong> Oberlin, OH</p>
+            <p><strong>Services:</strong> Full grocery</p>
+          </div>
+
+          <p class="nearby-note"><strong>Nearby options (10-15 min):</strong> Giant Eagle in Amherst, more options in Elyria</p>
+        </div>
+      </div>
+
+      <!-- CARLISLE TOWNSHIP -->
+      <div class="location-card" id="carlisle">
+        <h2>🏡 Carlisle Township</h2>
+        <p class="rural-note">No pharmacies or grocery stores located within Carlisle Township. Nearest options are in Elyria (~10 min drive).</p>
+        
+        <div class="category-section">
+          <h3>💊 Nearest Pharmacies (10-12 min to Elyria)</h3>
+          <ul class="compact-list">
+            <li><strong>Walgreens</strong> - 100 Cleveland St (24 hours, drive-thru)</li>
+            <li><strong>CVS</strong> - 240 Market Dr or 443 Cleveland St</li>
+            <li><strong>Walmart Pharmacy</strong> - 1000 Chestnut Commons Dr</li>
+            <li><strong>Elyria LowCost Pharmacy</strong> - 401 Cleveland St (independent, delivery)</li>
+          </ul>
+          <p><a href="#elyria">See full Elyria listings →</a></p>
+        </div>
+
+        <div class="category-section">
+          <h3>🛒 Nearest Grocery Stores (10-12 min to Elyria)</h3>
+          <ul class="compact-list">
+            <li><strong>Walmart Supercenter</strong> - 1000 Chestnut Commons Dr</li>
+            <li><strong>Marc's</strong> - 435 Midway Blvd</li>
+            <li><strong>ALDI</strong> - 38275 Chestnut Ridge Rd</li>
+            <li><strong>Giant Eagle</strong> - 320 Market Dr</li>
+            <li><strong>Save A Lot</strong> - 125 Cleveland St</li>
+          </ul>
+          <p><a href="#elyria">See full Elyria listings →</a></p>
+        </div>
+      </div>
+
+      <!-- EATON TOWNSHIP -->
+      <div class="location-card" id="eaton">
+        <h2>🌲 Eaton Township</h2>
+        <p class="rural-note">No pharmacies or grocery stores located within Eaton Township. Nearest options are in Grafton (~5-10 min) or Columbia Station (~5-10 min).</p>
+        
+        <div class="category-section">
+          <h3>💊 Nearest Pharmacies</h3>
+          <ul class="compact-list">
+            <li><strong>Midview Drug Pharmacy</strong> - 35053 Royalton Rd, Grafton (~5-10 min)</li>
+            <li><strong>Marc's Pharmacy</strong> - 18841 W Sprague Rd, Columbia Station (~5-10 min, drive-thru)</li>
+          </ul>
+          <p><a href="#grafton">See Grafton listings</a> | <a href="#elyria">See Elyria listings (15 min)</a></p>
+        </div>
+
+        <div class="category-section">
+          <h3>🛒 Nearest Grocery Stores</h3>
+          <ul class="compact-list">
+            <li><strong>Marc's Grocery</strong> - 18841 W Sprague Rd, Columbia Station (~5-10 min, pharmacy on-site)</li>
+            <li><strong>Giant Eagle</strong> - Strongsville (~15 min NE)</li>
+            <li><strong>Walmart Supercenter</strong> - Elyria (~15 min NW)</li>
+          </ul>
+          <p><a href="#grafton">See Grafton listings</a> | <a href="#medina">See Medina listings (15 min SE)</a></p>
+        </div>
+      </div>
+
+      <!-- ELYRIA (REGIONAL) -->
+      <div class="location-card regional" id="elyria">
+        <h2>🏢 Elyria (Regional Shopping Center)</h2>
+        <p class="regional-note">Major shopping destination serving all rural areas. ~10-15 min from Grafton, Carlisle, LaGrange.</p>
+        
+        <div class="category-section">
+          <h3>💊 Pharmacies</h3>
+          
+          <div class="stores-grid">
+            <div class="store-card compact">
+              <h4>Walgreens</h4>
+              <p class="store-type">Chain - 24 Hours</p>
+              <p>100 Cleveland St</p>
+              <p><a href="tel:440-322-7604">(440) 322-7604</a></p>
+              <p><strong>24-hour</strong> pharmacy, drive-thru</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>CVS (Market Dr)</h4>
+              <p class="store-type">Chain</p>
+              <p>240 Market Dr</p>
+              <p><a href="tel:440-322-2339">(440) 322-2339</a></p>
+              <p>Drive-thru, immunizations</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>CVS (Cleveland St)</h4>
+              <p class="store-type">Chain</p>
+              <p>443 Cleveland St</p>
+              <p>Drive-thru, pickup</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>Walmart Pharmacy</h4>
+              <p class="store-type">Grocery Store</p>
+              <p>1000 Chestnut Commons Dr</p>
+              <p><a href="tel:440-366-0125">(440) 366-0125</a></p>
+              <p>Drive-thru, app delivery</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>Giant Eagle Pharmacy</h4>
+              <p class="store-type">Grocery Store</p>
+              <p>320 Market Dr</p>
+              <p><a href="tel:440-322-1742">(440) 322-1742</a></p>
+              <p>Drive-thru, pickup</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>Discount Drug Mart (2 locations)</h4>
+              <p class="store-type">Regional Chain</p>
+              <p>110 Chestnut Commons Dr<br>500 Abbe Rd N</p>
+              <p>Drive-thru likely</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>Elyria LowCost Pharmacy</h4>
+              <p class="store-type">Independent</p>
+              <p>401 Cleveland St</p>
+              <p><a href="tel:440-309-4036">(440) 309-4036</a></p>
+              <p><strong>Free delivery</strong>, immunizations</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>Mac Pharmacy</h4>
+              <p class="store-type">Independent</p>
+              <p>710 Cleveland St</p>
+              <p><a href="tel:440-581-7730">(440) 581-7730</a></p>
+              <p>Delivery, compounding</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h3>🛒 Grocery Stores</h3>
+          
+          <div class="stores-grid">
+            <div class="store-card compact">
+              <h4>Walmart Supercenter</h4>
+              <p>1000 Chestnut Commons Dr</p>
+              <p><a href="tel:440-365-0135">(440) 365-0135</a></p>
+              <p>6AM daily, curbside/delivery</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>Giant Eagle</h4>
+              <p>320 Market Dr</p>
+              <p><a href="tel:440-322-1742">(440) 322-1742</a></p>
+              <p>Curbside, delivery</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>Marc's (Midway Mall)</h4>
+              <p>435 Midway Mall</p>
+              <p>~8AM-10PM daily</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>ALDI</h4>
+              <p>38275 Chestnut Ridge Rd</p>
+              <p>Mon-Sat 9AM-8PM<br>Sun 10AM-6PM</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>Save A Lot</h4>
+              <p>125 Cleveland St</p>
+              <p><a href="tel:216-673-4705">(216) 673-4705</a></p>
+              <p>8AM daily</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEDINA (REGIONAL) -->
+      <div class="location-card regional" id="medina">
+        <h2>🏢 Medina (Regional - Southeast Option)</h2>
+        <p class="regional-note">Shopping option for Grafton Township & Eaton Township residents. ~15-20 min drive.</p>
+        
+        <div class="category-section">
+          <h3>💊 Pharmacies</h3>
+          
+          <div class="stores-grid">
+            <div class="store-card compact">
+              <h4>Rite Aid</h4>
+              <p class="store-type">Chain</p>
+              <p>207 N Court St, Medina</p>
+              <p><a href="tel:330-725-4104">(330) 725-4104</a></p>
+              <p>Drive-thru, immunizations</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>CVS (South Medina)</h4>
+              <p class="store-type">Chain</p>
+              <p>401 S Elmwood Ave</p>
+              <p><a href="tel:330-725-1888">(330) 725-1888</a></p>
+              <p>Mon-Sat 8AM-9PM</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>CVS (North Medina)</h4>
+              <p class="store-type">Chain</p>
+              <p>1015 N Court St</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>Giant Eagle Pharmacy</h4>
+              <p class="store-type">Grocery Store</p>
+              <p>870 N Court St</p>
+              <p>Delivery/pickup via app</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h3>🛒 Grocery Stores</h3>
+          
+          <div class="stores-grid">
+            <div class="store-card compact">
+              <h4>Giant Eagle</h4>
+              <p>870 N Court St, Medina</p>
+              <p>Pharmacy on-site<br>Delivery/takeout</p>
+            </div>
+
+            <div class="store-card compact">
+              <h4>Walmart Supercenter</h4>
+              <p>Brunswick, OH 44212<br>(Western Medina County)</p>
+              <p>Pharmacy, drive-thru<br>Delivery/pickup</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <style>
+    .location-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: var(--space-md);
+    }
+
+    .location-btn {
+      padding: var(--space-md);
+      background: var(--color-bg-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      text-align: center;
+      font-weight: var(--font-weight-semibold);
+      transition: all 0.2s ease;
+    }
+
+    .location-btn:hover {
+      background: var(--color-bg-alt);
+      border-color: var(--color-primary);
+      transform: translateY(-2px);
+    }
+
+    .stores-by-location {
+      padding: var(--space-2xl) 0;
+    }
+
+    .location-card {
+      background: var(--color-bg-elevated);
+      border-radius: 12px;
+      padding: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+      border: 1px solid var(--color-border);
+    }
+
+    .location-card.regional {
+      border-color: var(--color-primary);
+      border-width: 2px;
+    }
+
+    .location-card h2 {
+      margin-bottom: var(--space-md);
+      color: var(--color-text);
+    }
+
+    .rural-note,
+    .regional-note {
+      background: rgba(59, 130, 246, 0.1);
+      border-left: 3px solid var(--color-primary);
+      padding: var(--space-md);
+      margin-bottom: var(--space-lg);
+      border-radius: 4px;
+      font-size: var(--font-size-sm);
+    }
+
+    .category-section {
+      margin-bottom: var(--space-2xl);
+    }
+
+    .category-section h3 {
+      font-size: var(--font-size-lg);
+      margin-bottom: var(--space-lg);
+      color: var(--color-text);
+      border-bottom: 2px solid var(--color-border);
+      padding-bottom: var(--space-sm);
+    }
+
+    .store-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: var(--space-lg);
+      margin-bottom: var(--space-md);
+    }
+
+    .store-card h4 {
+      margin-bottom: var(--space-xs);
+      color: var(--color-text);
+    }
+
+    .store-type {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      font-style: italic;
+      margin-bottom: var(--space-sm);
+    }
+
+    .store-card p {
+      margin-bottom: var(--space-xs);
+      font-size: var(--font-size-sm);
+    }
+
+    .distance {
+      margin-top: var(--space-sm);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+    }
+
+    .nearby-note {
+      margin-top: var(--space-lg);
+      padding: var(--space-md);
+      background: rgba(16, 185, 129, 0.1);
+      border-radius: 6px;
+      font-size: var(--font-size-sm);
+    }
+
+    .stores-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-md);
+    }
+
+    .store-card.compact {
+      padding: var(--space-md);
+    }
+
+    .store-card.compact h4 {
+      font-size: var(--font-size-base);
+    }
+
+    .compact-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .compact-list li {
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .compact-list li:last-child {
+      border-bottom: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .rural-note,
+      .regional-note {
+        background: rgba(59, 130, 246, 0.15);
+      }
+
+      .nearby-note {
+        background: rgba(16, 185, 129, 0.15);
+      }
+    }
+  </style>
+</BaseLayout>

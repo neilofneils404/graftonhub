@@ -1,17 +1,18 @@
-# GraftonHub Version 1.0.0
+# GraftonHub Version 1.2.0
 
 **Launch Date**: February 15, 2026  
 **Status**: Live at [graftonhub.com](https://graftonhub.com)
 
 ## Current Version
 
-**1.0.0** - Initial public launch
+**1.2.0** - Pharmacies & Grocery Stores added (community feedback)
 
 ### What's Included
 
-- 13 complete pages (homepage + 12 content pages)
-- 5 localities fully covered
+- 14 complete pages (homepage + 13 content pages)
+- 7 localities fully covered (Grafton Village & Township, LaGrange Village & Township, Carlisle Township, Eaton Township, Oberlin)
 - 3 school districts documented
+- **Pharmacies & grocery stores directory** (NEW in v1.2 - local + regional options with drive times)
 - Youth sports comprehensive directory
 - Emergency services by locality
 - Government contacts and meeting schedules
@@ -34,7 +35,7 @@
 ### Maintenance Schedule
 
 - **Daily**: None (static site)
-- **Monthly**: Information verification (12 verification tasks)
+- **Monthly**: Information verification (14 verification tasks - 7 localities government + utilities, 3 school districts, 2 sports categories, 2 parks/events)
 - **Annual**: Domain renewal (~$12)
 
 ### Git Repositories
