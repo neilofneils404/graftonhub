@@ -16,11 +16,13 @@ import '../styles/global.css';
       <div class="card">
         <h2>Where do you live?</h2>
         <div class="location-buttons">
-          <a href="#grafton" class="location-btn">Grafton (Village)</a>
+          <a href="#grafton-village" class="location-btn">Grafton (Village)</a>
+          <a href="#grafton-township" class="location-btn">Grafton Township</a>
+          <a href="#lagrange-village" class="location-btn">LaGrange (Village)</a>
+          <a href="#lagrange-township" class="location-btn">LaGrange Township</a>
           <a href="#carlisle" class="location-btn">Carlisle Township</a>
-          <a href="#lagrange" class="location-btn">LaGrange</a>
-          <a href="#oberlin" class="location-btn">Oberlin</a>
           <a href="#eaton" class="location-btn">Eaton Township</a>
+          <a href="#oberlin" class="location-btn">Oberlin</a>
         </div>
       </div>
     </div>
@@ -29,8 +31,8 @@ import '../styles/global.css';
   <section class="utilities-by-location">
     <div class="container">
 
-      <!-- GRAFTON -->
-      <div class="location-card" id="grafton">
+      <!-- GRAFTON VILLAGE -->
+      <div class="location-card" id="grafton-village">
         <h2>🏘️ Village of Grafton</h2>
         <p class="location-note">Grafton is one of only 4 communities in Lorain County with municipal electric!</p>
         
@@ -70,6 +72,53 @@ import '../styles/global.css';
             <p class="provider">Republic Services</p>
             <p><strong>Phone:</strong> <a href="tel:440-458-5191">440-458-5191</a></p>
             <p class="note">Weekly curbside trash/recycling, bulk 1st Friday/month</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRAFTON TOWNSHIP -->
+      <div class="location-card" id="grafton-township">
+        <h2>🌲 Grafton Township</h2>
+        <p class="location-note">Rural township surrounding the village. Most properties use private wells/septic. Contact township to verify services at your address.</p>
+        
+        <div class="utility-grid">
+          <div class="utility electric">
+            <h3>⚡ Electric</h3>
+            <p class="provider">Ohio Edison (FirstEnergy)</p>
+            <p><strong>Phone:</strong> <a href="tel:800-633-4766">800-633-4766</a></p>
+            <p><a href="https://www.firstenergycorp.com/ohio_edison.html" target="_blank" rel="noopener">firstenergycorp.com</a></p>
+            <p class="note"><strong>Alternative:</strong> Lorain-Medina Rural Electric (LMRE) in some areas</p>
+          </div>
+
+          <div class="utility water">
+            <h3>💧 Water</h3>
+            <p class="provider">Varies by location</p>
+            <ul>
+              <li>Private well (most common)</li>
+              <li>RLCWA (Rural Lorain County Water Authority) in some areas</li>
+            </ul>
+            <p><strong>RLCWA:</strong> <a href="tel:440-355-5121">440-355-5121</a></p>
+            <p><strong>Township:</strong> <a href="tel:440-926-2166">440-926-2166</a></p>
+          </div>
+
+          <div class="utility sewer">
+            <h3>🚿 Sewer</h3>
+            <p class="provider">Private septic systems (most properties)</p>
+            <p class="note">Contact township for septic inspection requirements</p>
+          </div>
+
+          <div class="utility gas">
+            <h3>🔥 Natural Gas</h3>
+            <p class="provider">Columbia Gas of Ohio</p>
+            <p><strong>Phone:</strong> <a href="tel:1-800-344-4077">1-800-344-4077</a></p>
+            <p class="note">Not available in all areas - some properties use propane</p>
+          </div>
+
+          <div class="utility trash">
+            <h3>🗑️ Trash & Recycling</h3>
+            <p class="provider">Rumpke Waste & Recycling</p>
+            <p><strong>Township Office:</strong> <a href="tel:440-926-2166">440-926-2166</a></p>
+            <p class="note">Curbside service with carts</p>
           </div>
         </div>
       </div>
@@ -122,8 +171,8 @@ import '../styles/global.css';
         </div>
       </div>
 
-      <!-- LAGRANGE -->
-      <div class="location-card" id="lagrange">
+      <!-- LAGRANGE VILLAGE -->
+      <div class="location-card" id="lagrange-village">
         <h2>🌾 Village of LaGrange</h2>
         
         <div class="utility-grid">
@@ -157,6 +206,53 @@ import '../styles/global.css';
             <p class="provider">Republic Services</p>
             <p class="note">Municipal contract, curbside</p>
             <p><a href="https://www.villageoflagrangeohio.gov" target="_blank" rel="noopener">villageoflagrangeohio.gov</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAGRANGE TOWNSHIP -->
+      <div class="location-card" id="lagrange-township">
+        <h2>🌾 LaGrange Township</h2>
+        <p class="location-note">Rural township surrounding the village. Most properties use private wells/septic. No uniform trash service - residents use private haulers.</p>
+        
+        <div class="utility-grid">
+          <div class="utility electric">
+            <h3>⚡ Electric</h3>
+            <p class="provider">Ohio Edison (FirstEnergy)</p>
+            <p><strong>Phone:</strong> <a href="tel:800-633-4766">800-633-4766</a></p>
+            <p><a href="https://www.firstenergycorp.com/ohio_edison.html" target="_blank" rel="noopener">firstenergycorp.com</a></p>
+          </div>
+
+          <div class="utility water">
+            <h3>💧 Water</h3>
+            <p class="provider">Varies by location</p>
+            <ul>
+              <li>Private well (most common)</li>
+              <li>RLCWA (Rural Lorain County Water Authority) in some areas</li>
+            </ul>
+            <p><strong>RLCWA:</strong> <a href="tel:440-355-5121">440-355-5121</a></p>
+            <p><strong>Township:</strong> <a href="tel:440-355-6071">440-355-6071</a></p>
+          </div>
+
+          <div class="utility sewer">
+            <h3>🚿 Sewer</h3>
+            <p class="provider">Private septic systems</p>
+            <p class="note">Home Sewage Treatment Systems (HSTS) - contact township for permits/inspections</p>
+          </div>
+
+          <div class="utility gas">
+            <h3>🔥 Natural Gas</h3>
+            <p class="provider">Columbia Gas of Ohio (where available)</p>
+            <p><strong>Phone:</strong> <a href="tel:1-800-344-4077">1-800-344-4077</a></p>
+            <p class="note">Not available in all areas - many properties use propane</p>
+          </div>
+
+          <div class="utility trash">
+            <h3>🗑️ Trash & Recycling</h3>
+            <p class="provider">Private haulers (no municipal contract)</p>
+            <p><strong>Dumpster Days:</strong> May 2 & Oct 3, 2026 (7am-1pm)</p>
+            <p><strong>Township Office:</strong> <a href="tel:440-355-6071">440-355-6071</a></p>
+            <p class="note">Residents contract with private haulers. Drop-off recycling available via Lorain County.</p>
           </div>
         </div>
       </div>
