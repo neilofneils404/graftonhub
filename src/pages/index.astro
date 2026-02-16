@@ -260,12 +260,12 @@ import '../styles/global.css';
       }
 
       .quick-card.emergency {
-        background: rgba(239, 68, 68, 0.15);
+        background: rgba(239, 68, 68, 0.1) !important;
         color: #fca5a5;
       }
 
       .quick-card.emergency:hover {
-        background: rgba(239, 68, 68, 0.25);
+        background: rgba(239, 68, 68, 0.15) !important;
       }
 
       .quick-card:hover {
@@ -318,8 +318,8 @@ import '../styles/global.css';
 
     @media (prefers-color-scheme: dark) {
       .info-card.highlight {
-        background: rgba(251, 191, 36, 0.15);
-        border-color: rgba(251, 191, 36, 0.5);
+        background: rgba(251, 191, 36, 0.08) !important;
+        border-color: rgba(251, 191, 36, 0.3) !important;
       }
     }
 
@@ -382,7 +382,8 @@ import '../styles/global.css';
 
     @media (prefers-color-scheme: dark) {
       .utility-item {
-        background: var(--color-bg);
+        background: var(--color-bg) !important;
+        border-color: var(--color-border) !important;
       }
     }
 
