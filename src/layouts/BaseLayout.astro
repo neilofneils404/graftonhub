@@ -4,7 +4,7 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = "Your local community hub for Grafton, Oberlin, LaGrange, Carlisle Township, and Eaton Township. Find news, events, sports, schools, and services." } = Astro.props;
+const { title, description = "Your local community hub for Grafton, Oberlin, LaGrange, Carlisle Township, and Eaton Township in Lorain County, Ohio. Find local news, events, sports, schools, utilities, and community services." } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -13,11 +13,52 @@ const { title, description = "Your local community hub for Grafton, Oberlin, LaG
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content={description}>
-  <title>{title} | GraftonHub</title>
+  <title>{title === "GraftonHub - Community Information for Grafton & Surrounding Areas" ? title : `${title} | GraftonHub`}</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "GraftonHub",
+    "url": "https://graftonhub.com",
+    "description": "Free community information hub for Grafton, LaGrange, Carlisle Township, Eaton Township, and Oberlin in Lorain County, Ohio",
+    "areaServed": [
+      {
+        "@type": "Place",
+        "name": "Grafton, Ohio"
+      },
+      {
+        "@type": "Place",
+        "name": "LaGrange, Ohio"
+      },
+      {
+        "@type": "Place",
+        "name": "Carlisle Township, Ohio"
+      },
+      {
+        "@type": "Place",
+        "name": "Eaton Township, Ohio"
+      },
+      {
+        "@type": "Place",
+        "name": "Oberlin, Ohio"
+      },
+      {
+        "@type": "Place",
+        "name": "Lorain County, Ohio"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "GraftonHub"
+    }
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
