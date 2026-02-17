@@ -15,29 +15,29 @@ import '../styles/global.css';
       font-size: 2rem;
       margin-top: 2rem;
       margin-bottom: 1rem;
-      color: #1a1a1a;
+      color: var(--color-text-primary);
     }
     
     .seniors-content h3 {
       font-size: 1.4rem;
       margin-top: 1.5rem;
       margin-bottom: 0.75rem;
-      color: #2a2a2a;
+      color: var(--color-text-primary);
     }
     
     .seniors-content a {
-      color: #0066cc;
+      color: var(--color-link);
       text-decoration: underline;
       font-weight: 500;
     }
     
     .seniors-content a:hover {
-      color: #004499;
+      color: var(--color-link-hover);
     }
     
     .resource-card {
-      background: #f8f9fa;
-      border-left: 4px solid #0066cc;
+      background: var(--color-bg-alt);
+      border-left: 4px solid var(--color-primary);
       padding: 1.5rem;
       margin-bottom: 1.5rem;
       border-radius: 4px;
@@ -50,14 +50,14 @@ import '../styles/global.css';
     .phone-number {
       font-size: 1.3rem;
       font-weight: 600;
-      color: #0066cc;
+      color: var(--color-link);
       text-decoration: none;
       display: inline-block;
       margin: 0.5rem 0;
     }
     
     .phone-number:hover {
-      color: #004499;
+      color: var(--color-link-hover);
     }
     
     .compact-list {
@@ -70,7 +70,8 @@ import '../styles/global.css';
     }
     
     .intro-box {
-      background: #e8f4f8;
+      background: var(--color-bg-surface);
+      border: 1px solid var(--color-border);
       border-radius: 8px;
       padding: 1.5rem;
       margin-bottom: 2rem;
@@ -265,7 +266,7 @@ import '../styles/global.css';
       </div>
 
       <!-- General Support -->
-      <div class="info-card" style="margin-top: 2rem; background: #f0f7ff; padding: 1.5rem; border-radius: 8px;">
+      <div class="resource-card" style="margin-top: 2rem;">
         <h3 style="margin-top: 0;">📞 Need Help Finding Services?</h3>
         <p><strong>Dial 2-1-1</strong> (or visit <a href="https://www.211lorain.org" target="_blank" rel="noopener">211lorain.org</a>)</p>
         <p>Free referrals to local services, available 24/7.</p>
