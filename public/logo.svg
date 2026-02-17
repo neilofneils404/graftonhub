@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Map pin shape -->
+  <path d="M32 8 C22 8 14 16 14 26 C14 36 32 56 32 56 C32 56 50 36 50 26 C50 16 42 8 32 8 Z" fill="#2563eb" stroke="#1e40af" stroke-width="2"/>
+  
+  <!-- GH text -->
+  <text x="32" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle">GH</text>
+</svg>

@@ -7,7 +7,10 @@ import '../styles/global.css';
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h1>Grafton<span class="hub-highlight">Hub</span></h1>
+      <div class="site-title">
+        <img src="/logo.svg" alt="GraftonHub logo" class="logo" />
+        <h1>Grafton<span class="hub-highlight">Hub</span></h1>
+      </div>
       <p class="tagline">Your community information hub</p>
       <div class="communities">
         Grafton (Village & Township) • LaGrange (Village & Township) • Carlisle Township • Eaton Township • Oberlin<br>
@@ -196,9 +199,23 @@ import '../styles/global.css';
       border-bottom: 1px solid var(--color-border-light);
     }
 
+    .site-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+
     .hero h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.25rem;
+      margin: 0;
     }
 
     .hub-highlight {
@@ -453,6 +470,11 @@ import '../styles/global.css';
       .weather-bar .container {
         flex-direction: column;
         gap: 0.25rem;
+      }
+
+      .logo {
+        width: 36px;
+        height: 36px;
       }
 
       .hero h1 {
