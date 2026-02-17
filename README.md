@@ -2,62 +2,28 @@
 
 A free community information hub for southern Lorain County, Ohio.
 
-## What We Cover
+**Live site:** [graftonhub.com](https://graftonhub.com)
 
-**Localities:**
-- Village of Grafton
-- Carlisle Township
-- Village of LaGrange
-- City of Oberlin
-- Eaton Township
+## What This Is
 
-**Information Available:**
-- Emergency services (police, fire, EMS, hospitals)
-- Local government (officials, meetings, contacts)
-- School districts, libraries, preschools
-- Utilities setup by location
-- Youth sports programs
-- New resident guide
+Community resource website covering Grafton, LaGrange, Carlisle Township, Eaton Township, and Oberlin. Provides local information on emergency services, government, schools, utilities, sports programs, and community resources.
 
 ## Philosophy
 
-No tracking. No ads. No data collection. Just useful community information, freely available.
+No tracking. No ads. No data collection. Just useful local information.
 
 ## Tech Stack
 
-- **Framework:** Astro (static site generator)
-- **Styling:** Custom CSS with design tokens
-- **Hosting:** Cloudflare Pages
-- **Domain:** graftonhub.com
+- Astro (static site generator)
+- Cloudflare Pages hosting
+- Custom CSS
 
-## Development
+## Local Development
 
 ```bash
 npm install
-npm run dev        # Local dev server
-npm run build      # Production build
-```
-
-## Deployment
-
-**Manual deployment to Cloudflare Pages:**
-
-```bash
-npm run build
-npx wrangler pages deploy dist --project-name graftonhub
-```
-
-See [DEPLOY.md](DEPLOY.md) for full deployment guide and troubleshooting.
-
-## Project Structure
-
-```
-src/
-├── pages/         # Site pages
-├── layouts/       # Base layout
-├── components/    # Reusable components
-├── data/          # Static data (localities, etc.)
-└── styles/        # Global styles
+npm run dev        # http://localhost:4321
+npm run build      # Production build to dist/
 ```
 
 ---
