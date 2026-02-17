@@ -1,0 +1,280 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="Senior Resources - GraftonHub">
+  <style>
+    /* Seniors page: larger fonts, high contrast for accessibility */
+    .seniors-content {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    
+    .seniors-content h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+    
+    .seniors-content h3 {
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #2a2a2a;
+    }
+    
+    .seniors-content a {
+      color: #0066cc;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    
+    .seniors-content a:hover {
+      color: #004499;
+    }
+    
+    .resource-card {
+      background: #f8f9fa;
+      border-left: 4px solid #0066cc;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+    }
+    
+    .resource-card h3 {
+      margin-top: 0;
+    }
+    
+    .phone-number {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #0066cc;
+      text-decoration: none;
+      display: inline-block;
+      margin: 0.5rem 0;
+    }
+    
+    .phone-number:hover {
+      color: #004499;
+    }
+    
+    .compact-list {
+      margin: 0.75rem 0;
+      padding-left: 1.5rem;
+    }
+    
+    .compact-list li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .intro-box {
+      background: #e8f4f8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      font-size: 1.15rem;
+    }
+  </style>
+
+  <section class="main-content seniors-content">
+    <div class="container">
+      <h1>🤝 Senior Resources</h1>
+      
+      <div class="intro-box">
+        <p><strong>Support services for seniors in Grafton, LaGrange, Carlisle Township, Eaton Township, and Oberlin.</strong></p>
+        <p>All programs welcome residents age 60 and older. Many services are free or low-cost based on income.</p>
+      </div>
+
+      <!-- Transportation -->
+      <h2>🚐 Transportation</h2>
+      <p>Getting around without a personal vehicle? These services provide rides for medical appointments, shopping, and more.</p>
+
+      <div class="resource-card">
+        <h3>Lorain County Transit Dial-A-Ride</h3>
+        <p>Door-to-door service throughout Lorain County, including all rural townships.</p>
+        <p><strong>Phone:</strong> <a href="tel:440-365-0224" class="phone-number">440-365-0224</a> (Scheduling, Mon-Fri 6am-6pm)</p>
+        <p><strong>Cost:</strong> $1-2 per ride for seniors 65+</p>
+        <p><strong>Booking:</strong> Reserve 2-14 days in advance. Wheelchair accessible.</p>
+      </div>
+
+      <div class="resource-card">
+        <h3>ViaLC On-Demand Rides</h3>
+        <p>App-based shared rides connecting to buses. Good for quick trips.</p>
+        <p><strong>Phone:</strong> <a href="tel:440-901-5554" class="phone-number">440-901-5554</a> (or use Lorain County Transit app)</p>
+        <p><strong>Cost:</strong> $1 for seniors/Medicare holders</p>
+        <p><strong>Hours:</strong> Mon-Fri 6:30am-6:30pm</p>
+      </div>
+
+      <div class="resource-card">
+        <h3>Volunteer Driver Programs</h3>
+        <p>Local churches and volunteers may provide rides. Contact:</p>
+        <ul class="compact-list">
+          <li><strong>Lorain County Office on Aging:</strong> <a href="tel:440-326-4800">440-326-4800</a></li>
+          <li><strong>Dial 2-1-1</strong> for referrals to local volunteer drivers</li>
+        </ul>
+      </div>
+
+      <!-- Health Services -->
+      <h2>💙 Health Services</h2>
+
+      <div class="resource-card">
+        <h3>UH Elyria Medical Center</h3>
+        <p>Full hospital with senior primary care and geriatrics.</p>
+        <p><strong>Address:</strong> 303 Chestnut Commons Dr, Elyria, OH 44035</p>
+        <p><strong>Phone:</strong> <a href="tel:440-329-7500" class="phone-number">440-329-7500</a> (ER 24/7)</p>
+        <p><strong>Appointments:</strong> <a href="tel:440-581-7764">440-581-7764</a></p>
+        <p><strong>Accepts:</strong> Medicare, Medicaid</p>
+      </div>
+
+      <div class="resource-card">
+        <h3>UH Oberlin Health Center</h3>
+        <p>Primary care and wellness visits.</p>
+        <p><strong>Address:</strong> 25 W 9th St, Suite 204, Oberlin, OH 44074</p>
+        <p><strong>Phone:</strong> <a href="tel:440-775-2290" class="phone-number">440-775-2290</a></p>
+        <p><strong>Hours:</strong> Mon-Fri 8am-5pm</p>
+      </div>
+
+      <div class="resource-card">
+        <h3>Medicare & Medicaid Navigation</h3>
+        <p>Free counseling to help with enrollment, coverage questions, and appeals.</p>
+        <p><strong>Lorain County Office on Aging:</strong> <a href="tel:440-326-4800" class="phone-number">440-326-4800</a></p>
+        <p><strong>Ohio SHIP Helpline:</strong> <a href="tel:1-866-243-5678">1-866-243-5678</a></p>
+      </div>
+
+      <div class="resource-card">
+        <h3>Telehealth Options</h3>
+        <p>Virtual doctor visits from home—no travel needed.</p>
+        <p><strong>UH Telehealth:</strong> <a href="tel:1-866-844-2273">1-866-844-2273</a></p>
+        <p><strong>Ohio Medicaid Telehealth:</strong> <a href="tel:1-800-324-8680">1-800-324-8680</a></p>
+      </div>
+
+      <!-- Food & Meals -->
+      <h2>🍽️ Food & Meals</h2>
+
+      <div class="resource-card">
+        <h3>Meals on Wheels (Home Delivery)</h3>
+        <p>Hot meals delivered to your home 5+ days per week.</p>
+        <p><strong>Neighborhood Alliance:</strong> <a href="tel:440-233-8768" class="phone-number">440-233-8768</a> (ext. 2)</p>
+        <p><strong>Western Reserve Agency on Aging:</strong> <a href="tel:1-800-626-7278">1-800-626-7278</a></p>
+        <p><strong>Cost:</strong> Suggested $3-5/meal donation; free for very low income</p>
+        <p><strong>Eligibility:</strong> Age 60+, homebound</p>
+      </div>
+
+      <div class="resource-card">
+        <h3>Senior Center Meals</h3>
+        <p>Eat with others at local senior centers (congregate dining).</p>
+        <ul class="compact-list">
+          <li><strong>Oberlin Senior Center:</strong> <a href="tel:440-774-6579">440-774-6579</a>, 500 E. Lorain St. (Mon/Wed/Fri)</li>
+          <li><strong>Wellington (near LaGrange):</strong> <a href="tel:440-647-3263">440-647-3263</a>, First United Methodist Church</li>
+        </ul>
+        <p><strong>Cost:</strong> Suggested $3-4 donation</p>
+      </div>
+
+      <div class="resource-card">
+        <h3>Food Pantries</h3>
+        <ul class="compact-list">
+          <li><strong>Oberlin Community Services:</strong> <a href="tel:440-774-6579">440-774-6579</a>, 500 E. Lorain St. (Mon/Wed 1:30-4:30pm, Fri 1:30-3:30pm)</li>
+          <li><strong>Well-Help Food Pantry (Wellington):</strong> <a href="tel:440-647-2689">440-647-2689</a>, 127 Park Place</li>
+        </ul>
+      </div>
+
+      <div class="resource-card">
+        <h3>Senior Farmers Market Vouchers</h3>
+        <p>Free vouchers ($25-50) for fresh produce at local farmers markets.</p>
+        <p><strong>Apply:</strong> Through Lorain County Office on Aging <a href="tel:440-326-4800">440-326-4800</a></p>
+        <p><strong>Eligibility:</strong> Age 60+, income below 185% poverty level</p>
+      </div>
+
+      <!-- Community & Social -->
+      <h2>🤝 Community & Social Programs</h2>
+
+      <div class="resource-card">
+        <h3>Lorain Senior Center</h3>
+        <p>Social activities, fitness classes, events. Free transportation to the center.</p>
+        <p><strong>Address:</strong> 3361 Garfield Blvd, Lorain, OH 44052</p>
+        <p><strong>Phone:</strong> <a href="tel:440-288-4040" class="phone-number">440-288-4040</a></p>
+        <p><strong>Hours:</strong> Mon-Fri 9am-3pm</p>
+        <p><strong>Activities:</strong> Dance, fitness, cards, seasonal events</p>
+      </div>
+
+      <div class="resource-card">
+        <h3>Oberlin Senior Center</h3>
+        <p><strong>Address:</strong> 90 E. College St., Oberlin, OH 44074</p>
+        <p><strong>Phone:</strong> <a href="tel:440-233-8768">440-233-8768</a> ext. 6217</p>
+        <p><strong>Hours:</strong> Mon-Fri 9am-4pm</p>
+        <p><strong>Activities:</strong> Games, fitness, social time</p>
+      </div>
+
+      <div class="resource-card">
+        <h3>Library Programs</h3>
+        <p>Free tech classes, book clubs, and home delivery of books.</p>
+        <ul class="compact-list">
+          <li><strong>Oberlin Public Library:</strong> <a href="tel:440-935-0463">440-935-0463</a>, tech classes and book discussions</li>
+          <li><strong>Lorain Public Library System:</strong> <a href="tel:440-988-7203">440-988-7203</a>, Books by Mail for homebound seniors</li>
+        </ul>
+      </div>
+
+      <!-- Financial & Home Assistance -->
+      <h2>💰 Financial & Home Assistance</h2>
+
+      <div class="resource-card">
+        <h3>Utility Payment Help (HEAP)</h3>
+        <p>One-time grants for heating bills. Crisis assistance available.</p>
+        <p><strong>Lorain County DJFS:</strong> <a href="tel:440-284-4465" class="phone-number">440-284-4465</a></p>
+        <p><strong>Energy Help Hotline:</strong> <a href="tel:1-800-282-0880">1-800-282-0880</a></p>
+        <p><strong>Apply:</strong> October-March at energyhelp.ohio.gov</p>
+      </div>
+
+      <div class="resource-card">
+        <h3>PIPP (Percentage of Income Payment Plan)</h3>
+        <p>Cap your monthly utility bills at a percentage of your income.</p>
+        <p><strong>Contact:</strong> Your utility company or <a href="tel:440-284-4465">440-284-4465</a></p>
+      </div>
+
+      <div class="resource-card">
+        <h3>Home Repair & Weatherization</h3>
+        <p>Free insulation, heating repairs, and home improvements.</p>
+        <ul class="compact-list">
+          <li><strong>Great Lakes Community Action (GLCAP):</strong> <a href="tel:1-800-775-9767">1-800-775-9767</a></li>
+          <li><strong>USDA Rural Housing Repair (age 62+):</strong> <a href="tel:614-255-2400">614-255-2400</a> (loans/grants for rural homes)</li>
+        </ul>
+      </div>
+
+      <div class="resource-card">
+        <h3>Property Tax Relief</h3>
+        <p>Reduce your property taxes if you're 65+ with income below $37,300.</p>
+        <p><strong>Lorain County Auditor:</strong> <a href="tel:440-329-5100" class="phone-number">440-329-5100</a></p>
+        <p><strong>Apply by:</strong> December 31 each year</p>
+      </div>
+
+      <div class="resource-card">
+        <h3>Free Legal Help</h3>
+        <p>Civil legal assistance for housing, benefits, and elder rights.</p>
+        <p><strong>Legal Aid Society of Cleveland:</strong> <a href="tel:440-323-8568" class="phone-number">440-323-8568</a></p>
+        <p><strong>Address:</strong> 314 W 9th St Suite 200, Elyria, OH 44035</p>
+        <p><strong>Eligibility:</strong> Low-income, age 60+ prioritized</p>
+      </div>
+
+      <div class="resource-card">
+        <h3>Elder Abuse Hotline</h3>
+        <p>Confidential reporting and help for seniors experiencing abuse or neglect.</p>
+        <p><strong>Lorain County Adult Protective Services:</strong> <a href="tel:440-284-4465" class="phone-number">440-284-4465</a></p>
+        <p><strong>Ohio Statewide Hotline:</strong> <a href="tel:855-644-6277">855-644-6277</a> (24/7)</p>
+      </div>
+
+      <!-- General Support -->
+      <div class="info-card" style="margin-top: 2rem; background: #f0f7ff; padding: 1.5rem; border-radius: 8px;">
+        <h3 style="margin-top: 0;">📞 Need Help Finding Services?</h3>
+        <p><strong>Dial 2-1-1</strong> (or visit <a href="https://www.211lorain.org" target="_blank" rel="noopener">211lorain.org</a>)</p>
+        <p>Free referrals to local services, available 24/7.</p>
+        <p style="margin-top: 1rem;"><strong>Lorain County Office on Aging:</strong> <a href="tel:440-326-4800" class="phone-number">440-326-4800</a><br>
+        534 South Abbe Rd, Elyria, OH 44035<br>
+        Mon-Fri 8am-4:30pm</p>
+      </div>
+
+      <p style="margin-top: 2rem;"><a href="/">← Back to GraftonHub home</a></p>
+    </div>
+  </section>
+</BaseLayout>
