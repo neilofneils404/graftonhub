@@ -24,6 +24,7 @@ const { title, description = "Your local community hub for Grafton, Oberlin, LaG
     <nav class="container">
       <div class="nav-content">
         <a href="/" class="logo">
+          <img src="/logo.svg" alt="GraftonHub logo" class="logo-mark" />
           <span class="logo-text">Grafton<span class="hub">Hub</span></span>
         </a>
         <div class="nav-links">
@@ -198,7 +199,7 @@ const { title, description = "Your local community hub for Grafton, Oberlin, LaG
     .logo {
       display: flex;
       align-items: center;
-      gap: var(--space-sm);
+      gap: 0.4rem;
       font-size: var(--font-size-xl);
       font-weight: var(--font-weight-bold);
       color: var(--color-text);
@@ -207,6 +208,12 @@ const { title, description = "Your local community hub for Grafton, Oberlin, LaG
 
     .logo:hover {
       text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
     }
 
     .hub {
