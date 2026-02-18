@@ -18,15 +18,15 @@ import '../styles/global.css';
         <div class="district-guide">
           <div class="district-item">
             <strong>Grafton, Eaton Township, most of Carlisle Township:</strong>
-            <span>→ Midview Local Schools</span>
+            <span>→ <a href="#midview">Midview Local Schools</a></span>
           </div>
           <div class="district-item">
             <strong>LaGrange, LaGrange Township, parts of Carlisle:</strong>
-            <span>→ Keystone Local Schools</span>
+            <span>→ <a href="#keystone">Keystone Local Schools</a></span>
           </div>
           <div class="district-item">
             <strong>Oberlin, Oberlin Township:</strong>
-            <span>→ Oberlin City Schools</span>
+            <span>→ <a href="#oberlin">Oberlin City Schools</a></span>
           </div>
         </div>
         <p class="note">School district boundaries can vary by street. Contact the district to confirm.</p>
@@ -420,6 +420,20 @@ import '../styles/global.css';
     .district-item span {
       color: var(--color-text-secondary);
       font-weight: 600;
+    }
+
+    .district-item a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .district-item a:hover {
+      text-decoration: underline;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     .which-district .note {
