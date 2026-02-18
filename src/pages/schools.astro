@@ -228,6 +228,45 @@ import '../styles/global.css';
         </div>
 
       </div>
+
+      <h3>Lorain County Public Library System</h3>
+      <p class="library-intro">The Lorain County Public Library System serves over 135,000 residents across northeast Lorain County with six branches. Closest branches to our area:</p>
+      
+      <div class="library-grid">
+        <div class="library-card">
+          <h3>Columbia Branch</h3>
+          <p class="system">Lorain County Public Library</p>
+          <p><strong>Address:</strong> 13824 W. River Road North, Columbia Station, OH 44028</p>
+          <p><strong>Phone:</strong> <a href="tel:440-236-8751">440-236-8751</a></p>
+          <div class="hours">
+            <h4>Hours</h4>
+            <table>
+              <tr><td>Mon – Thu</td><td>9:00am – 8:00pm</td></tr>
+              <tr><td>Fri – Sat</td><td>10:00am – 6:00pm</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="library-card">
+          <h3>North Ridgeville Branch</h3>
+          <p class="system">Lorain County Public Library</p>
+          <p><strong>Address:</strong> 35700 Bainbridge Road, North Ridgeville, OH 44039</p>
+          <p><strong>Phone:</strong> <a href="tel:440-327-8326">440-327-8326</a></p>
+          <div class="hours">
+            <h4>Hours</h4>
+            <table>
+              <tr><td>Mon – Thu</td><td>9:00am – 8:00pm</td></tr>
+              <tr><td>Fri – Sat</td><td>10:00am – 6:00pm</td></tr>
+              <tr><td>Sunday</td><td>1:00pm – 5:00pm</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <p class="library-system-note">
+        <strong>All LCPL locations:</strong> <a href="https://www.lorainpubliclibrary.org/locations-hours" target="_blank" rel="noopener">lorainpubliclibrary.org/locations-hours</a>
+      </p>
+
       <div class="library-note">
         <p><strong>Library Cards:</strong> Free for Ohio residents. Bring photo ID and proof of address to any library to sign up.</p>
         <p><strong>Digital Resources:</strong> All libraries offer OverDrive (ebooks), Kanopy (streaming), and research databases.</p>
@@ -239,6 +278,17 @@ import '../styles/global.css';
     <div class="container">
       <h2>👶 Preschools & Childcare</h2>
       
+      <h3>County Preschool Programs</h3>
+      <div class="preschool-grid">
+        <div class="preschool-card">
+          <h4>Early Learning Center of Lorain County</h4>
+          <p>12079 LaGrange Road, LaGrange, OH 44050</p>
+          <p><a href="tel:440-324-3178">440-324-3178</a></p>
+          <p><em>Ages 3-5, developmentally appropriate learning, quality licensed professionals</em></p>
+          <p><a href="https://www.loraincountyesc.org/theearlylearningcenter1.aspx" target="_blank" rel="noopener">Learn more →</a></p>
+        </div>
+      </div>
+
       <h3>Head Start Programs</h3>
       <div class="preschool-grid">
         <div class="preschool-card">
@@ -295,6 +345,18 @@ import '../styles/global.css';
         </div>
       </div>
       <p class="childcare-note">Search all licensed providers: <a href="https://childcaresearch.ohio.gov" target="_blank" rel="noopener">childcaresearch.ohio.gov</a></p>
+    </div>
+  </section>
+
+  <section class="homeschool">
+    <div class="container">
+      <h2>🏠 Homeschool Resources</h2>
+      <div class="card">
+        <h3>Ohio Homeschooling Parents</h3>
+        <p>Ohio's largest homeschooling support network with over 26,000 members statewide. Open to all homeschooling families regardless of methodology, curriculum, or background.</p>
+        <p><strong>Website:</strong> <a href="https://ohiohomeschoolingparents.com/" target="_blank" rel="noopener">ohiohomeschoolingparents.com</a></p>
+        <p class="note">OHP provides peer support, resources, and information about Ohio homeschooling regulations. Members recommend joining HSLDA (Home School Legal Defense Association) for legal support.</p>
+      </div>
     </div>
   </section>
 
@@ -565,6 +627,50 @@ import '../styles/global.css';
       margin-top: var(--space-lg);
       font-size: var(--font-size-sm);
       color: var(--color-text-secondary);
+    }
+
+    .homeschool {
+      padding: var(--space-2xl) 0;
+      background: var(--color-bg-surface);
+    }
+
+    .homeschool h2 {
+      margin-bottom: var(--space-xl);
+    }
+
+    .homeschool .card {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .homeschool h3 {
+      margin-bottom: var(--space-md);
+    }
+
+    .homeschool .note {
+      margin-top: var(--space-md);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-tertiary);
+      font-style: italic;
+    }
+
+    .library-intro {
+      margin-bottom: var(--space-lg);
+      font-size: var(--font-size-base);
+      color: var(--color-text-secondary);
+    }
+
+    .library-system-note {
+      margin-top: var(--space-lg);
+      margin-bottom: var(--space-lg);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+    }
+
+    .libraries h3 {
+      margin-top: var(--space-2xl);
+      margin-bottom: var(--space-md);
+      color: var(--color-text-primary);
     }
 
     .youth-sports-link {
