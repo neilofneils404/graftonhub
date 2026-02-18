@@ -1,5 +1,4 @@
 /* GraftonHub - Clean, Content-First Design */
-/* Improved accessibility - WCAG AA compliant contrast ratios */
 
 :root {
   /* === COLORS === */
@@ -7,8 +6,8 @@
   /* Neutral palette - let content shine */
   --color-text: #1a1a1a;
   --color-text-primary: #1a1a1a;
-  --color-text-secondary: #4a4a4a;    /* Was #666 - improved from 4.54:1 to 7:1 contrast */
-  --color-text-tertiary: #666666;     /* Was #999 - improved from 2.85:1 to 5.74:1 contrast */
+  --color-text-secondary: #666666;
+  --color-text-tertiary: #999999;
   
   --color-bg: #ffffff;
   --color-bg-base: #ffffff;
@@ -127,11 +126,12 @@ p {
 
 a {
   color: var(--color-link);
-  text-decoration: underline;  /* Always show underline for accessibility */
+  text-decoration: none;
 }
 
 a:hover {
   color: var(--color-link-hover);
+  text-decoration: underline;
 }
 
 a:visited {
@@ -226,8 +226,8 @@ ul, ol {
   :root:not([data-theme="light"]) {
     --color-text: #e4e4e7;
     --color-text-primary: #e4e4e7;
-    --color-text-secondary: #b4b4b8;    /* Improved contrast for dark mode */
-    --color-text-tertiary: #9ca3af;     /* Was #71717a - better contrast now */
+    --color-text-secondary: #a1a1aa;
+    --color-text-tertiary: #71717a;
     
     --color-bg: #18181b;
     --color-bg-base: #18181b;
@@ -269,8 +269,8 @@ ul, ol {
 :root[data-theme="dark"] {
   --color-text: #e4e4e7;
   --color-text-primary: #e4e4e7;
-  --color-text-secondary: #b4b4b8;    /* Improved contrast for dark mode */
-  --color-text-tertiary: #9ca3af;     /* Was #71717a - better contrast now */
+  --color-text-secondary: #a1a1aa;
+  --color-text-tertiary: #71717a;
   
   --color-bg: #18181b;
   --color-bg-base: #18181b;
