@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-02-15",
+    "lastUpdated": "2026-02-19",
     "version": "1.0",
     "notes": "Phase 1 initial data collection - needs verification and expansion"
   },
@@ -373,6 +373,8 @@
       "website": "https://www.midviewk12.org",
       "phone": "440-748-5353",
       "address": "13050 Durkee Rd, Grafton, OH 44044",
+      "superintendent": "Meredith Udris (Interim)",
+      "superintendentNote": "Board of Education conducting search for permanent superintendent",
       "coverage": ["Grafton Village", "Grafton Township", "Eaton Township", "Carlisle Township (part)", "Elyria (small portion)"],
       "enrollment": "~2,534 students",
       "schools": 7,
